@@ -1,0 +1,94 @@
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+  padding: 40px 20px;
+}
+
+/* Flexbox Layout Container using requested properties */
+.employee-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Employee Card Base Styles */
+.employee-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.employee-card:hover {
+  transform: translateY(-4px);
+}
+
+.employee-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Makes portrait image circular */
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 3px solid #007bff;
+}
+
+.employee-name {
+  font-size: 1.25rem;
+  color: #2d3748;
+  margin-bottom: 6px;
+}
+
+.employee-dept {
+  font-size: 0.95rem;
+  color: #007bff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.employee-email {
+  font-size: 0.9rem;
+  color: #718096;
+  text-decoration: underline;
+}
+
+/* ========================================== */
+/* RESPONSIVE LAYOUT CALCULATION (MEDIA QUERIES) */
+/* ========================================== */
+
+/* 1. Mobile (Default Layout) - 1 Card Per Row */
+/* Card width takes up full row width minus spacing limits */
+.employee-card {
+  flex: 1 1 100%;
+  max-width: 400px; 
+}
+
+/* 2. Tablet View (2 Cards Per Row) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .employee-card {
+    /* calc((100% total - 1 gap of 20px) / 2 columns) */
+    flex: 0 1 calc((100% - 20px) / 2);
+  }
+}
+
+/* 3. Desktop View (3 Cards Per Row) */
+@media (min-width: 1025px) {
+  .employee-card {
+    /* calc((100% total - 2 gaps of 20px) / 3 columns) */
+    flex: 0 1 calc((100% - 40px) / 3);
+  }
+}

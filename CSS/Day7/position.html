@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Playground</title>
+    <link rel="stylesheet" href="position.css">
+</head>
+<body>
+
+    <header class="page-info">
+        <h1>CSS Position Property Showroom</h1>
+        <p>Scroll the webpage vertically to see how different boxes react to the viewport layout flow.</p>
+    </header>
+
+    <main class="playground-area">
+        
+        <div class="box static-box">
+            <strong>Static Position</strong>
+            <small>Default normal flow layout. Ignores top/left properties.</small>
+        </div>
+
+        <div class="box relative-box">
+            <strong>Relative Position</strong>
+            <small>Moved from its original location. Space remains reserved.</small>
+        </div>
+
+        <div class="box absolute-box">
+            <strong>Absolute Position</strong>
+            <small>Removed from flow. Positioned relative to parent container.</small>
+        </div>
+
+        <div class="box fixed-box">
+            <strong>Fixed Position</strong>
+            <small>Locked to the browser viewport window. Never moves during scrolling.</small>
+        </div>
+
+        <div class="box sticky-box">
+            <strong>Sticky Position</strong>
+            <small>Acts normal until scrolled to top, then locks in place.</small>
+        </div>
+
+    </main>
+
+    <div class="scroll-spacer">
+        <p>Keep scrolling down to examine behavior modifications...</p>
+    </div>
+
+</body>
+</html>

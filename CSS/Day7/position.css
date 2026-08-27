@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333333;
+    line-height: 1.4;
+}
+
+.page-info {
+    text-align: center;
+    padding: 30px 20px;
+    background: #ffffff;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.playground-area {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.box {
+    width: 250px;
+    padding: 15px;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.box strong {
+    font-size: 16px;
+}
+
+.box small {
+    font-size: 11px;
+    opacity: 0.9;
+}
+
+.static-box {
+    position: static;
+    background-color: #34495e; 
+}
+
+.relative-box {
+    position: relative;
+    top: 15px;
+    left: 40px;
+    background-color: #3498db;
+}
+
+.absolute-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #e67e22;
+}
+
+.fixed-box {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    background-color: #e74c3c;
+    z-index: 2000;
+}
+
+.sticky-box {
+    position: sticky;
+    top: 10px;
+    background-color: #2ecc71;
+}
+
+.scroll-spacer {
+    height: 1200px;
+    padding: 100px 0;
+    text-align: center;
+    font-style: italic;
+    color: #94a3b8;
+}

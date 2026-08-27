@@ -1,0 +1,99 @@
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Element Selector */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* ID Selector */
+#main-header {
+    background-color: #222222;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+}
+
+/* Descendant Selector */
+.nav-container a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Child Selector */
+.nav-container > ul {
+    list-style: none;
+}
+
+/* Group Selector */
+h2, h3 {
+    color: #0056b3;
+    margin-bottom: 0.5rem;
+}
+
+/* Class Selector & Flexbox Centering */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Box Model and Flexbox for Content Center */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.section-box {
+    background: #ffffff;
+    padding: 2rem;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.skills-grid {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.skill-tag {
+    background-color: #e2e8f0;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.project-card {
+    border-left: 4px solid #0056b3;
+    padding-left: 1rem;
+    margin-top: 1rem;
+}
+
+#main-footer {
+    background-color: #222222;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}

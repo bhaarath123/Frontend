@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d9fbe6;
+    color: #1f2937;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    color: #0f3d7a;
+    margin-bottom: 20px;
+}
+
+.company-card {
+    background-color: #ffffff;
+    color: #111827;
+    width: 320px;
+    height: 180px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(175, 46, 46, 0.1);
+}
+
+#zoho {
+    background-color: #d9fbe6;
+    color: #0f5132;
+}
+
+#tcs {
+    background-color: #e8f0ff;
+    color: #1d4ed8;
+}
+
+#infosys {
+    background-color: #fde7e7;
+    color: #b91c1c;
+}

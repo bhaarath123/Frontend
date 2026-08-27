@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #1f2937;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    color: #0f3d7a;
+    margin-bottom: 25px;
+}
+
+.dept-card {
+    background-color: #ffffff;
+    color: #111827;
+    width: 220px;
+    height: 140px;
+    margin: 15px auto;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: #c1cddb;
+}
+
+#cse {
+    background-color: #dbeafe;
+    color: #1e3a8a;
+}
+
+#it {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+#ece {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+#eee {
+    background-color: #fce7f3;
+    color: #9d174d;
+}
+
+#mechanical {
+    background-color: #ede9fe;
+    color: #5b21b6;
+}

@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.visible-card {
+    background: #2ecc71;
+}
+
+.hidden-card {
+    background: #e67e22;
+    display: none;
+}
+
+.invisible-card {
+    background: #3498db;
+    visibility: hidden;
+}

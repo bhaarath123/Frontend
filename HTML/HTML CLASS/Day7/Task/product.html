@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics Shop Inventory System</title>
+</head>
+<body>
+    <center>
+        <header>
+            <section>
+                <div>
+                    <h2>Electronics Shop Inventory System</h2>
+                    <form action="register-processing-page" method="POST">
+                        <label>Product ID:</label>
+                        <input type="text" id="productid" name="productid" placeholder="Enter product ID" required>
+                        <br><br>
+
+                        <label>Product Name:</label>
+                        <input type="text" id="productname" name="productname" placeholder="Enter product name" required>
+                        <br><br>
+
+                        <label>Brand:</label>
+                        <input type="text" id="brand" name="brand" placeholder="Enter brand" required>
+                        <br><br>
+
+                        <label>Category:</label>
+                        <select name="category" required>
+                            <option value="">Select Category</option>
+                            <option value="Mobile">Mobile</option>
+                            <option value="Laptop">Laptop</option>
+                            <option value="Headphones">Headphones</option>
+                            <option value="Camera">Camera</option>
+                        </select>
+                        <br><br>
+
+                        <label>Price:</label>
+                        <input type="number" id="price" name="price" min="0" step="0.01" required>
+                        <br><br>
+
+                        <label>Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="0" required>
+                        <br><br>
+
+                        <label>Supplier:</label>
+                        <input type="text" id="supplier" name="supplier" placeholder="Enter supplier" required>
+                        <br><br>
+
+                        <label>Product Image:</label>
+                        <input type="file" name="image" accept="image/*" required>
+                        <br><br>
+
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </form>
+                </div>
+
+                <h2>Inventory Details</h2>
+                <table border="1" cellspacing="0" cellpadding="6">
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Product Name</th>
+                            <th>Brand</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Stock Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>P101</td>
+                            <td>Smartphone</td>
+                            <td>Samsung</td>
+                            <td>25000</td>
+                            <td>15</td>
+                            <td>In Stock</td>
+                        </tr>
+                        <tr>
+                            <td>P102</td>
+                            <td>Laptop</td>
+                            <td> Dell</td>
+                            <td>55000</td>
+                            <td>8</td>
+                            <td>Low Stock</td>
+                        </tr>
+                        <tr>
+                            <td>P103</td>
+                            <td>Headphones</td>
+                            <td>JBL</td>
+                            <td>3000</td>
+                            <td>0</td>
+                            <td>Out of Stock</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </header>
+    </center>
+</body>
+</html>

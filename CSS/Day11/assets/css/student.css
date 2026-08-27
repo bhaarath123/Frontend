@@ -1,0 +1,81 @@
+/* Global Reset & Page Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f6;
+  padding: 40px 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Desktop View: Flexbox Layout Parent Container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Student Card Base Styling */
+.card {
+  /* Calculates width for 3 columns minus the layout gaps */
+  flex: 0 1 calc(33.333% - 14px); 
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Card Contents Styling */
+.card img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #007bff;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 4px 0;
+}
+
+.card .course {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Tablet Display: 2 cards per row */
+@media (max-width: 768px) {
+  .card {
+    flex: 0 1 calc(50% - 10px);
+  }
+}
+
+/* Mobile Display: 1 card per row */
+@media (max-width: 576px) {
+  .card {
+    flex: 0 1 100%;
+  }
+}

@@ -1,0 +1,67 @@
+/* Layout wrapper to center and space the cards */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+}
+
+/* Base style for the student profile cards */
+.profile-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 30px 24px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+
+  /* Required smooth transition for 0.5 seconds */
+  transition: 0.5s;
+}
+
+/* Combines zooming slightly and moving upward on hover */
+.profile-card:hover {
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Circular profile avatar styling */
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #e2e8f0;
+  margin-bottom: 16px;
+}
+
+/* Student name styling */
+.student-name {
+  font-size: 1.25rem;
+  color: #1a202c;
+  margin: 0 0 8px 0;
+}
+
+/* Course name text styling */
+.course {
+  font-size: 0.95rem;
+  color: #4a5568;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+}
+
+/* Mobile number styling */
+.mobile-num {
+  font-size: 0.85rem;
+  color: #718096;
+  background-color: #f7fafc;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 0;
+}

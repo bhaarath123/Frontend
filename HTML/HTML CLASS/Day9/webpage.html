@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Showcase</title>
+  </head>
+<body>
+  <header>
+    <h1>Media Showcase</h1>
+    <p>Three images, audio, video, YouTube, Google Maps, and an embedded PDF in a single semantic page.</p>
+  </header>
+
+  <main>
+    <section id="images">
+      <h2>Image Gallery</h2>
+      <div class="gallery">
+        <figure>
+          <img src="assets/1.png" alt="Colorful hot air balloons over a valley" width="300" height="200">
+          <figcaption>Hot air balloons over hills</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/2.png" alt="Close-up of a bright neon sign against a night sky">
+          <figcaption>Night city neon</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/3.png" alt="A modern geometric building facade in soft light">
+          <figcaption>Architectural details</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="audio">
+      <h2>Audio Player</h2>
+      <div class="media-container">
+        <audio controls>
+          <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </section>
+
+    <section id="video">
+      <h2>Video Player</h2>
+      <div class="media-container">
+        <video controls>
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+      </div>
+    </section>
+
+    <section id="youtube">
+      <h2>YouTube Video</h2>
+      <div class="media-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+     <h2>Google Map</h2>
+  <iframe
+   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15544.669219432366!2d80.23979238265635!3d13.088581096197505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265dca1806f09%3A0x2b7e01875ad82bf4!2sPurasaiwakkam%2C%20Chennai%2C%20Greater%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1784950747357!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+    width="560"
+    height="315">
+  </iframe>
+  
+    <section id="pdf">
+      <h2>Embedded PDF</h2>
+      <div class="media-container">
+        <object data="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" type="application/pdf" width="100%" height="600">
+          <p>Your browser does not support embedded PDFs. <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">Download the PDF</a>.</p>
+        </object>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Media Showcase created with semantic HTML for easy access and modern layout.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef7ff;
+    color: #1f2937;
+    padding: 30px;
+}
+
+h1 {
+    color: #0f766e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hospital-card {
+    background-color: #ffffff;
+    width: 460px;
+    height: 260px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+#emergency {
+    color: #b91c1c;
+    font-size: bold;
+}

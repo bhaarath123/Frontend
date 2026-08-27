@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <link rel="stylesheet" href="assets/navigation.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="#home">MyBrand</a>
+        </div>
+        
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" class="content-section home-section">
+            <div class="container">
+                <h1>Welcome to Our Website</h1>
+                <p>Discover innovative solutions and beautiful experiences tailored just for you.</p>
+                <a href="#services" class="cta-btn">Our Services</a>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>We are a team of dedicated professionals committed to excellence.</p>
+            </div>
+        </section>
+
+
+        <section id="services" class="content-section services-section">
+            <div class="container">
+                <h2>Our Services</h2>
+                <p class="section-subtitle">What we offer to help your business grow</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Web Design</h3>
+                        <p>Crafting beautiful, modern, and user-friendly website interfaces.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Development</h3>
+                        <p>Building fast, secure, and scalable web applications.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>SEO Optimization</h3>
+                        <p>Improving your online visibility to drive organic traffic.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+        <section id="gallery" class="content-section gallery-section">
+            <div class="container">
+                <h2>Our Gallery</h2>
+                <p class="section-subtitle">A glimpse of our latest visual projects</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item item-1"><span>Project One</span></div>
+                    <div class="gallery-item item-2"><span>Project Two</span></div>
+                    <div class="gallery-item item-3"><span>Project Three</span></div>
+                    <div class="gallery-item item-4"><span>Project Four</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us today to start your next project.</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

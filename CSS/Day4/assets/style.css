@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: blanchedalmond;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-styled-span{
+    display: block;
+    background-color: beige;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 18px;
+}

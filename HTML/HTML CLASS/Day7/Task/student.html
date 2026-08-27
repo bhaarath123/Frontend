@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SLA Institute Registration</title>
+</head>
+<body>
+    <center>
+    <header>
+        <section>
+            <div>
+<h2>Student Registration Form</h2>
+<form action="register-processing page" method="POST">
+    <label>Student Name:</label>
+    <input type="text" id="sname" name="sname" placeholder="Enter the name" required>
+    
+    <br>
+
+    <label>Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter the email" required>
+    
+    <br>
+
+    <label>Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter the password" required>
+    
+    <br>
+
+    <label>Mobile Number:</label>
+    <input type="tel" id="Mobile Number" name="Mobile Number" minlength="10" maxlength="10" required>
+    
+    <br>
+
+
+    <label>Age:</label>
+    <input type="number" id="age" name="age" min="18" max="60" required>
+    
+    <br>
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="other"> other 
+    
+    <br>
+
+    <label>Skills:</label>
+    <input type="checkbox" name="skills" value="HTML"> HTML
+    <input type="checkbox" name="skills" value="CSS"> CSS
+    <input type="checkbox" name="skills" value="JS"> JavaScript 
+    
+    <br>
+
+    <label>Course:</label>
+    <select name="course" required>
+        <option value="">Select a course</option>
+        <option value="Web Dev">Web Development</option>
+        <option value="Data Science">Data Science</option>
+        <option value="Full stack with java">Full stack</option>
+    </select>
+    
+    <br>
+
+    <label>Address:</label>
+    <textarea name="address" required></textarea>
+    
+    <br>
+
+    <label>Profile Image:</label>
+    <input type="file" name="image" accept="image/*" required>
+    
+    
+    <br>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+</form>
+            </div>
+
+<h2>Student Details</h2>
+<table>
+    <thead>
+        <tr>
+            <th>SLA ID</th>
+            <th>Student Name</th>
+            <th>Course</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+            <th>Status</th>
+        </tr>
+    <section>
+            <table border="1" cellspacing="0" cellpadding="6">
+                <thead>
+                    <tr>
+                        <th>SLA NO</th>
+                        <th>STUDENT NAME</th>
+                        <th>COURSE</th>
+                        <th>EMAIL</th>
+                        <th>MOBILE NO</th>
+                        <th>STATUS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1001</td>
+                        <td>Janani K</td>
+                        <td>Data anayalst</td>
+                        <td>janani010@gmail.com</td>
+                        <td>9080510028</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>1002</td>
+                        <td>Kalai M</td>
+                        <td>Data science</td>
+                        <td>kalai0203@gmail.com</td>
+                        <td>9626065207<td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>1003</td>
+                        <td>Prabhu M</td>
+                        <td>Ai engineer</td>
+                        <td>prabhu786@gmail.com</td>
+                        <td>8838174905</td>
+                        <td>Active</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </header>
+    </center>
+    </body>
+</html>

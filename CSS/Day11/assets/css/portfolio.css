@@ -1,0 +1,151 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333333;
+  line-height: 1.6;
+  transition: background-color 0.3s ease;
+}
+
+.section-padding {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- 1. REQUIREMENT: PAGE BACKGROUND COLORS VIA MEDIA QUERIES --- */
+
+/* Desktop Background (Default) */
+body {
+  background-color: #f8fafc; /* Slate light */
+}
+
+/* Tablet Background */
+@media (max-width: 1024px) and (min-width: 769px) {
+  body {
+    background-color: #f0fdf4; /* Mint light */
+  }
+}
+
+/* Mobile Background */
+@media (max-width: 768px) {
+  body {
+    background-color: #fff7ed; /* Orange/Peach light */
+  }
+}
+
+/* --- HEADER & NAVIGATION --- */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Desktop Navigation (Row) */
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Mobile Navigation (Column) */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .nav-menu {
+    flex-direction: column; /* Stacks links vertically */
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Desktop Hero layout */
+.hero-image, .hero-text {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Mobile Hero Layout (Image on top, text below) */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column; /* Places image above text */
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+}
+
+/* --- OTHER SECTIONS PLACEHOLDERS --- */
+.skills-grid, .projects-grid {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.skill-item, .project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.main-footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #222;
+  color: #fff;
+  margin-top: 60px;
+}

@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: beige;
+}
+
+h2::before {
+  content: "★ ";
+  color: gold;
+}
+
+h2::after {
+  content: " ✔";
+  color: green;
+}

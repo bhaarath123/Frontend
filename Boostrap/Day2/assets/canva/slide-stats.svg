@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <rect width="100%" height="100%" fill="#FFFFFF" />
+  <text x="120" y="120" font-family="Segoe UI, Roboto, Arial" font-size="44" fill="#111827">Metrics That Matter</text>
+  <g transform="translate(120,180)">
+    <text x="0" y="0" font-family="Segoe UI, Roboto" font-size="88" font-weight="700" fill="#2563EB">1.2M</text>
+    <text x="0" y="100" font-family="Segoe UI, Roboto" font-size="20" fill="#6B7280">Users reached</text>
+  </g>
+  <g transform="translate(700,180)">
+    <text x="0" y="0" font-family="Segoe UI, Roboto" font-size="88" font-weight="700" fill="#10B981">98%</text>
+    <text x="0" y="100" font-family="Segoe UI, Roboto" font-size="20" fill="#6B7280">Satisfaction</text>
+  </g>
+  <g transform="translate(1280,180)">
+    <rect x="0" y="0" width="520" height="260" rx="12" fill="#2563EB" />
+    <text x="30" y="60" font-family="Segoe UI, Roboto" font-size="28" fill="#FFFFFF">Start a free trial</text>
+    <rect x="30" y="100" width="200" height="48" rx="8" fill="#FFFFFF" />
+    <text x="60" y="132" font-family="Segoe UI, Roboto" font-size="18" fill="#2563EB">Get Started</text>
+  </g>
+</svg>

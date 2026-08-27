@@ -1,0 +1,66 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Desktop Setup (Default) */
+.services-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+}
+
+.service-card h3 {
+  color: #222222;
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: #666666;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Mobile Setup (Screens under 768px wide) */
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 12px;
+  }
+
+  .service-card {
+    background-color: #1e293b; /* Dark mobile background */
+    padding: 16px;
+    box-shadow: none;
+    border: none;
+  }
+
+  .service-card h3 {
+    color: #38bdf8; /* Light blue heading text */
+    font-size: 1.05rem; /* Reduced font size */
+    margin-bottom: 8px;
+  }
+
+  .service-card p {
+    color: #cbd5e1; /* Adjusted paragraph text for readability */
+    font-size: 0.85rem; /* Reduced font size */
+  }
+}

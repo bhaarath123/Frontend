@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+.company-section {
+    width: 320px;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+h2, p, span {
+    margin: 6px 0;
+}
+
+.zoho {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+}
+
+.freshworks {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.aspire {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+.cts {
+    background-color: #fce7f3;
+    color: #be185d;
+}
+
+.tcs {
+    background-color: #ede9fe;
+    color: #6d28d9;
+}

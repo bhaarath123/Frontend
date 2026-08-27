@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: radial-gradient(circle at top left, #eafdfc 0%, #ffffff 48%),
+                linear-gradient(180deg, #f8fcff 0%, #f2f9ff 100%);
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #102a43;
+}
+
+.container {
+    width: min(100%, 760px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 30px 80px rgba(16, 42, 67, 0.12);
+    border: 1px solid rgba(16, 42, 67, 0.08);
+}
+
+.container h1 {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    letter-spacing: -0.03em;
+}
+
+.container p {
+    line-height: 1.75;
+    color: #334e68;
+}
+
+.spacer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 26px;
+    border-radius: 24px;
+    background: #f3fbff;
+    border: 1px solid rgba(56, 143, 255, 0.12);
+}
+
+.spacer h3 {
+    font-size: 1.2rem;
+    color: #0b3140;
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #25d366;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 14px 24px;
+    border-radius: 999px;
+    box-shadow: 0 18px 45px rgba(37, 211, 102, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1dba58;
+    transform: translateY(-3px);
+    box-shadow: 0 22px 50px rgba(37, 211, 102, 0.28);
+}
+
+.whatsapp-btn svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    fill: currentColor;
+}
+
+.whatsapp-btn span {
+    white-space: nowrap;
+}
+
+.whatsapp-btn {
+        right: 16px;
+        bottom: 16px;
+        padding: 12px 18px;
+        font-size: 0.9rem;
+    }

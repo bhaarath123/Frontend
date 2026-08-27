@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(190, 164, 156);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: azure;
+    padding: 15px 30px;
+    color: black;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.nav-links{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links > a{
+    color: rgb(104, 73, 73);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.6;
+}
+
+.nav-links > a:hover{
+    color: rgba(163, 162, 74, 0.774);
+}
+
+.main-container{
+    max-width: 1200px;
+    margin: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-container{
+    margin-bottom: 30px;
+    color: rgba(212, 236, 236, 0.836);
+}
+
+.card-grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 25px;
+    width: 20pxx;
+    padding: 40px 20px;
+}
+
+.card-wrapper{
+    display: flex;
+    width: 320px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(rgb(133, 112, 112), rgb(210, 255, 210), rgb(234, 234, 245));
+    overflow: hidden;
+}
+
+.card{
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card img{
+    width: 250px;
+    height: 100px;
+}
+
+.card-content{
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.card-content h3{
+    margin-bottom: 10px;
+    color: rgb(83, 45, 48);
+}
+
+.card-content p{
+    font-size: 15px;
+    color: rgb(121, 110, 98);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.button{
+    background-color: rgb(90, 90, 204);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.button{
+    background-color: rgb(110, 85, 133);
+}

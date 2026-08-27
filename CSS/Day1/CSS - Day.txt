@@ -1,0 +1,680 @@
+CSS - Day 1 Complete Notes
+
+CSS Basics: Introduction, Properties, Values, Selectors, Specificity
+What is CSS?
+Full Form
+CSS = Cascading Style Sheets
+CSS is a stylesheet language used to control the appearance and layout of HTML elements.
+
+HTML creates the structure of a webpage, while CSS makes the webpage beautiful, responsive, and visually attractive.
+
+Why Do We Use CSS?
+Without CSS, webpages look plain.
+
+CSS helps us to:
+
+Change Colors
+
+Change Fonts
+
+Add Backgrounds
+
+Create Layouts
+
+Add Animations
+
+Make Responsive Websites
+
+Improve User Experience (UI/UX)
+
+Example Without CSS
+<h1>Welcome to CSS</h1>
+
+<p>Learning CSS Basics</p>
+Output
+
+Black text
+White background
+Default browser styles
+Example With CSS
+<h1>Welcome to CSS</h1>
+h1{
+    color:red;
+    font-size:40px;
+}
+Output
+
+Large Red Heading
+What is Cascading?
+"Cascading" means flowing down according to priority.
+
+When multiple CSS rules target the same element, the browser decides which rule should be applied based on the CSS Cascade Rules.
+
+Example
+
+h1{
+    color:red;
+}
+
+h1{
+    color:blue;
+}
+Output
+
+Blue
+Because the last rule overrides the first one.
+
+Why is it Called Cascading Style Sheets?
+Breakdown
+
+Cascading
+Rules are applied based on priority.
+
+Style
+Used to style HTML elements.
+
+Sheets
+CSS rules are written inside style sheets (.css files).
+
+What is a Stylesheet?
+A stylesheet is a file that contains CSS rules.
+
+Example
+
+style.css
+Example
+
+h1{
+    color:red;
+}
+
+p{
+    color:green;
+}
+What is a CSS Rule?
+A CSS Rule consists of
+
+Selector
+
+Property
+
+Value
+Example
+
+h1{
+
+color:red;
+
+}
+Breakdown
+
+h1      → Selector
+
+color   → Property
+
+red     → Value
+CSS Syntax
+selector{
+
+property:value;
+
+}
+Example
+
+h1{
+
+color:blue;
+
+font-size:40px;
+
+}
+CSS Property
+Property defines what should be changed.
+
+Examples
+
+color
+
+font-size
+
+background
+
+width
+
+height
+
+margin
+
+padding
+CSS Value
+Value defines how it should look.
+
+Example
+
+color:red;
+Property
+
+color
+Value
+
+red
+CSS Types
+CSS can be applied in three ways.
+
+Inline CSS
+
+Internal CSS
+
+External CSS
+1. Inline CSS
+CSS written inside HTML elements.
+
+Syntax
+
+<h1 style="color:red;">
+HTML
+</h1>
+Advantages
+
+Quick Styling
+
+Disadvantages
+
+Difficult to Maintain
+
+Not Reusable
+
+2. Internal CSS
+CSS written inside
+
+<style>
+
+</style>
+Example
+
+<style>
+
+h1{
+
+color:red;
+
+}
+
+</style>
+Advantages
+
+Good for Single Page
+
+Disadvantages
+
+Cannot reuse in multiple pages
+
+3. External CSS
+CSS stored inside a separate file.
+
+Example
+
+style.css
+HTML
+
+<link rel="stylesheet" href="style.css">
+style.css
+
+h1{
+
+color:red;
+
+}
+Advantages
+
+Reusable
+
+Easy Maintenance
+
+Professional
+
+Faster Development
+
+How to Connect External CSS?
+Step 1
+
+Create
+
+style.css
+Step 2
+
+Link
+
+<link
+rel="stylesheet"
+href="style.css">
+Step 3
+
+Write CSS
+
+body{
+
+background:#f5f5f5;
+
+}
+CSS Comments
+/* This is CSS Comment */
+CSS Selectors
+Selectors tell CSS which HTML element should be styled.
+
+Types of Selectors
+Universal Selector
+
+Element Selector
+
+Class Selector
+
+ID Selector
+
+Grouping Selector
+
+Descendant Selector
+
+Child Selector
+
+Adjacent Sibling Selector
+
+General Sibling Selector
+
+Attribute Selector
+
+Pseudo Class Selector
+
+Pseudo Element Selector
+1. Universal Selector
+Selects every element.
+
+Syntax
+
+*{
+
+margin:0;
+
+padding:0;
+
+}
+2. Element Selector
+Targets HTML tags.
+
+Example
+
+p{
+
+color:red;
+
+}
+3. Class Selector
+Starts with
+
+.
+HTML
+
+<p class="title">
+CSS
+
+.title{
+
+color:blue;
+
+}
+4. ID Selector
+Starts with
+
+#
+HTML
+
+<h1 id="logo">
+CSS
+
+#logo{
+
+color:red;
+
+}
+5. Group Selector
+Multiple selectors.
+
+h1,p,div{
+
+color:green;
+
+}
+6. Descendant Selector
+Targets children inside another element.
+
+div p{
+
+color:red;
+
+}
+7. Child Selector
+Direct child.
+
+div>p{
+
+color:blue;
+
+}
+8. Adjacent Sibling Selector
+Immediate next sibling.
+
+h1+p{
+
+color:red;
+
+}
+9. General Sibling Selector
+All siblings.
+
+h1~p{
+
+color:blue;
+
+}
+10. Attribute Selector
+input[type="text"]{
+
+background:yellow;
+
+}
+11. Pseudo Class Selector
+Starts with
+
+:
+Example
+
+button:hover{
+
+background:red;
+
+}
+Other Examples
+
+:first-child
+
+:last-child
+
+:nth-child()
+
+:focus
+
+:checked
+12. Pseudo Element Selector
+Starts with
+
+::
+Example
+
+p::first-letter{
+
+font-size:40px;
+
+}
+Other Examples
+
+::before
+
+::after
+
+::selection
+
+::placeholder
+CSS Specificity
+Specificity decides which CSS rule wins when multiple rules target the same element.
+
+Specificity Priority
+Highest
+
+Inline Style
+↓
+
+ID Selector
+↓
+
+Class Selector
+
+Attribute Selector
+
+Pseudo Class
+↓
+
+Element Selector
+
+Pseudo Element
+↓
+
+Lowest
+
+Universal Selector
+Specificity Example
+*{
+
+color:black;
+
+}
+
+h1{
+
+color:red;
+
+}
+
+.title{
+
+color:green;
+
+}
+
+#heading{
+
+color:blue;
+
+}
+HTML
+
+<h1
+id="heading"
+class="title">
+HTML
+</h1>
+Output
+
+Blue
+Because
+
+ID > Class > Element > Universal
+Important CSS Properties
+color
+
+background
+
+background-color
+
+font-size
+
+font-family
+
+font-weight
+
+width
+
+height
+
+margin
+
+padding
+
+border
+
+display
+
+position
+
+overflow
+
+text-align
+
+line-height
+
+letter-spacing
+
+word-spacing
+
+opacity
+
+visibility
+CSS Value Types
+Color
+
+Number
+
+Length
+
+Percentage
+
+Keyword
+
+URL
+
+Function
+Examples
+
+color:red;
+
+width:300px;
+
+height:50%;
+
+background:url(image.jpg);
+
+display:flex;
+CSS Units
+Absolute Units
+
+px
+
+cm
+
+mm
+
+in
+
+pt
+Relative Units
+
+%
+
+em
+
+rem
+
+vh
+
+vw
+
+vmin
+
+vmax
+Browser Developer Tools
+Every browser provides Developer Tools.
+
+Shortcut
+
+F12
+or
+
+Ctrl + Shift + I
+Used for
+
+Inspect HTML
+
+Edit CSS
+
+Debug Layout
+
+Test Responsive Design
+
+Interview Questions
+What is CSS?
+CSS stands for Cascading Style Sheets. It is used to style HTML webpages.
+
+Why do we use CSS?
+To improve the appearance and layout of webpages.
+
+What is Cascading?
+Cascading is the process of applying CSS rules based on priority.
+
+What is a Stylesheet?
+A stylesheet is a file containing CSS rules.
+
+Name the Types of CSS.
+Inline CSS
+
+Internal CSS
+
+External CSS
+Which CSS type is recommended?
+External CSS.
+
+What is a Selector?
+A selector selects HTML elements for styling.
+
+What is Specificity?
+Specificity is the priority system used to decide which CSS rule should be applied.
+
+Specificity Order
+Inline
+
+↓
+
+ID
+
+↓
+
+Class
+
+↓
+
+Element
+
+↓
+
+Universal
+Difference Between Property and Value
+Property specifies what to change.
+
+Value specifies how it should change.
+
+Example
+
+color:red;
+Property → color
+
+Value → red
+Summary
+✔ CSS = Cascading Style Sheets
+
+✔ Used for Styling
+
+✔ HTML = Structure
+
+✔ CSS = Design
+
+✔ 3 Types of CSS
+
+✔ External CSS is Recommended
+
+✔ Selectors identify HTML elements
+
+✔ Properties define what changes
+
+✔ Values define how it changes
+
+✔ Specificity decides which rule wins
+
+✔ CSS makes webpages attractive and responsive

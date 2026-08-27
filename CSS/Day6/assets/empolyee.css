@@ -1,0 +1,80 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    min-height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center; 
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.employee-card {
+    background-color: #ffffff;
+    width: 260px;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    border: 1px solid #e0e0e0;
+}
+
+.employee-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    border: 3px solid #007bff;
+}
+
+
+.employee-name {
+    font-size: 1.25rem;
+    color: #333333;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.employee-dept {
+    font-size: 0.9rem;
+    color: #007bff;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.employee-email {
+    font-size: 0.85rem;
+    color: #666666;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.employee-email:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

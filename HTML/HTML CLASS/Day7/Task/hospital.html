@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo Hospital - Patient Registration</title>
+</head>
+<body>
+    <center>
+        <header>
+            <section>
+                <div>
+                    <h2>Apollo Hospital Patient Registration</h2>
+                    <form action="register-processing-page" method="POST">
+                        <label>Patient ID:</label>
+                        <input type="text" id="patientid" name="patientid" placeholder="Enter patient ID" required>
+                        <br><br>
+
+                        <label>Patient Name:</label>
+                        <input type="text" id="patientname" name="patientname" placeholder="Enter patient name" required>
+                        <br><br>
+
+                        <label>Age:</label>
+                        <input type="number" id="age" name="age" min="1" max="120" required>
+                        <br><br>
+
+                        <label>Gender:</label>
+                        <input type="radio" name="gender" value="Male"> Male
+                        <input type="radio" name="gender" value="Female"> Female
+                        <input type="radio" name="gender" value="Other"> Other
+                        <br><br>
+
+                        <label>Blood Group:</label>
+                        <select name="bloodgroup" required>
+                            <option value="">Select Blood Group</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                        </select>
+                        <br><br>
+
+                        <label>Doctor:</label>
+                        <input type="text" id="doctor" name="doctor" placeholder="Enter doctor name" required>
+                        <br><br>
+
+                        <label>Appointment Date:</label>
+                        <input type="date" id="appointmentdate" name="appointmentdate" required>
+                        <br><br>
+
+                        <label>Symptoms:</label>
+                        <textarea name="symptoms" placeholder="Enter symptoms" required></textarea>
+                        <br><br>
+
+                        <label>Medical Report Upload:</label>
+                        <input type="file" name="report" accept=".pdf,.jpg,.png,.jpeg" required>
+                        <br><br>
+
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </form>
+                </div>
+
+                <h2>Patient Details</h2>
+                <table border="1" cellspacing="0" cellpadding="6">
+                    <thead>
+                        <tr>
+                            <th>Patient ID</th>
+                            <th>Patient Name</th>
+                            <th>Doctor</th>
+                            <th>Blood Group</th>
+                            <th>Appointment Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>101</td>
+                            <td>Ramesh K</td>
+                            <td>Dr. Anitha</td>
+                            <td>O+</td>
+                            <td>2026-07-25</td>
+                            <td>Pending</td>
+                        </tr>
+                        <tr>
+                            <td>102</td>
+                            <td>Sneha R</td>
+                            <td>Dr. Kumar</td>
+                            <td>A+</td>
+                            <td>2026-07-27</td>
+                            <td>Confirmed</td>
+                        </tr>
+                        <tr>
+                            <td>103</td>
+                            <td>Vikram P</td>
+                            <td>Dr. Meera</td>
+                            <td>B+</td>
+                            <td>2026-07-30</td>
+                            <td>Completed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </header>
+    </center>
+</body>
+</html>
