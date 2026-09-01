@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn HTML5 SEO syntax, advantages, common mistakes, and practice questions.">
+  <title>HTML5 SEO | WebLearn Hub</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Compiled style.css (includes Tailwind utilities + prefixing) -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Inline CSS Checkbox Hack for No-JS Mobile Navbar toggling */
+    #mobile-nav-checkbox:checked ~ #navbarCollapseContent {
+      display: block !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Responsive Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        WebLearn Hub
+      </a>
+      
+      <!-- Pure CSS toggle using checkbox (Zero JS) -->
+      <input type="checkbox" id="mobile-nav-checkbox" class="d-none">
+      <label for="mobile-nav-checkbox" class="navbar-toggler" role="button" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </label>
+
+      <div class="collapse navbar-collapse" id="navbarCollapseContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+          
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../index.html">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../html/index.html">HTML5</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../css/index.html">CSS3</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../bootstrap/index.html">Bootstrap</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../tailwind/index.html">Tailwind</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../examples/html-examples.html">Examples</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../practice/html-practice.html">Practice</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../projects/html-projects.html">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../articles/index.html">Articles</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../cheat-sheets/index.html">Cheat Sheets</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../interview/index.html">Interviews</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../about.html">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../contact.html">Contact</a>
+      </li>
+    
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input class="form-control me-2 bg-secondary text-white border-0" type="search" placeholder="Search lessons..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  
+      <div class="tutorial-wrapper">
+        <aside class="sidebar-nav">
+          
+    <div class="mb-4">
+      <h5 class="fw-bold px-3 mb-3 text-secondary text-uppercase small tracking-wider">HTML Topics</h5>
+      <nav class="nav flex-column">
+        <a href="../html/index.html" class="nav-link ">
+          Course Overview
+        </a>
+        
+      <a href="../html/introduction.html" class="nav-link ">
+        HTML Introduction
+      </a>
+    
+      <a href="../html/structure.html" class="nav-link ">
+        HTML Document Structure
+      </a>
+    
+      <a href="../html/headings.html" class="nav-link ">
+        HTML Headings
+      </a>
+    
+      <a href="../html/paragraphs.html" class="nav-link ">
+        HTML Paragraphs
+      </a>
+    
+      <a href="../html/links.html" class="nav-link ">
+        HTML Links
+      </a>
+    
+      <a href="../html/images.html" class="nav-link ">
+        HTML Images
+      </a>
+    
+      <a href="../html/lists.html" class="nav-link ">
+        HTML Lists
+      </a>
+    
+      <a href="../html/tables.html" class="nav-link ">
+        HTML Tables
+      </a>
+    
+      <a href="../html/forms.html" class="nav-link ">
+        HTML Forms
+      </a>
+    
+      <a href="../html/semantic.html" class="nav-link ">
+        Semantic HTML5
+      </a>
+    
+      <a href="../html/multimedia.html" class="nav-link ">
+        HTML5 Multimedia
+      </a>
+    
+      <a href="../html/accessibility.html" class="nav-link ">
+        HTML5 Accessibility
+      </a>
+    
+      <a href="../html/seo.html" class="nav-link active">
+        HTML5 SEO
+      </a>
+    
+      </nav>
+    </div>
+  
+        </aside>
+        <main class="content-area">
+          
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html">HTML Course</a></li>
+        <li class="breadcrumb-item active" aria-current="page">HTML5 SEO</li>
+      </ol>
+    </nav>
+
+    <h1 class="fw-bold tw-text-4xl tw-text-slate-900 dark:tw-text-white tw-mb-4">HTML5 SEO</h1>
+    
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">What is HTML5 SEO?</h3>
+      <p class="lead">SEO (Search Engine Optimization) represents practices to make web pages rank higher in search engine results. HTML5 provides structured meta tags, header hierarchy, and descriptive markup that search bots use to parse content relevancy.</p>
+    </section>
+
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">Why is it used?</h3>
+      <p>Even the best website is useless if no one can find it. Semantic, well-optimized HTML5 ensures that search engine crawlers understand what your page is about and indexing it correctly.</p>
+    </section>
+
+    <!-- Side-by-Side Editor Preview -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">Code & Output Example</h3>
+      
+      <div class="editor-container">
+        <div class="editor-header">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+          <div class="editor-title">html editor</div>
+        </div>
+        <div class="editor-body">
+          <pre class="code-panel"><code>&lt;!-- Search Engine Preview --&gt;
+&lt;div style=&quot;font-family: Arial, sans-serif; max-width: 600px; padding: 15px; border: 1px solid #e1e3e6; border-radius: 8px; background: #fff;&quot;&gt;
+    &lt;div style=&quot;font-size: 14px; color: #202124; margin-bottom: 4px;&quot;&gt;weblearnhub.com &gt; html &gt; seo&lt;/div&gt;
+    &lt;a href=&quot;#&quot; style=&quot;font-size: 20px; color: #1a0dab; text-decoration: none; font-weight: 500;&quot;&gt;Complete HTML5 SEO Guide | WebLearn Hub&lt;/a&gt;
+    &lt;p style=&quot;font-size: 14px; color: #4d5156; margin-top: 4px; line-height: 1.4;&quot;&gt;Master HTML5 search engine optimization. Learn headings, title configurations, and image indexing meta.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          <div class="output-panel">
+            <h6 class="tw-text-xs tw-text-slate-400 tw-font-bold tw-uppercase tw-mb-2">Visual Preview</h6>
+            <div class="border tw-p-4 tw-rounded bg-white text-dark">
+              <div style="font-family: Arial, sans-serif; max-width: 600px; padding: 15px; border: 1px solid #e1e3e6; border-radius: 8px; background: #fff;">
+    <div style="font-size: 14px; color: #202124; margin-bottom: 4px;">weblearnhub.com > html > seo</div>
+    <a href="#" style="font-size: 20px; color: #1a0dab; text-decoration: none; font-weight: 500;">Complete HTML5 SEO Guide | WebLearn Hub</a>
+    <p style="font-size: 14px; color: #4d5156; margin-top: 4px; line-height: 1.4; margin-bottom: 0;">Master HTML5 search engine optimization. Learn headings, title configurations, and image indexing meta.</p>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">Code Explanation</h3>
+      <ul class="tw-list-disc tw-pl-5 tw-space-y-2">
+        <li><title>: The browser tab title and the clickable blue title shown in search engine results.</li><li><meta name='description'>: The summary paragraph (snippet) displayed in search results pages.</li><li><link rel='canonical'>: Prevents duplicate content issues by telling search engines which URL is the master source version.</li><li>Robot crawler tags: Tell search bots whether to index a page or follow links (<meta name='robots' content='index, follow'>).</li>
+      </ul>
+    </section>
+
+    <div class="row g-4 tw-mb-8">
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-success fs-5">Important Points</h4>
+          <ul class="small mb-0 mt-2">
+            <li>Keep title tags under 60 characters and description snippets under 160 characters to prevent truncation in Google search results.</li><li>Use one and only one <h1> tag containing the page's primary target keyword.</li><li>Alt attributes on images allow search engines to parse and list your images in image searches.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-danger fs-5">Common Mistakes</h4>
+          <ul class="small mb-0 mt-2">
+            <li>Using duplicate titles and descriptions across multiple pages of the site, causing indexing confusion.</li><li>Writing generic meta description summaries like 'About this site' or omitting them completely.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="tw-mb-8 bg-info bg-opacity-10 border border-info border-opacity-20 tw-p-4 tw-rounded-lg">
+      <h4 class="fw-bold text-info-emphasis fs-5">Real-World Usage</h4>
+      <p class="mb-0 small">SEO is a massive industry. Structuring pages with clean titles, semantic headings, and detailed meta cards is the first critical step for ranking articles in search results.</p>
+    </section>
+
+    <!-- Practice Exercise Section -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">Practice Exercise</h3>
+      <div class="card border-primary p-4 bg-white text-dark">
+        <h5 class="fw-bold">Write an HTML head section containing a meta description 'Master semantic structure for web searches' and a page title 'Semantic SEO Guide'.</h5>
+        <p class="small text-muted mt-1">Objective: Set up core search indexing tags.</p>
+        <p class="small">Instructions: Create title and meta name='description' tags.</p>
+        
+        <pre class="bg-dark text-white p-3 rounded font-monospace small mb-3"><code>&lt;!-- Add SEO header metadata --&gt;</code></pre>
+        
+        <div class="d-flex gap-2">
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Hint</summary>
+            <div class="interactive-body">
+              <p class="mb-0 text-secondary">Place title and meta elements inside a head block.</p>
+            </div>
+          </details>
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Solution</summary>
+            <div class="interactive-body">
+              <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;head&gt;
+    &lt;title&gt;Semantic SEO Guide&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;Master semantic structure for web searches.&quot;&gt;
+&lt;/head&gt;</code></pre>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interview Prep Section -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">Interview Question</h3>
+      <details class="interactive-card">
+        <summary>Q: What is the canonical tag, and why is it important for SEO?</summary>
+        <div class="interactive-body">
+          <h6 class="fw-bold text-success">Answer:</h6>
+          <p>A canonical tag (<link rel='canonical' href='...'>) is an HTML link element placed in the head section that tells search engines which version of a URL represents the master copy of a webpage. It is vital for preventing duplicate content issues when identical pages can be reached through different links.</p>
+          <h6 class="fw-bold text-indigo-600">Explanation:</h6>
+          <p class="small">For example, search bots treat http://site.com, https://site.com, and https://site.com?ref=social as three separate URLs. A canonical tag merges their ranking signals to the primary link.</p>
+          <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;link rel=&#039;canonical&#039; href=&#039;https://weblearnhub.com/html/seo.html&#039;&gt;</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <!-- Previous / Next navigation -->
+    <div class="d-flex justify-content-between pt-4 border-top">
+      <a href="accessibility.html" class="btn btn-outline-secondary d-flex align-items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Previous: HTML5 Accessibility
+       </a>
+      <div></div>
+    </div>
+  
+        </main>
+      </div>
+    
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white-50 py-5 mt-auto border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="text-white fw-bold d-flex align-items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            WebLearn Hub
+          </h5>
+          <p class="small mt-2">Master HTML5, CSS3, Bootstrap 5 and Tailwind CSS through hands-on static code walkthroughs.</p>
+          <p class="small text-white-50">Tagline: <em>Learn. Code. Build. Share.</em></p>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Tutorials</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../html/index.html" class="text-white-50 text-decoration-none hover:text-white">HTML5 Basics</a></li>
+            <li><a href="../css/index.html" class="text-white-50 text-decoration-none hover:text-white">CSS3 Styles</a></li>
+            <li><a href="../bootstrap/index.html" class="text-white-50 text-decoration-none hover:text-white">Bootstrap 5</a></li>
+            <li><a href="../tailwind/index.html" class="text-white-50 text-decoration-none hover:text-white">Tailwind CSS</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Resources</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../examples/html-examples.html" class="text-white-50 text-decoration-none hover:text-white">Examples</a></li>
+            <li><a href="../practice/html-practice.html" class="text-white-50 text-decoration-none hover:text-white">Practice Sets</a></li>
+            <li><a href="../projects/html-projects.html" class="text-white-50 text-decoration-none hover:text-white">Projects</a></li>
+            <li><a href="../articles/index.html" class="text-white-50 text-decoration-none hover:text-white">Articles</a></li>
+            <li><a href="../cheat-sheets/index.html" class="text-white-50 text-decoration-none hover:text-white">Cheat Sheets</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-white fw-bold">Company</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../about.html" class="text-white-50 text-decoration-none hover:text-white">About Hub</a></li>
+            <li><a href="../contact.html" class="text-white-50 text-decoration-none hover:text-white">Contact Us</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover:text-white">Privacy Policy</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover:text-white">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="text-center small">
+        © 2026 WebLearn Hub. Built strictly with frontend technologies. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn Responsive Media & Typography syntax, properties, mistakes, and practice questions.">
+  <title>Responsive Media & Typography | WebLearn Hub</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Compiled style.css (includes Tailwind utilities + prefixing) -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Inline CSS Checkbox Hack for Mobile Navbar toggling */
+    #mobile-nav-checkbox:checked ~ #navbarCollapseContent {
+      display: block !important;
+    }
+    /* Hover Dropdown Menu triggers */
+    .nav-item-dropdown {
+      position: relative;
+    }
+    .dropdown-menu-custom {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #212529;
+      border: 1px solid #343a40;
+      padding: 0.5rem 0;
+      z-index: 1000;
+      min-width: 200px;
+      border-radius: 0.25rem;
+      list-style: none;
+    }
+    .dropdown-menu-custom a:hover {
+      background-color: #4f46e5;
+    }
+    .nav-item-dropdown:hover .dropdown-menu-custom {
+      display: block;
+    }
+    .interactive-runner-card {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 16px;
+      color: #e2e8f0;
+    }
+    .runner-screen {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 6px;
+      padding: 12px;
+      font-family: 'Fira Code', monospace;
+      color: #38bdf8;
+      min-height: 48px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Responsive Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        WebLearn Hub
+      </a>
+      
+      <!-- Mobile toggle using checkbox -->
+      <input type="checkbox" id="mobile-nav-checkbox" class="d-none">
+      <label for="mobile-nav-checkbox" class="navbar-toggler" role="button" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </label>
+
+      <div class="collapse navbar-collapse" id="navbarCollapseContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+          
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../index.html">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../javascript/index.html">JavaScript</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../javascript/logical-problems.html">Logic 10</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/roadmap.html">Roadmap</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/practice.html">Practice</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/projects.html">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/quizzes.html">Quizzes</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/articles.html">Articles</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/interview.html">Interviews</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/cheat-sheets.html">Cheat Sheets</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/about.html">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/contact.html">Contact</a>
+      </li>
+    
+          <!-- Learn hover dropdown -->
+          <li class="nav-item nav-item-dropdown">
+            <a class="nav-link dropdown-toggle text-white-50" href="#" role="button">All Modules</a>
+            <ul class="dropdown-menu-custom shadow">
+              <li><a class="dropdown-item text-white" style="font-size: 13px;" href="../web-basics/index.html">Web Basics</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../html/index.html">HTML5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../css/index.html">CSS3</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="index.html">Responsive Design</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../bootstrap/index.html">Bootstrap 5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../tailwind/index.html">Tailwind CSS</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../javascript/index.html">JavaScript (New!)</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../javascript/logical-problems.html">JS Logical 10 (New!)</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input class="form-control me-2 bg-secondary text-white border-0" type="search" placeholder="Search JS & web topics..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  
+      <div class="tutorial-wrapper">
+        <aside class="sidebar-nav">
+          
+    <div class="mb-4">
+      <h5 class="fw-bold px-3 mb-3 text-secondary text-uppercase small tracking-wider">RESPONSIVE Outline</h5>
+      <nav class="nav flex-column">
+        <a href="index.html" class="nav-link ">
+          Course Overview
+        </a>
+        
+      <a href="mobile-first.html" class="nav-link ">
+        Mobile-First Design
+      </a>
+    
+      <a href="responsive-layouts.html" class="nav-link ">
+        Responsive Layout Systems
+      </a>
+    
+      <a href="media-queries.html" class="nav-link ">
+        Media Queries & Breakpoints
+      </a>
+    
+      <a href="responsive-media-typography.html" class="nav-link active">
+        Responsive Media & Typography
+      </a>
+    
+      <a href="responsive-forms-testing.html" class="nav-link ">
+        Responsive Forms & Viewport Testing
+      </a>
+    
+        
+      </nav>
+    </div>
+  
+        </aside>
+        <main class="content-area">
+          
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html">RESPONSIVE</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Responsive Media & Typography</li>
+      </ol>
+    </nav>
+
+    <!-- 1. Topic Title -->
+    <h1 class="fw-bold tw-text-4xl tw-text-slate-900 dark:tw-text-white tw-mb-4">Responsive Media & Typography</h1>
+    
+    <!-- 2. What is it? -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">1. What is it?</h3>
+      <p class="lead">Responsive Media and Typography ensures that images scale within their containers and text sizing remains readable on both phone screens and large desktop monitors.</p>
+    </section>
+
+    <!-- 3. Why is it important? -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">2. Why is it important?</h3>
+      <p>Unresponsive images overflow layouts, creating horizontal scrollbars. Desktop-sized headings (like 48px) look too large on phone screens, pushing content off the page.</p>
+    </section>
+
+    <!-- 4. Syntax & 5. Basic Example -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">3. Syntax & Basic Example</h3>
+      <pre class="bg-dark text-white p-3 rounded font-monospace small mb-2"><code>/* Fluid Responsive Image */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Typography using clamp */
+h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}</code></pre>
+      <p class="small text-muted mt-2"><strong>Basic description:</strong> <code>No basic explanation needed.</code></p>
+    </section>
+
+    <!-- 6. Code Example & 7. Expected Output -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">4. Code & Interactive Rendered Output</h3>
+      
+      <div class="editor-container">
+        <div class="editor-header">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+          <div class="editor-title">responsive live sandbox</div>
+        </div>
+        <div class="editor-body">
+          <pre class="code-panel"><code>&lt;div style=&quot;max-width: 150px;&quot;&gt;
+  &lt;img src=&quot;https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=150&quot; alt=&quot;Laptop&quot; class=&quot;fluid-img&quot;&gt;
+&lt;/div&gt;</code></pre>
+          <div class="output-panel">
+            <h6 class="tw-text-xs tw-text-slate-400 tw-font-bold tw-uppercase tw-mb-2">Live Output & Execution Preview</h6>
+            <div class="border tw-p-4 tw-rounded bg-white text-dark">
+              <div style="font-family: sans-serif; text-align: center;">
+  <div style="max-width: 100px; margin: 0 auto; border: 1px solid #ccc; padding: 4px;">
+    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=100" alt="Laptop" style="max-width: 100%; height: auto; display: block;">
+  </div>
+  <p style="font-size: clamp(11px, 2vw, 14px); margin-top: 4px; color: #4b5563;">Fluid image and text scale</p>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="small text-muted mt-2"><strong>Expected Layout / Behavior:</strong> Visual representation of element content.</p>
+    </section>
+
+    <!-- 8. Line-by-Line Explanation -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">5. Line-by-Line Explanation</h3>
+      <ul class="tw-list-disc tw-pl-5 tw-space-y-2">
+        <li>max-width: 100%: Prevents images from growing wider than their parent container.</li><li>height: auto: Scales height proportionally to width to prevent image distortion.</li><li>clamp(min, preferred, max): Dynamically calculates font size based on viewport width (vw), keeping it within boundaries.</li>
+      </ul>
+    </section>
+
+    <!-- 9. Important Properties/Tags/Classes -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">6. Key Properties, Methods & Syntax</h3>
+      <table class="table table-bordered table-striped small">
+        <thead>
+          <tr class="table-primary">
+            <th>Property / Method / Tag</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="2">No specific variables declared.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 10. Real-World Use -->
+    <section class="tw-mb-8 bg-info bg-opacity-10 border border-info border-opacity-20 tw-p-4 tw-rounded-lg">
+      <h4 class="fw-bold text-info-emphasis fs-5">7. Real-World Use</h4>
+      <p class="mb-0 small">News portals use fluid typography to scale article headings smoothly from mobile (20px) to desktop (40px) without jagged layout reflows.</p>
+    </section>
+
+    <!-- 11. Common Mistakes & 12. Best Practices -->
+    <div class="row g-4 tw-mb-8">
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-success fs-5">Best Practices</h4>
+          <ul class="small mb-0 mt-2">
+            <li>Wrap wide tables in an overflow container: `<div style='overflow-x: auto;'><table>...</table></div>`.</li><li>Use fluid typography units like rem and viewport width (vw) configurations.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-danger fs-5">Common Mistakes</h4>
+          <ul class="small mb-0 mt-2">
+            <li>Forgetting max-width: 100% on images, causing them to break container boundaries.</li><li>Setting static text sizes that force users to pinch-zoom on mobile screens.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13. Practice Exercise -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">8. Interactive Practice Challenge</h3>
+      <div class="card border-primary p-4 bg-white text-dark">
+        <h5 class="fw-bold">Write CSS rules to make all video tags fluid and responsive, ensuring they fit their containers.</h5>
+        <p class="small text-muted mt-1">Objective: Apply responsive sizing to media elements.</p>
+        <p class="small">Instructions: Use max-width and height properties.</p>
+        
+        <pre class="bg-dark text-white p-3 rounded font-monospace small mb-3"><code>video {
+  /* Style here */
+}</code></pre>
+        
+        <div class="d-flex gap-2">
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Hint</summary>
+            <div class="interactive-body">
+              <p class="mb-0 text-secondary">Use max-width: 100% and height: auto.</p>
+            </div>
+          </details>
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Solution</summary>
+            <div class="interactive-body">
+              <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}</code></pre>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. Interview Questions -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">9. Tech Screening Question</h3>
+      <details class="interactive-card">
+        <summary>Q: How does the CSS clamp() function work for responsive typography?</summary>
+        <div class="interactive-body">
+          <h6 class="fw-bold text-success">Answer:</h6>
+          <p>The clamp() function takes three arguments: a minimum value, a preferred value (usually viewport units like 4vw), and a maximum value. The browser calculates the preferred value dynamically. If it drops below the minimum, the browser locks it to the minimum; if it exceeds the maximum, it locks it to the maximum.</p>
+          <h6 class="fw-bold text-indigo-600">Explanation:</h6>
+          <p class="small">This allows font sizes to scale smoothly with screen width without needing media queries.</p>
+          <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>font-size: clamp(1rem, 3vw, 2.5rem) (ranges from 16px to 40px depending on screen width).</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <!-- 15. Quick Revision -->
+    <section class="tw-mb-8 bg-warning bg-opacity-10 border border-warning border-opacity-20 tw-p-4 tw-rounded-lg">
+      <h4 class="fw-bold text-warning-emphasis fs-5">10. Quick Revision</h4>
+      <p class="mb-0 small">Responsive media uses max-width and auto height limits. Typography uses relative sizing units (rem, vw) or clamp() to adapt text sizing to screen width.</p>
+    </section>
+
+    <!-- 16 & 17. Previous / Next navigation -->
+    <div class="d-flex justify-content-between pt-4 border-top">
+      <a href="media-queries.html" class="btn btn-outline-secondary d-flex align-items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Previous: Media Queries & Breakpoints
+       </a>
+      <a href="responsive-forms-testing.html" class="btn btn-primary d-flex align-items-center gap-1">
+        Next: Responsive Forms & Viewport Testing
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+       </a>
+    </div>
+  
+        </main>
+      </div>
+    
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white-50 py-5 mt-auto border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="text-white fw-bold d-flex align-items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            WebLearn Hub
+          </h5>
+          <p class="small mt-2">Master Web Basics, HTML5, CSS3, Bootstrap 5, Tailwind CSS, and JavaScript with interactive examples and logic problem solvers.</p>
+          <p class="small text-white-50">Tagline: <em>Learn. Code. Build. Share.</em></p>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Curriculum</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../web-basics/index.html" class="text-white-50 text-decoration-none">Web Basics</a></li>
+            <li><a href="../html/index.html" class="text-white-50 text-decoration-none">HTML5 Basics</a></li>
+            <li><a href="../css/index.html" class="text-white-50 text-decoration-none">CSS3 Styles</a></li>
+            <li><a href="index.html" class="text-white-50 text-decoration-none">Responsive Design</a></li>
+            <li><a href="../bootstrap/index.html" class="text-white-50 text-decoration-none">Bootstrap 5</a></li>
+            <li><a href="../tailwind/index.html" class="text-white-50 text-decoration-none">Tailwind CSS</a></li>
+            <li><a href="../javascript/index.html" class="text-warning text-decoration-none fw-bold">JavaScript (New)</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Resources</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../javascript/logical-problems.html" class="text-white-50 text-decoration-none">JS Logical 10</a></li>
+            <li><a href="../pages/practice.html" class="text-white-50 text-decoration-none">Practice Sets</a></li>
+            <li><a href="../pages/projects.html" class="text-white-50 text-decoration-none">Projects</a></li>
+            <li><a href="../pages/quizzes.html" class="text-white-50 text-decoration-none">Quizzes</a></li>
+            <li><a href="../pages/articles.html" class="text-white-50 text-decoration-none">Articles</a></li>
+            <li><a href="../pages/cheat-sheets.html" class="text-white-50 text-decoration-none">Cheat Sheets</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-white fw-bold">Company & Legal</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../pages/about.html" class="text-white-50 text-decoration-none">About Hub</a></li>
+            <li><a href="../pages/contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="text-center small">
+        © 2026 WebLearn Hub. Complete Frontend & JavaScript Learning System. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

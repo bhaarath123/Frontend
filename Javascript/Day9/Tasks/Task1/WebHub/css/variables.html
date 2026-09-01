@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn CSS Variables (Custom Properties) syntax, advantages, common mistakes, and practice questions.">
+  <title>CSS Variables (Custom Properties) | WebLearn Hub</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Compiled style.css (includes Tailwind utilities + prefixing) -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Inline CSS Checkbox Hack for No-JS Mobile Navbar toggling */
+    #mobile-nav-checkbox:checked ~ #navbarCollapseContent {
+      display: block !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Responsive Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        WebLearn Hub
+      </a>
+      
+      <!-- Pure CSS toggle using checkbox (Zero JS) -->
+      <input type="checkbox" id="mobile-nav-checkbox" class="d-none">
+      <label for="mobile-nav-checkbox" class="navbar-toggler" role="button" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </label>
+
+      <div class="collapse navbar-collapse" id="navbarCollapseContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+          
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../index.html">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../html/index.html">HTML5</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../css/index.html">CSS3</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../bootstrap/index.html">Bootstrap</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../tailwind/index.html">Tailwind</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../examples/html-examples.html">Examples</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../practice/html-practice.html">Practice</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../projects/html-projects.html">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../articles/index.html">Articles</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../cheat-sheets/index.html">Cheat Sheets</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../interview/index.html">Interviews</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../about.html">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../contact.html">Contact</a>
+      </li>
+    
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input class="form-control me-2 bg-secondary text-white border-0" type="search" placeholder="Search lessons..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  
+      <div class="tutorial-wrapper">
+        <aside class="sidebar-nav">
+          
+    <div class="mb-4">
+      <h5 class="fw-bold px-3 mb-3 text-secondary text-uppercase small tracking-wider">CSS Topics</h5>
+      <nav class="nav flex-column">
+        <a href="../css/index.html" class="nav-link ">
+          Course Overview
+        </a>
+        
+      <a href="../css/introduction.html" class="nav-link ">
+        CSS Introduction
+      </a>
+    
+      <a href="../css/selectors.html" class="nav-link ">
+        CSS Selectors
+      </a>
+    
+      <a href="../css/colors.html" class="nav-link ">
+        CSS Colors & Backgrounds
+      </a>
+    
+      <a href="../css/box-model.html" class="nav-link ">
+        CSS Box Model
+      </a>
+    
+      <a href="../css/flexbox.html" class="nav-link ">
+        CSS Flexbox
+      </a>
+    
+      <a href="../css/grid.html" class="nav-link ">
+        CSS Grid Layout
+      </a>
+    
+      <a href="../css/responsive.html" class="nav-link ">
+        CSS Responsive Design & Media Queries
+      </a>
+    
+      <a href="../css/animations.html" class="nav-link ">
+        CSS Transitions & Animations
+      </a>
+    
+      <a href="../css/variables.html" class="nav-link active">
+        CSS Variables (Custom Properties)
+      </a>
+    
+      </nav>
+    </div>
+  
+        </aside>
+        <main class="content-area">
+          
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html">CSS Course</a></li>
+        <li class="breadcrumb-item active" aria-current="page">CSS Variables (Custom Properties)</li>
+      </ol>
+    </nav>
+
+    <h1 class="fw-bold tw-text-4xl tw-text-slate-900 dark:tw-text-white tw-mb-4">CSS Variables (Custom Properties)</h1>
+    
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">What is CSS Variables (Custom Properties)?</h3>
+      <p class="lead">CSS Variables (officially Custom Properties) are entities defined by CSS authors that contain specific values to be reused throughout a document. They are declared using two dashes (--) and accessed using the var() function.</p>
+    </section>
+
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">Why is it used?</h3>
+      <p>Variables keep stylesheets organized. Instead of copy-pasting HEX colors hundreds of times, declaring a single variable allows you to change theme colors across the entire site by editing one value.</p>
+    </section>
+
+    <!-- Side-by-Side Editor Preview -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">Code & Output Example</h3>
+      
+      <div class="editor-container">
+        <div class="editor-header">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+          <div class="editor-title">css editor</div>
+        </div>
+        <div class="editor-body">
+          <pre class="code-panel"><code>&lt;div class=&quot;var-demo&quot;&gt;
+    &lt;h4&gt;Dynamic CSS Variables&lt;/h4&gt;
+    &lt;p&gt;Using root configurations for layout sizing.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          <div class="output-panel">
+            <h6 class="tw-text-xs tw-text-slate-400 tw-font-bold tw-uppercase tw-mb-2">Visual Preview</h6>
+            <div class="border tw-p-4 tw-rounded bg-white text-dark">
+              <div style="font-family: sans-serif; background-color: #e0f2fe; border-left: 6px solid #14b8a6; padding: 20px; border-radius: 4px; color: #0369a1;">
+    <h4 style="margin: 0 0 5px 0;">Dynamic CSS Variables</h4>
+    <p style="margin: 0; font-size: 14px;">Using root configurations for layout sizing.</p>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">Code Explanation</h3>
+      <ul class="tw-list-disc tw-pl-5 tw-space-y-2">
+        <li>:root: Pseudo-class that targets the highest root element (usually <html>), making variables global.</li><li>--variable-name: Declares a custom property. Must start with two dashes.</li><li>var(--name, fallback): Retrieves the value, with an optional fallback color value if the variable is not defined.</li>
+      </ul>
+    </section>
+
+    <div class="row g-4 tw-mb-8">
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-success fs-5">Important Points</h4>
+          <ul class="small mb-0 mt-2">
+            <li>CSS variables are dynamic: they can be updated in real-time using media queries or custom theme class overrides.</li><li>CSS variables inherit: a child element can override a parent's variable value locally.</li><li>Variables are case-sensitive.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-danger fs-5">Common Mistakes</h4>
+          <ul class="small mb-0 mt-2">
+            <li>Declaring variables without the double-dash prefix (e.g. primary-color: blue instead of --primary-color: blue).</li><li>Confusing CSS variables with Sass/SCSS variables, which are compiled offline and cannot change dynamically in the browser.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="tw-mb-8 bg-info bg-opacity-10 border border-info border-opacity-20 tw-p-4 tw-rounded-lg">
+      <h4 class="fw-bold text-info-emphasis fs-5">Real-World Usage</h4>
+      <p class="mb-0 small">Most modern themes, including dark mode implementations, are powered by CSS variables. Changing the variables inside a body.dark selector automatically swaps the colors of all elements on the page.</p>
+    </section>
+
+    <!-- Practice Exercise Section -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">Practice Exercise</h3>
+      <div class="card border-primary p-4 bg-white text-dark">
+        <h5 class="fw-bold">Declare a local variable '--text-size' with value '22px' inside a '.large-text' class, and apply it to the font-size of that selector.</h5>
+        <p class="small text-muted mt-1">Objective: Declare and load local CSS custom properties.</p>
+        <p class="small">Instructions: Apply local variable declaration and var load.</p>
+        
+        <pre class="bg-dark text-white p-3 rounded font-monospace small mb-3"><code>.large-text {
+    /* Style here */
+}</code></pre>
+        
+        <div class="d-flex gap-2">
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Hint</summary>
+            <div class="interactive-body">
+              <p class="mb-0 text-secondary">Use --text-size: 22px; and font-size: var(--text-size);.</p>
+            </div>
+          </details>
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Solution</summary>
+            <div class="interactive-body">
+              <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>.large-text {
+    --text-size: 22px;
+    font-size: var(--text-size);
+}</code></pre>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interview Prep Section -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">Interview Question</h3>
+      <details class="interactive-card">
+        <summary>Q: How do CSS Custom Properties differ from preprocessor variables (like Sass)?</summary>
+        <div class="interactive-body">
+          <h6 class="fw-bold text-success">Answer:</h6>
+          <p>CSS Custom Properties (CSS variables) are native browser properties. They are dynamic, meaning they can change in the browser (e.g., inside media queries or theme overrides) and can be accessed by scripts. Preprocessor variables (like Sass or Less) are compiled into static CSS values before shipping to the browser, meaning they do not exist in runtime.</p>
+          <h6 class="fw-bold text-indigo-600">Explanation:</h6>
+          <p class="small">Native CSS variables are much more powerful for building run-time themes like Dark Mode.</p>
+          <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>Sass: $color: red; (outputs &#039;color: red&#039; to browser). Native: --color: red; (retains var reference in browser stylesheet).</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <!-- Previous / Next navigation -->
+    <div class="d-flex justify-content-between pt-4 border-top">
+      <a href="animations.html" class="btn btn-outline-secondary d-flex align-items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Previous: CSS Transitions & Animations
+       </a>
+      <div></div>
+    </div>
+  
+        </main>
+      </div>
+    
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white-50 py-5 mt-auto border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="text-white fw-bold d-flex align-items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            WebLearn Hub
+          </h5>
+          <p class="small mt-2">Master HTML5, CSS3, Bootstrap 5 and Tailwind CSS through hands-on static code walkthroughs.</p>
+          <p class="small text-white-50">Tagline: <em>Learn. Code. Build. Share.</em></p>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Tutorials</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../html/index.html" class="text-white-50 text-decoration-none hover:text-white">HTML5 Basics</a></li>
+            <li><a href="../css/index.html" class="text-white-50 text-decoration-none hover:text-white">CSS3 Styles</a></li>
+            <li><a href="../bootstrap/index.html" class="text-white-50 text-decoration-none hover:text-white">Bootstrap 5</a></li>
+            <li><a href="../tailwind/index.html" class="text-white-50 text-decoration-none hover:text-white">Tailwind CSS</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Resources</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../examples/html-examples.html" class="text-white-50 text-decoration-none hover:text-white">Examples</a></li>
+            <li><a href="../practice/html-practice.html" class="text-white-50 text-decoration-none hover:text-white">Practice Sets</a></li>
+            <li><a href="../projects/html-projects.html" class="text-white-50 text-decoration-none hover:text-white">Projects</a></li>
+            <li><a href="../articles/index.html" class="text-white-50 text-decoration-none hover:text-white">Articles</a></li>
+            <li><a href="../cheat-sheets/index.html" class="text-white-50 text-decoration-none hover:text-white">Cheat Sheets</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-white fw-bold">Company</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../about.html" class="text-white-50 text-decoration-none hover:text-white">About Hub</a></li>
+            <li><a href="../contact.html" class="text-white-50 text-decoration-none hover:text-white">Contact Us</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover:text-white">Privacy Policy</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover:text-white">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="text-center small">
+        © 2026 WebLearn Hub. Built strictly with frontend technologies. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

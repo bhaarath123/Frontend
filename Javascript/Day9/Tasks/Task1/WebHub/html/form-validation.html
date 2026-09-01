@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn Form Attributes & Validation syntax, properties, mistakes, and practice questions.">
+  <title>Form Attributes & Validation | WebLearn Hub</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Compiled style.css (includes Tailwind utilities + prefixing) -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Inline CSS Checkbox Hack for Mobile Navbar toggling */
+    #mobile-nav-checkbox:checked ~ #navbarCollapseContent {
+      display: block !important;
+    }
+    /* Hover Dropdown Menu triggers */
+    .nav-item-dropdown {
+      position: relative;
+    }
+    .dropdown-menu-custom {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #212529;
+      border: 1px solid #343a40;
+      padding: 0.5rem 0;
+      z-index: 1000;
+      min-width: 200px;
+      border-radius: 0.25rem;
+      list-style: none;
+    }
+    .dropdown-menu-custom a:hover {
+      background-color: #4f46e5;
+    }
+    .nav-item-dropdown:hover .dropdown-menu-custom {
+      display: block;
+    }
+    .interactive-runner-card {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 16px;
+      color: #e2e8f0;
+    }
+    .runner-screen {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 6px;
+      padding: 12px;
+      font-family: 'Fira Code', monospace;
+      color: #38bdf8;
+      min-height: 48px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Responsive Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        WebLearn Hub
+      </a>
+      
+      <!-- Mobile toggle using checkbox -->
+      <input type="checkbox" id="mobile-nav-checkbox" class="d-none">
+      <label for="mobile-nav-checkbox" class="navbar-toggler" role="button" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </label>
+
+      <div class="collapse navbar-collapse" id="navbarCollapseContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+          
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../index.html">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../javascript/index.html">JavaScript</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../javascript/logical-problems.html">Logic 10</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/roadmap.html">Roadmap</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/practice.html">Practice</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/projects.html">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/quizzes.html">Quizzes</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/articles.html">Articles</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/interview.html">Interviews</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/cheat-sheets.html">Cheat Sheets</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/about.html">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/contact.html">Contact</a>
+      </li>
+    
+          <!-- Learn hover dropdown -->
+          <li class="nav-item nav-item-dropdown">
+            <a class="nav-link dropdown-toggle text-white-50" href="#" role="button">All Modules</a>
+            <ul class="dropdown-menu-custom shadow">
+              <li><a class="dropdown-item text-white" style="font-size: 13px;" href="../web-basics/index.html">Web Basics</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="index.html">HTML5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../css/index.html">CSS3</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../responsive/index.html">Responsive Design</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../bootstrap/index.html">Bootstrap 5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../tailwind/index.html">Tailwind CSS</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../javascript/index.html">JavaScript (New!)</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../javascript/logical-problems.html">JS Logical 10 (New!)</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input class="form-control me-2 bg-secondary text-white border-0" type="search" placeholder="Search JS & web topics..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  
+      <div class="tutorial-wrapper">
+        <aside class="sidebar-nav">
+          
+    <div class="mb-4">
+      <h5 class="fw-bold px-3 mb-3 text-secondary text-uppercase small tracking-wider">HTML Outline</h5>
+      <nav class="nav flex-column">
+        <a href="index.html" class="nav-link ">
+          Course Overview
+        </a>
+        
+      <a href="introduction.html" class="nav-link ">
+        HTML Introduction & Syntax
+      </a>
+    
+      <a href="structure.html" class="nav-link ">
+        Document Structure & Meta Tags
+      </a>
+    
+      <a href="headings-text.html" class="nav-link ">
+        Headings, Paragraphs & Text Formatting
+      </a>
+    
+      <a href="links.html" class="nav-link ">
+        Links & Relative Paths
+      </a>
+    
+      <a href="images.html" class="nav-link ">
+        HTML Images & Semantics
+      </a>
+    
+      <a href="lists.html" class="nav-link ">
+        HTML Lists (ul, ol, dl)
+      </a>
+    
+      <a href="tables.html" class="nav-link ">
+        HTML Tables & Layout grids
+      </a>
+    
+      <a href="forms.html" class="nav-link ">
+        HTML Forms & User Inputs
+      </a>
+    
+      <a href="input-types.html" class="nav-link ">
+        HTML Input Types
+      </a>
+    
+      <a href="form-validation.html" class="nav-link active">
+        Form Attributes & Validation
+      </a>
+    
+      <a href="semantic.html" class="nav-link ">
+        Semantic HTML5 Elements
+      </a>
+    
+      <a href="multimedia.html" class="nav-link ">
+        HTML5 Multimedia & Embeds
+      </a>
+    
+      <a href="advanced-html.html" class="nav-link ">
+        Advanced HTML, a11y & SEO
+      </a>
+    
+        
+      </nav>
+    </div>
+  
+        </aside>
+        <main class="content-area">
+          
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html">HTML</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Form Attributes & Validation</li>
+      </ol>
+    </nav>
+
+    <!-- 1. Topic Title -->
+    <h1 class="fw-bold tw-text-4xl tw-text-slate-900 dark:tw-text-white tw-mb-4">Form Attributes & Validation</h1>
+    
+    <!-- 2. What is it? -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">1. What is it?</h3>
+      <p class="lead">Form attributes define validation rules, formatting guidelines, and behavior limits (required, placeholder, disabled, pattern, min/max) that browsers validate automatically.</p>
+    </section>
+
+    <!-- 3. Why is it important? -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">2. Why is it important?</h3>
+      <p>Validating inputs server-side is secure, but validation on the client using HTML5 attributes provides users with instant feedback if inputs are incomplete.</p>
+    </section>
+
+    <!-- 4. Syntax & 5. Basic Example -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">3. Syntax & Basic Example</h3>
+      <pre class="bg-dark text-white p-3 rounded font-monospace small mb-2"><code>&lt;input type=&quot;text&quot; required minlength=&quot;5&quot; pattern=&quot;[A-Z]+&quot;&gt;</code></pre>
+      <p class="small text-muted mt-2"><strong>Basic description:</strong> <code>A required number field: `&lt;input type=&quot;number&quot; min=&quot;1&quot; max=&quot;10&quot; required&gt;`.</code></p>
+    </section>
+
+    <!-- 6. Code Example & 7. Expected Output -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">4. Code & Interactive Rendered Output</h3>
+      
+      <div class="editor-container">
+        <div class="editor-header">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+          <div class="editor-title">html live sandbox</div>
+        </div>
+        <div class="editor-body">
+          <pre class="code-panel"><code>&lt;form action=&quot;#&quot; style=&quot;font-family: sans-serif; max-width: 320px;&quot;&gt;
+    &lt;div style=&quot;margin-bottom: 10px;&quot;&gt;
+        &lt;label for=&quot;val_user&quot; style=&quot;display: block; font-size: 13px;&quot;&gt;Username (Required, min 5 chars):&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;val_user&quot; required minlength=&quot;5&quot; style=&quot;width: 100%; padding: 4px;&quot; placeholder=&quot;Min 5 letters&quot;&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;margin-bottom: 10px;&quot;&gt;
+        &lt;label for=&quot;val_age&quot; style=&quot;display: block; font-size: 13px;&quot;&gt;Age (18 - 99):&lt;/label&gt;
+        &lt;input type=&quot;number&quot; id=&quot;val_age&quot; min=&quot;18&quot; max=&quot;99&quot; style=&quot;width: 100%; padding: 4px;&quot;&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;submit&quot; style=&quot;width: 100%; background: #2563eb; color: white; padding: 6px; border: none; font-weight: bold; border-radius: 4px;&quot;&gt;Validate Form&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+          <div class="output-panel">
+            <h6 class="tw-text-xs tw-text-slate-400 tw-font-bold tw-uppercase tw-mb-2">Live Output & Execution Preview</h6>
+            <div class="border tw-p-4 tw-rounded bg-white text-dark">
+              <div style="font-family: sans-serif; display: flex; justify-content: center;">
+    <form style="max-width: 280px; width: 100%; padding: 15px; border: 1px solid #e2e8f0; border-radius: 6px; background: #fff;">
+        <div style="margin-bottom: 8px;">
+            <label style="display: block; font-weight: bold; font-size: 12px; color: #1e3a8a; margin-bottom: 4px;">Username (Min 5):</label>
+            <input type="text" required minlength="5" style="width: 100%; padding: 4px; font-size: 12px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box;" placeholder="Min 5 letters">
+        </div>
+        <div style="margin-bottom: 8px;">
+            <label style="display: block; font-weight: bold; font-size: 12px; color: #1e3a8a; margin-bottom: 4px;">Age (18-99):</label>
+            <input type="number" min="18" max="99" style="width: 100%; padding: 4px; font-size: 12px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box;">
+        </div>
+        <button type="submit" style="width: 100%; background: #6366f1; color: white; border: none; padding: 6px; font-weight: bold; border-radius: 4px; font-size: 12px; cursor: pointer;">Validate Form</button>
+    </form>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="small text-muted mt-2"><strong>Expected Layout / Behavior:</strong> A form layout that displays error tooltips if you submit empty fields or input ages under 18.</p>
+    </section>
+
+    <!-- 8. Line-by-Line Explanation -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">5. Line-by-Line Explanation</h3>
+      <ul class="tw-list-disc tw-pl-5 tw-space-y-2">
+        <li>required: Enforces validation, showing browser errors if submitted empty.</li><li>minlength='5': Displays error if characters typed is less than five.</li><li>min='18' / max='99': Enforces numerical boundaries on number inputs.</li>
+      </ul>
+    </section>
+
+    <!-- 9. Important Properties/Tags/Classes -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">6. Key Properties, Methods & Syntax</h3>
+      <table class="table table-bordered table-striped small">
+        <thead>
+          <tr class="table-primary">
+            <th>Property / Method / Tag</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+    <tr>
+      <td class="font-monospace fw-bold text-indigo-600">disabled</td>
+      <td>Prevents user interaction and excludes the field value from form submission.</td>
+    </tr>
+  
+    <tr>
+      <td class="font-monospace fw-bold text-indigo-600">readonly</td>
+      <td>Allows viewing and copying the field value, but prevents modification.</td>
+    </tr>
+  
+    <tr>
+      <td class="font-monospace fw-bold text-indigo-600">pattern</td>
+      <td>Regular expression (Regex) constraint that input values must match to submit.</td>
+    </tr>
+  
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 10. Real-World Use -->
+    <section class="tw-mb-8 bg-info bg-opacity-10 border border-info border-opacity-20 tw-p-4 tw-rounded-lg">
+      <h4 class="fw-bold text-info-emphasis fs-5">7. Real-World Use</h4>
+      <p class="mb-0 small">Credit card form inputs use max-length and patterns to ensure card numbers match standard lengths before sending data.</p>
+    </section>
+
+    <!-- 11. Common Mistakes & 12. Best Practices -->
+    <div class="row g-4 tw-mb-8">
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-success fs-5">Best Practices</h4>
+          <ul class="small mb-0 mt-2">
+            <li>Always set placeholders as formatting guides, not label replacements.</li><li>Configure autocomplete='on' or autocomplete='email' to speed up form completion.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-danger fs-5">Common Mistakes</h4>
+          <ul class="small mb-0 mt-2">
+            <li>Relying solely on client-side HTML5 validation. Hackers can bypass browser validations, so backend validation is required for security.</li><li>Setting values that conflict (e.g. min larger than max).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13. Practice Exercise -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">8. Interactive Practice Challenge</h3>
+      <div class="card border-primary p-4 bg-white text-dark">
+        <h5 class="fw-bold">Create a code text field that is read-only (readonly) and displays a preset code value 'WL-9928'.</h5>
+        <p class="small text-muted mt-1">Objective: Apply read-only attributes.</p>
+        <p class="small">Instructions: Combine value and readonly attributes on an input.</p>
+        
+        <pre class="bg-dark text-white p-3 rounded font-monospace small mb-3"><code>&lt;!-- Write read-only field --&gt;</code></pre>
+        
+        <div class="d-flex gap-2">
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Hint</summary>
+            <div class="interactive-body">
+              <p class="mb-0 text-secondary">Use attributes value=&#039;WL-9928&#039; and readonly.</p>
+            </div>
+          </details>
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Solution</summary>
+            <div class="interactive-body">
+              <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;input type=&quot;text&quot; value=&quot;WL-9928&quot; readonly&gt;</code></pre>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. Interview Questions -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">9. Tech Screening Question</h3>
+      <details class="interactive-card">
+        <summary>Q: What is the difference between the disabled and readonly attributes?</summary>
+        <div class="interactive-body">
+          <h6 class="fw-bold text-success">Answer:</h6>
+          <p>The disabled attribute prevents user interaction, dims the element visually, and excludes its value from the form payload when submitted. The readonly attribute prevents users from modifying the value, but allows them to highlight and copy it, and includes the value in the form payload when submitted.</p>
+          <h6 class="fw-bold text-indigo-600">Explanation:</h6>
+          <p class="small">Use readonly for values that are relevant to the submission; use disabled to lock options completely.</p>
+          <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>Readonly: User account ID. Disabled: Inactive checkbox.</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <!-- 15. Quick Revision -->
+    <section class="tw-mb-8 bg-warning bg-opacity-10 border border-warning border-opacity-20 tw-p-4 tw-rounded-lg">
+      <h4 class="fw-bold text-warning-emphasis fs-5">10. Quick Revision</h4>
+      <p class="mb-0 small">HTML5 validation attributes (required, min, max, pattern, readonly, disabled) validate user inputs inside the browser before sending data to the server.</p>
+    </section>
+
+    <!-- 16 & 17. Previous / Next navigation -->
+    <div class="d-flex justify-content-between pt-4 border-top">
+      <a href="input-types.html" class="btn btn-outline-secondary d-flex align-items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Previous: HTML Input Types
+       </a>
+      <a href="semantic.html" class="btn btn-primary d-flex align-items-center gap-1">
+        Next: Semantic HTML5 Elements
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+       </a>
+    </div>
+  
+        </main>
+      </div>
+    
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white-50 py-5 mt-auto border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="text-white fw-bold d-flex align-items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            WebLearn Hub
+          </h5>
+          <p class="small mt-2">Master Web Basics, HTML5, CSS3, Bootstrap 5, Tailwind CSS, and JavaScript with interactive examples and logic problem solvers.</p>
+          <p class="small text-white-50">Tagline: <em>Learn. Code. Build. Share.</em></p>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Curriculum</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../web-basics/index.html" class="text-white-50 text-decoration-none">Web Basics</a></li>
+            <li><a href="index.html" class="text-white-50 text-decoration-none">HTML5 Basics</a></li>
+            <li><a href="../css/index.html" class="text-white-50 text-decoration-none">CSS3 Styles</a></li>
+            <li><a href="../responsive/index.html" class="text-white-50 text-decoration-none">Responsive Design</a></li>
+            <li><a href="../bootstrap/index.html" class="text-white-50 text-decoration-none">Bootstrap 5</a></li>
+            <li><a href="../tailwind/index.html" class="text-white-50 text-decoration-none">Tailwind CSS</a></li>
+            <li><a href="../javascript/index.html" class="text-warning text-decoration-none fw-bold">JavaScript (New)</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Resources</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../javascript/logical-problems.html" class="text-white-50 text-decoration-none">JS Logical 10</a></li>
+            <li><a href="../pages/practice.html" class="text-white-50 text-decoration-none">Practice Sets</a></li>
+            <li><a href="../pages/projects.html" class="text-white-50 text-decoration-none">Projects</a></li>
+            <li><a href="../pages/quizzes.html" class="text-white-50 text-decoration-none">Quizzes</a></li>
+            <li><a href="../pages/articles.html" class="text-white-50 text-decoration-none">Articles</a></li>
+            <li><a href="../pages/cheat-sheets.html" class="text-white-50 text-decoration-none">Cheat Sheets</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-white fw-bold">Company & Legal</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../pages/about.html" class="text-white-50 text-decoration-none">About Hub</a></li>
+            <li><a href="../pages/contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="text-center small">
+        © 2026 WebLearn Hub. Complete Frontend & JavaScript Learning System. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

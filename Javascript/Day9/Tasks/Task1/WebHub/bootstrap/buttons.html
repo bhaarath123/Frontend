@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn Bootstrap Buttons syntax, advantages, common mistakes, and practice questions.">
+  <title>Bootstrap Buttons | WebLearn Hub</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Compiled style.css (includes Tailwind utilities + prefixing) -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Inline CSS Checkbox Hack for No-JS Mobile Navbar toggling */
+    #mobile-nav-checkbox:checked ~ #navbarCollapseContent {
+      display: block !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Responsive Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        WebLearn Hub
+      </a>
+      
+      <!-- Pure CSS toggle using checkbox (Zero JS) -->
+      <input type="checkbox" id="mobile-nav-checkbox" class="d-none">
+      <label for="mobile-nav-checkbox" class="navbar-toggler" role="button" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </label>
+
+      <div class="collapse navbar-collapse" id="navbarCollapseContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+          
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../index.html">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../html/index.html">HTML5</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../css/index.html">CSS3</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link active fw-bold text-white" href="../bootstrap/index.html">Bootstrap</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../tailwind/index.html">Tailwind</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../examples/html-examples.html">Examples</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../practice/html-practice.html">Practice</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../projects/html-projects.html">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../articles/index.html">Articles</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../cheat-sheets/index.html">Cheat Sheets</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../interview/index.html">Interviews</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../about.html">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../contact.html">Contact</a>
+      </li>
+    
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input class="form-control me-2 bg-secondary text-white border-0" type="search" placeholder="Search lessons..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  
+      <div class="tutorial-wrapper">
+        <aside class="sidebar-nav">
+          
+    <div class="mb-4">
+      <h5 class="fw-bold px-3 mb-3 text-secondary text-uppercase small tracking-wider">BOOTSTRAP Topics</h5>
+      <nav class="nav flex-column">
+        <a href="../bootstrap/index.html" class="nav-link ">
+          Course Overview
+        </a>
+        
+      <a href="../bootstrap/introduction.html" class="nav-link ">
+        Bootstrap Introduction
+      </a>
+    
+      <a href="../bootstrap/containers.html" class="nav-link ">
+        Bootstrap Containers
+      </a>
+    
+      <a href="../bootstrap/grid.html" class="nav-link ">
+        Bootstrap Grid System
+      </a>
+    
+      <a href="../bootstrap/buttons.html" class="nav-link active">
+        Bootstrap Buttons
+      </a>
+    
+      <a href="../bootstrap/cards.html" class="nav-link ">
+        Bootstrap Cards
+      </a>
+    
+      <a href="../bootstrap/navbar.html" class="nav-link ">
+        Bootstrap Navbar
+      </a>
+    
+      <a href="../bootstrap/forms.html" class="nav-link ">
+        Bootstrap Forms
+      </a>
+    
+      <a href="../bootstrap/components.html" class="nav-link ">
+        Bootstrap Core Components
+      </a>
+    
+      <a href="../bootstrap/utilities.html" class="nav-link ">
+        Bootstrap Utilities
+      </a>
+    
+      </nav>
+    </div>
+  
+        </aside>
+        <main class="content-area">
+          
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html">BOOTSTRAP Course</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Bootstrap Buttons</li>
+      </ol>
+    </nav>
+
+    <h1 class="fw-bold tw-text-4xl tw-text-slate-900 dark:tw-text-white tw-mb-4">Bootstrap Buttons</h1>
+    
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">What is Bootstrap Buttons?</h3>
+      <p class="lead">Bootstrap buttons are styled elements with preset actions. Standard buttons are styled with the base class .btn, combined with coloring classes (.btn-primary, .btn-secondary, etc.) and size variations.</p>
+    </section>
+
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">Why is it used?</h3>
+      <p>Buttons are primary UI triggers. Having predefined, unified styles for main actions, warnings, details, and disabled states ensures UI consistency.</p>
+    </section>
+
+    <!-- Side-by-Side Editor Preview -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">Code & Output Example</h3>
+      
+      <div class="editor-container">
+        <div class="editor-header">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+          <div class="editor-title">bootstrap editor</div>
+        </div>
+        <div class="editor-body">
+          <pre class="code-panel"><code>&lt;div class=&quot;d-flex gap-2&quot;&gt;
+    &lt;button class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+    &lt;button class=&quot;btn btn-outline-danger&quot;&gt;Outline Danger&lt;/button&gt;
+    &lt;button class=&quot;btn btn-warning btn-sm&quot;&gt;Small Warning&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+          <div class="output-panel">
+            <h6 class="tw-text-xs tw-text-slate-400 tw-font-bold tw-uppercase tw-mb-2">Visual Preview</h6>
+            <div class="border tw-p-4 tw-rounded bg-white text-dark">
+              <div style="font-family: sans-serif; display: flex; gap: 8px;">
+    <button style="background-color: #0d6efd; color: white; border: none; padding: 0.375rem 0.75rem; border-radius: 0.25rem; font-weight: bold; cursor: pointer;">Primary</button>
+    <button style="background-color: transparent; color: #dc3545; border: 1px solid #dc3545; padding: 0.375rem 0.75rem; border-radius: 0.25rem; font-weight: bold; cursor: pointer;">Outline Danger</button>
+    <button style="background-color: #ffc107; color: #212529; border: none; padding: 0.25rem 0.5rem; border-radius: 0.2rem; font-size: 0.875rem; cursor: pointer;">Small Warning</button>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">Code Explanation</h3>
+      <ul class="tw-list-disc tw-pl-5 tw-space-y-2">
+        <li>btn: The base class. Removes borders, adds block padding, handles cursor pointers, and sets default alignments.</li><li>btn-primary, btn-outline-danger: Pre-styled color classes for primary links and outlines.</li><li>btn-sm, btn-lg: Modifies element sizes.</li>
+      </ul>
+    </section>
+
+    <div class="row g-4 tw-mb-8">
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-success fs-5">Important Points</h4>
+          <ul class="small mb-0 mt-2">
+            <li>The .btn class can be applied to both <button>, <a>, and <input> tags.</li><li>Disable actions by appending the disabled attribute to a button or the .disabled class to an anchor.</li><li>Anchor links styled as buttons must include role='button' for screen readers.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-danger fs-5">Common Mistakes</h4>
+          <ul class="small mb-0 mt-2">
+            <li>Using button classes without the primary .btn base class (e.g. class='btn-primary'), which removes all spacing and layout styling.</li><li>Applying button classes to random elements like div or span instead of native buttons or anchors, breaking keyboard access.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="tw-mb-8 bg-info bg-opacity-10 border border-info border-opacity-20 tw-p-4 tw-rounded-lg">
+      <h4 class="fw-bold text-info-emphasis fs-5">Real-World Usage</h4>
+      <p class="mb-0 small">Sign-up forms, navigation buttons, e-commerce buy buttons, and card links all use these buttons. In custom themes, developers change brand colors by overriding Bootstrap variables.</p>
+    </section>
+
+    <!-- Practice Exercise Section -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">Practice Exercise</h3>
+      <div class="card border-primary p-4 bg-white text-dark">
+        <h5 class="fw-bold">Create a large, block-style outline button styled with primary theme coloring (btn-outline-primary).</h5>
+        <p class="small text-muted mt-1">Objective: Combine size and design outline classes.</p>
+        <p class="small">Instructions: Apply btn, btn-outline-primary, and btn-lg to an anchor.</p>
+        
+        <pre class="bg-dark text-white p-3 rounded font-monospace small mb-3"><code>&lt;!-- Create button here --&gt;</code></pre>
+        
+        <div class="d-flex gap-2">
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Hint</summary>
+            <div class="interactive-body">
+              <p class="mb-0 text-secondary">Use class='btn btn-outline-primary btn-lg'.</p>
+            </div>
+          </details>
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Solution</summary>
+            <div class="interactive-body">
+              <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-outline-primary btn-lg&quot; role=&quot;button&quot;&gt;Large Primary Link&lt;/a&gt;</code></pre>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interview Prep Section -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">Interview Question</h3>
+      <details class="interactive-card">
+        <summary>Q: Which HTML elements can you apply Bootstrap button classes to, and what role accessibility is needed?</summary>
+        <div class="interactive-body">
+          <h6 class="fw-bold text-success">Answer:</h6>
+          <p>You can apply button classes (.btn, .btn-*) to <button> elements, <a> (anchor) elements, and <input> tags (like input type='submit'). When styling an anchor <a> as a button, you must add role='button' to tell screen readers that the link behaves like a button.</p>
+          <h6 class="fw-bold text-indigo-600">Explanation:</h6>
+          <p class="small">Applying the correct role is a core requirement for web accessibility compliance.</p>
+          <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;a href=&#039;#&#039; class=&#039;btn btn-success&#039; role=&#039;button&#039;&gt;Save&lt;/a&gt;</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <!-- Previous / Next navigation -->
+    <div class="d-flex justify-content-between pt-4 border-top">
+      <a href="grid.html" class="btn btn-outline-secondary d-flex align-items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Previous: Bootstrap Grid System
+       </a>
+      <a href="cards.html" class="btn btn-primary d-flex align-items-center gap-1">
+        Next: Bootstrap Cards
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+       </a>
+    </div>
+  
+        </main>
+      </div>
+    
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white-50 py-5 mt-auto border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="text-white fw-bold d-flex align-items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            WebLearn Hub
+          </h5>
+          <p class="small mt-2">Master HTML5, CSS3, Bootstrap 5 and Tailwind CSS through hands-on static code walkthroughs.</p>
+          <p class="small text-white-50">Tagline: <em>Learn. Code. Build. Share.</em></p>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Tutorials</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../html/index.html" class="text-white-50 text-decoration-none hover:text-white">HTML5 Basics</a></li>
+            <li><a href="../css/index.html" class="text-white-50 text-decoration-none hover:text-white">CSS3 Styles</a></li>
+            <li><a href="../bootstrap/index.html" class="text-white-50 text-decoration-none hover:text-white">Bootstrap 5</a></li>
+            <li><a href="../tailwind/index.html" class="text-white-50 text-decoration-none hover:text-white">Tailwind CSS</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Resources</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../examples/html-examples.html" class="text-white-50 text-decoration-none hover:text-white">Examples</a></li>
+            <li><a href="../practice/html-practice.html" class="text-white-50 text-decoration-none hover:text-white">Practice Sets</a></li>
+            <li><a href="../projects/html-projects.html" class="text-white-50 text-decoration-none hover:text-white">Projects</a></li>
+            <li><a href="../articles/index.html" class="text-white-50 text-decoration-none hover:text-white">Articles</a></li>
+            <li><a href="../cheat-sheets/index.html" class="text-white-50 text-decoration-none hover:text-white">Cheat Sheets</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-white fw-bold">Company</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../about.html" class="text-white-50 text-decoration-none hover:text-white">About Hub</a></li>
+            <li><a href="../contact.html" class="text-white-50 text-decoration-none hover:text-white">Contact Us</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover:text-white">Privacy Policy</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover:text-white">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="text-center small">
+        © 2026 WebLearn Hub. Built strictly with frontend technologies. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

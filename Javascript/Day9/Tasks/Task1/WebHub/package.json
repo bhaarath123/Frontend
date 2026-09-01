@@ -1,0 +1,29 @@
+{
+  "name": "weblearn-hub",
+  "version": "2.0.0",
+  "description": "WebLearn Hub - Learn Web Development & JavaScript from Scratch",
+  "main": "index.html",
+  "scripts": {
+    "generate": "node generator.js",
+    "build:css": "npx @tailwindcss/cli -i assets/css/input.css -o assets/css/style.css",
+    "verify": "node verify.js",
+    "build": "node generator.js && npx @tailwindcss/cli -i assets/css/input.css -o assets/css/style.css && node verify.js",
+    "start": "npx serve . -l 3000"
+  },
+  "keywords": [
+    "html5",
+    "css3",
+    "bootstrap5",
+    "tailwindcss",
+    "javascript",
+    "logic-10",
+    "learning-platform"
+  ],
+  "author": "WebLearn Hub Team",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quick reference for HTML5 tags, CSS properties, Bootstrap, Tailwind, and JavaScript.">
+  <title>Developer Cheat Sheets | WebLearn Hub</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Compiled style.css (includes Tailwind utilities + prefixing) -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Inline CSS Checkbox Hack for Mobile Navbar toggling */
+    #mobile-nav-checkbox:checked ~ #navbarCollapseContent {
+      display: block !important;
+    }
+    /* Hover Dropdown Menu triggers */
+    .nav-item-dropdown {
+      position: relative;
+    }
+    .dropdown-menu-custom {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #212529;
+      border: 1px solid #343a40;
+      padding: 0.5rem 0;
+      z-index: 1000;
+      min-width: 200px;
+      border-radius: 0.25rem;
+      list-style: none;
+    }
+    .dropdown-menu-custom a:hover {
+      background-color: #4f46e5;
+    }
+    .nav-item-dropdown:hover .dropdown-menu-custom {
+      display: block;
+    }
+    .interactive-runner-card {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 16px;
+      color: #e2e8f0;
+    }
+    .runner-screen {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 6px;
+      padding: 12px;
+      font-family: 'Fira Code', monospace;
+      color: #38bdf8;
+      min-height: 48px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Responsive Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        WebLearn Hub
+      </a>
+      
+      <!-- Mobile toggle using checkbox -->
+      <input type="checkbox" id="mobile-nav-checkbox" class="d-none">
+      <label for="mobile-nav-checkbox" class="navbar-toggler" role="button" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </label>
+
+      <div class="collapse navbar-collapse" id="navbarCollapseContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+          
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../index.html">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../javascript/index.html">JavaScript</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../javascript/logical-problems.html">Logic 10</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/roadmap.html">Roadmap</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/practice.html">Practice</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/projects.html">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/quizzes.html">Quizzes</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/articles.html">Articles</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/interview.html">Interviews</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link active fw-bold text-white" href="../pages/cheat-sheets.html">Cheat Sheets</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/about.html">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/contact.html">Contact</a>
+      </li>
+    
+          <!-- Learn hover dropdown -->
+          <li class="nav-item nav-item-dropdown">
+            <a class="nav-link dropdown-toggle text-white-50" href="#" role="button">All Modules</a>
+            <ul class="dropdown-menu-custom shadow">
+              <li><a class="dropdown-item text-white" style="font-size: 13px;" href="../web-basics/index.html">Web Basics</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../html/index.html">HTML5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../css/index.html">CSS3</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../responsive/index.html">Responsive Design</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../bootstrap/index.html">Bootstrap 5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../tailwind/index.html">Tailwind CSS</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../javascript/index.html">JavaScript (New!)</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../javascript/logical-problems.html">JS Logical 10 (New!)</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input class="form-control me-2 bg-secondary text-white border-0" type="search" placeholder="Search JS & web topics..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  
+      <main class="flex-grow-1">
+        
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h1 class="fw-bold text-slate-900">Developer Cheat Sheets</h1>
+      <p class="text-muted">A quick-reference guide for HTML5 tags, CSS3 selectors, Bootstrap, Tailwind, and JavaScript APIs.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- HTML -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-header bg-danger text-white fw-bold">HTML5 Quick Reference</div>
+          <div class="card-body bg-white text-dark">
+            <ul class="list-group list-group-flush small">
+              <li class="list-group-item"><strong>Common Tags:</strong><div class="mt-1"><code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code></div></li><li class="list-group-item"><strong>Forms:</strong><div class="mt-1"><code>&lt;form&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;button&gt;</code></div></li><li class="list-group-item"><strong>Tables:</strong><div class="mt-1"><code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code></div></li><li class="list-group-item"><strong>Semantic HTML:</strong><div class="mt-1"><code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- CSS -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-header bg-primary text-white fw-bold">CSS3 Quick Reference</div>
+          <div class="card-body bg-white text-dark">
+            <ul class="list-group list-group-flush small">
+              <li class="list-group-item"><strong>Selectors:</strong><div class="mt-1"><code>.class</code>, <code>#id</code>, <code>tag</code>, <code>:hover</code>, <code>:focus</code>, <code>::before</code>, <code>::after</code></div></li><li class="list-group-item"><strong>Box Model:</strong><div class="mt-1"><code>width</code>, <code>height</code>, <code>padding</code>, <code>border</code>, <code>margin</code>, <code>box-sizing: border-box</code></div></li><li class="list-group-item"><strong>Flexbox:</strong><div class="mt-1"><code>display: flex</code>, <code>justify-content</code>, <code>align-items</code>, <code>flex-direction</code>, <code>gap</code></div></li><li class="list-group-item"><strong>Grid:</strong><div class="mt-1"><code>display: grid</code>, <code>grid-template-columns</code>, <code>gap</code>, <code>grid-column: span X</code></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bootstrap -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-header text-white fw-bold" style="background-color: #8b5cf6;">Bootstrap 5 Quick Reference</div>
+          <div class="card-body bg-white text-dark">
+            <ul class="list-group list-group-flush small">
+              <li class="list-group-item"><strong>Grid:</strong><div class="mt-1"><code>.container</code>, <code>.row</code>, <code>.col-*</code>, <code>.col-md-6</code>, <code>.g-3</code></div></li><li class="list-group-item"><strong>Components:</strong><div class="mt-1"><code>.btn</code>, <code>.card</code>, <code>.navbar</code>, <code>.alert</code>, <code>.badge</code>, <code>.modal</code></div></li><li class="list-group-item"><strong>Utilities:</strong><div class="mt-1"><code>.p-3</code>, <code>.mb-4</code>, <code>.text-center</code>, <code>.d-flex</code>, <code>.bg-primary</code></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tailwind -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-header bg-info text-white fw-bold">Tailwind CSS Quick Reference</div>
+          <div class="card-body bg-white text-dark">
+            <ul class="list-group list-group-flush small">
+              <li class="list-group-item"><strong>Layout & Spacing:</strong><div class="mt-1"><code>tw-p-4</code>, <code>tw-m-2</code>, <code>tw-gap-4</code>, <code>tw-flex</code>, <code>tw-grid</code>, <code>tw-grid-cols-3</code></div></li><li class="list-group-item"><strong>Colors & Typography:</strong><div class="mt-1"><code>tw-bg-slate-900</code>, <code>tw-text-white</code>, <code>tw-text-xl</code>, <code>tw-font-bold</code></div></li><li class="list-group-item"><strong>Variants:</strong><div class="mt-1"><code>hover:tw-bg-indigo-600</code>, <code>focus:tw-ring-2</code>, <code>dark:tw-bg-slate-900</code></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="col-12">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-header bg-warning text-dark fw-bold">JavaScript (ES6+) Quick Reference</div>
+          <div class="card-body bg-white text-dark">
+            <ul class="list-group list-group-flush small">
+              <li class="list-group-item"><strong>Variables & Types:</strong><div class="mt-1"><code>const</code>, <code>let</code>, <code>typeof</code>. Primitives: String, Number, Boolean, BigInt, Undefined, Null, Symbol.</div></li><li class="list-group-item"><strong>Operators:</strong><div class="mt-1">Strict equality: <code>===</code>, <code>!==</code>. Logical: <code>&&</code>, <code>||</code>, <code>!</code>. Ternary: <code>cond ? a : b</code>.</div></li><li class="list-group-item"><strong>Array Methods:</strong><div class="mt-1"><code>.push()</code>, <code>.pop()</code>, <code>.slice()</code>, <code>.splice()</code>, <code>.map()</code>, <code>.filter()</code>, <code>.reduce()</code>, <code>.find()</code>, <code>.includes()</code></div></li><li class="list-group-item"><strong>Object Methods:</strong><div class="mt-1"><code>Object.keys()</code>, <code>Object.values()</code>, <code>Object.entries()</code>, <code>JSON.stringify()</code>, <code>JSON.parse()</code></div></li><li class="list-group-item"><strong>DOM Methods:</strong><div class="mt-1"><code>document.getElementById()</code>, <code>document.querySelector()</code>, <code>.textContent</code>, <code>.classList.toggle()</code>, <code>.addEventListener()</code></div></li><li class="list-group-item"><strong>ES6+ Features:</strong><div class="mt-1">Arrow functions <code>() => {}</code>, Destructuring <code>const {a} = obj</code>, Spread <code>[...arr]</code>, Template literals <code>`${val}`</code>, <code>async/await</code></div></li><li class="list-group-item"><strong>Storage & Timing:</strong><div class="mt-1"><code>localStorage.setItem(k, v)</code>, <code>localStorage.getItem(k)</code>, <code>setTimeout(fn, ms)</code>, <code>setInterval(fn, ms)</code></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      </main>
+    
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white-50 py-5 mt-auto border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="text-white fw-bold d-flex align-items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            WebLearn Hub
+          </h5>
+          <p class="small mt-2">Master Web Basics, HTML5, CSS3, Bootstrap 5, Tailwind CSS, and JavaScript with interactive examples and logic problem solvers.</p>
+          <p class="small text-white-50">Tagline: <em>Learn. Code. Build. Share.</em></p>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Curriculum</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../web-basics/index.html" class="text-white-50 text-decoration-none">Web Basics</a></li>
+            <li><a href="../html/index.html" class="text-white-50 text-decoration-none">HTML5 Basics</a></li>
+            <li><a href="../css/index.html" class="text-white-50 text-decoration-none">CSS3 Styles</a></li>
+            <li><a href="../responsive/index.html" class="text-white-50 text-decoration-none">Responsive Design</a></li>
+            <li><a href="../bootstrap/index.html" class="text-white-50 text-decoration-none">Bootstrap 5</a></li>
+            <li><a href="../tailwind/index.html" class="text-white-50 text-decoration-none">Tailwind CSS</a></li>
+            <li><a href="../javascript/index.html" class="text-warning text-decoration-none fw-bold">JavaScript (New)</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Resources</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../javascript/logical-problems.html" class="text-white-50 text-decoration-none">JS Logical 10</a></li>
+            <li><a href="../pages/practice.html" class="text-white-50 text-decoration-none">Practice Sets</a></li>
+            <li><a href="../pages/projects.html" class="text-white-50 text-decoration-none">Projects</a></li>
+            <li><a href="../pages/quizzes.html" class="text-white-50 text-decoration-none">Quizzes</a></li>
+            <li><a href="../pages/articles.html" class="text-white-50 text-decoration-none">Articles</a></li>
+            <li><a href="../pages/cheat-sheets.html" class="text-white-50 text-decoration-none">Cheat Sheets</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-white fw-bold">Company & Legal</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../pages/about.html" class="text-white-50 text-decoration-none">About Hub</a></li>
+            <li><a href="../pages/contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="text-center small">
+        © 2026 WebLearn Hub. Complete Frontend & JavaScript Learning System. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

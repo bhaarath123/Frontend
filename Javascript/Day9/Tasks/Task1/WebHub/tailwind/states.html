@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn Tailwind Hover, Focus, & Active States syntax, advantages, common mistakes, and practice questions.">
+  <title>Tailwind Hover, Focus, & Active States | WebLearn Hub</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Compiled style.css (includes Tailwind utilities + prefixing) -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Inline CSS Checkbox Hack for No-JS Mobile Navbar toggling */
+    #mobile-nav-checkbox:checked ~ #navbarCollapseContent {
+      display: block !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Responsive Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        WebLearn Hub
+      </a>
+      
+      <!-- Pure CSS toggle using checkbox (Zero JS) -->
+      <input type="checkbox" id="mobile-nav-checkbox" class="d-none">
+      <label for="mobile-nav-checkbox" class="navbar-toggler" role="button" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </label>
+
+      <div class="collapse navbar-collapse" id="navbarCollapseContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+          
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../index.html">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../html/index.html">HTML5</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../css/index.html">CSS3</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../bootstrap/index.html">Bootstrap</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link active fw-bold text-white" href="../tailwind/index.html">Tailwind</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../examples/html-examples.html">Examples</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../practice/html-practice.html">Practice</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../projects/html-projects.html">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../articles/index.html">Articles</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../cheat-sheets/index.html">Cheat Sheets</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../interview/index.html">Interviews</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../about.html">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../contact.html">Contact</a>
+      </li>
+    
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input class="form-control me-2 bg-secondary text-white border-0" type="search" placeholder="Search lessons..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  
+      <div class="tutorial-wrapper">
+        <aside class="sidebar-nav">
+          
+    <div class="mb-4">
+      <h5 class="fw-bold px-3 mb-3 text-secondary text-uppercase small tracking-wider">TAILWIND Topics</h5>
+      <nav class="nav flex-column">
+        <a href="../tailwind/index.html" class="nav-link ">
+          Course Overview
+        </a>
+        
+      <a href="../tailwind/introduction.html" class="nav-link ">
+        Tailwind CSS Introduction
+      </a>
+    
+      <a href="../tailwind/spacing.html" class="nav-link ">
+        Tailwind Spacing (Margin & Padding)
+      </a>
+    
+      <a href="../tailwind/typography.html" class="nav-link ">
+        Tailwind Typography
+      </a>
+    
+      <a href="../tailwind/colors.html" class="nav-link ">
+        Tailwind Colors
+      </a>
+    
+      <a href="../tailwind/flexbox.html" class="nav-link ">
+        Tailwind Flexbox
+      </a>
+    
+      <a href="../tailwind/grid.html" class="nav-link ">
+        Tailwind Grid
+      </a>
+    
+      <a href="../tailwind/responsive.html" class="nav-link ">
+        Tailwind Responsive Design
+      </a>
+    
+      <a href="../tailwind/states.html" class="nav-link active">
+        Tailwind Hover, Focus, & Active States
+      </a>
+    
+      <a href="../tailwind/dark-mode.html" class="nav-link ">
+        Tailwind Dark Mode
+      </a>
+    
+      </nav>
+    </div>
+  
+        </aside>
+        <main class="content-area">
+          
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html">TAILWIND Course</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Tailwind Hover, Focus, & Active States</li>
+      </ol>
+    </nav>
+
+    <h1 class="fw-bold tw-text-4xl tw-text-slate-900 dark:tw-text-white tw-mb-4">Tailwind Hover, Focus, & Active States</h1>
+    
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">What is Tailwind Hover, Focus, & Active States?</h3>
+      <p class="lead">Tailwind CSS state modifiers apply styles to elements in specific states, such as mouse hover (hover:), keyboard focus (focus:), active clicks (active:), and disabled inputs (disabled:).</p>
+    </section>
+
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">Why is it used?</h3>
+      <p>Improves user experience. Interactive buttons, links, and forms feel more responsive when they change style on hover, focus, or click.</p>
+    </section>
+
+    <!-- Side-by-Side Editor Preview -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">Code & Output Example</h3>
+      
+      <div class="editor-container">
+        <div class="editor-header">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+          <div class="editor-title">tailwind editor</div>
+        </div>
+        <div class="editor-body">
+          <pre class="code-panel"><code>&lt;div class=&quot;tw-p-2 bg-white rounded border&quot;&gt;
+    &lt;input type=&quot;text&quot; placeholder=&quot;Focus me...&quot; class=&quot;tw-w-full tw-border tw-border-slate-300 tw-p-2 tw-rounded focus:tw-outline-none focus:tw-border-indigo-500 focus:tw-ring-1 focus:tw-ring-indigo-500&quot;&gt;
+&lt;/div&gt;</code></pre>
+          <div class="output-panel">
+            <h6 class="tw-text-xs tw-text-slate-400 tw-font-bold tw-uppercase tw-mb-2">Visual Preview</h6>
+            <div class="border tw-p-4 tw-rounded bg-white text-dark">
+              <div style="font-family: sans-serif; padding: 10px; background: white; border: 1px solid #e2e8f0; border-radius: 0.375rem;">
+    <input type="text" placeholder="Focus me (Static Preview)..." style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 0.25rem; outline: none; transition: border 0.2s;">
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">Code Explanation</h3>
+      <ul class="tw-list-disc tw-pl-5 tw-space-y-2">
+        <li>hover:tw-bg-indigo-700: Changes background color on hover.</li><li>focus:tw-border-indigo-500: Changes border color when focused.</li><li>focus:tw-ring-1: Adds a light ring outline when focused, boosting accessibility.</li><li>focus:tw-outline-none: Removes default browser focus outline, allowing you to use custom styles.</li>
+      </ul>
+    </section>
+
+    <div class="row g-4 tw-mb-8">
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-success fs-5">Important Points</h4>
+          <ul class="small mb-0 mt-2">
+            <li>State prefixes can be combined with responsive prefixes (e.g. lg:hover:tw-scale-110).</li><li>Focus states are critical for keyboard navigation accessibility.</li><li>Other variants include group-hover: (styles child when parent hovered) and peer-focus: (styles sibling element).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-danger fs-5">Common Mistakes</h4>
+          <ul class="small mb-0 mt-2">
+            <li>Omitting focus styles when using focus:tw-outline-none, which makes the element inaccessible to keyboard users.</li><li>Using state prefixes on non-interactive elements (like paragraphs or divs), where hover effects carry no functional benefit.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="tw-mb-8 bg-info bg-opacity-10 border border-info border-opacity-20 tw-p-4 tw-rounded-lg">
+      <h4 class="fw-bold text-info-emphasis fs-5">Real-World Usage</h4>
+      <p class="mb-0 small">Form fields highlight borders when focused, buttons darken on hover, and active pagination links change color when clicked.</p>
+    </section>
+
+    <!-- Practice Exercise Section -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">Practice Exercise</h3>
+      <div class="card border-primary p-4 bg-white text-dark">
+        <h5 class="fw-bold">Create a button using Tailwind classes that has a red background (tw-bg-red-500) and shifts to a darker red background (tw-bg-red-700) on mouse hover.</h5>
+        <p class="small text-muted mt-1">Objective: Set hover state overrides.</p>
+        <p class="small">Instructions: Combine tw-bg-red-500 and hover:tw-bg-red-700 classes.</p>
+        
+        <pre class="bg-dark text-white p-3 rounded font-monospace small mb-3"><code>&lt;button class=&quot;/* classes */&quot;&gt;Delete&lt;/button&gt;</code></pre>
+        
+        <div class="d-flex gap-2">
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Hint</summary>
+            <div class="interactive-body">
+              <p class="mb-0 text-secondary">Use classes class='tw-bg-red-500 hover:tw-bg-red-700 tw-text-white tw-py-2 tw-px-4 tw-rounded'.</p>
+            </div>
+          </details>
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Solution</summary>
+            <div class="interactive-body">
+              <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;button class=&quot;tw-bg-red-500 hover:tw-bg-red-700 tw-text-white tw-py-2 tw-px-4 tw-rounded&quot;&gt;Delete&lt;/button&gt;</code></pre>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interview Prep Section -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">Interview Question</h3>
+      <details class="interactive-card">
+        <summary>Q: How do focus state utilities improve web accessibility?</summary>
+        <div class="interactive-body">
+          <h6 class="fw-bold text-success">Answer:</h6>
+          <p>When a user navigates a page using the Tab key on their keyboard, focus state utilities (like focus:tw-ring-2) highlight the active element visually. Without focus styles (or if you hide them using focus:tw-outline-none without an alternative), keyboard users cannot see which element is active, making the site unusable.</p>
+          <h6 class="fw-bold text-indigo-600">Explanation:</h6>
+          <p class="small">Highlighting focused elements is a core requirement of the WCAG accessibility guidelines.</p>
+          <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-indigo-500</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <!-- Previous / Next navigation -->
+    <div class="d-flex justify-content-between pt-4 border-top">
+      <a href="responsive.html" class="btn btn-outline-secondary d-flex align-items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Previous: Tailwind Responsive Design
+       </a>
+      <a href="dark-mode.html" class="btn btn-primary d-flex align-items-center gap-1">
+        Next: Tailwind Dark Mode
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+       </a>
+    </div>
+  
+        </main>
+      </div>
+    
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white-50 py-5 mt-auto border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="text-white fw-bold d-flex align-items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            WebLearn Hub
+          </h5>
+          <p class="small mt-2">Master HTML5, CSS3, Bootstrap 5 and Tailwind CSS through hands-on static code walkthroughs.</p>
+          <p class="small text-white-50">Tagline: <em>Learn. Code. Build. Share.</em></p>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Tutorials</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../html/index.html" class="text-white-50 text-decoration-none hover:text-white">HTML5 Basics</a></li>
+            <li><a href="../css/index.html" class="text-white-50 text-decoration-none hover:text-white">CSS3 Styles</a></li>
+            <li><a href="../bootstrap/index.html" class="text-white-50 text-decoration-none hover:text-white">Bootstrap 5</a></li>
+            <li><a href="../tailwind/index.html" class="text-white-50 text-decoration-none hover:text-white">Tailwind CSS</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Resources</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../examples/html-examples.html" class="text-white-50 text-decoration-none hover:text-white">Examples</a></li>
+            <li><a href="../practice/html-practice.html" class="text-white-50 text-decoration-none hover:text-white">Practice Sets</a></li>
+            <li><a href="../projects/html-projects.html" class="text-white-50 text-decoration-none hover:text-white">Projects</a></li>
+            <li><a href="../articles/index.html" class="text-white-50 text-decoration-none hover:text-white">Articles</a></li>
+            <li><a href="../cheat-sheets/index.html" class="text-white-50 text-decoration-none hover:text-white">Cheat Sheets</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-white fw-bold">Company</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../about.html" class="text-white-50 text-decoration-none hover:text-white">About Hub</a></li>
+            <li><a href="../contact.html" class="text-white-50 text-decoration-none hover:text-white">Contact Us</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover:text-white">Privacy Policy</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover:text-white">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="text-center small">
+        © 2026 WebLearn Hub. Built strictly with frontend technologies. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

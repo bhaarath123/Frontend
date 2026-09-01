@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Master HTML with structured visual tutorials.">
+  <title>HTML Course Overview | WebLearn Hub</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Compiled style.css (includes Tailwind utilities + prefixing) -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Inline CSS Checkbox Hack for Mobile Navbar toggling */
+    #mobile-nav-checkbox:checked ~ #navbarCollapseContent {
+      display: block !important;
+    }
+    /* Hover Dropdown Menu triggers */
+    .nav-item-dropdown {
+      position: relative;
+    }
+    .dropdown-menu-custom {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #212529;
+      border: 1px solid #343a40;
+      padding: 0.5rem 0;
+      z-index: 1000;
+      min-width: 200px;
+      border-radius: 0.25rem;
+      list-style: none;
+    }
+    .dropdown-menu-custom a:hover {
+      background-color: #4f46e5;
+    }
+    .nav-item-dropdown:hover .dropdown-menu-custom {
+      display: block;
+    }
+    .interactive-runner-card {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 16px;
+      color: #e2e8f0;
+    }
+    .runner-screen {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 6px;
+      padding: 12px;
+      font-family: 'Fira Code', monospace;
+      color: #38bdf8;
+      min-height: 48px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Responsive Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        WebLearn Hub
+      </a>
+      
+      <!-- Mobile toggle using checkbox -->
+      <input type="checkbox" id="mobile-nav-checkbox" class="d-none">
+      <label for="mobile-nav-checkbox" class="navbar-toggler" role="button" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </label>
+
+      <div class="collapse navbar-collapse" id="navbarCollapseContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+          
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../index.html">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../javascript/index.html">JavaScript</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../javascript/logical-problems.html">Logic 10</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/roadmap.html">Roadmap</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/practice.html">Practice</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/projects.html">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/quizzes.html">Quizzes</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/articles.html">Articles</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/interview.html">Interviews</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/cheat-sheets.html">Cheat Sheets</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/about.html">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/contact.html">Contact</a>
+      </li>
+    
+          <!-- Learn hover dropdown -->
+          <li class="nav-item nav-item-dropdown">
+            <a class="nav-link dropdown-toggle text-white-50" href="#" role="button">All Modules</a>
+            <ul class="dropdown-menu-custom shadow">
+              <li><a class="dropdown-item text-white" style="font-size: 13px;" href="../web-basics/index.html">Web Basics</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="index.html">HTML5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../css/index.html">CSS3</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../responsive/index.html">Responsive Design</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../bootstrap/index.html">Bootstrap 5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../tailwind/index.html">Tailwind CSS</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../javascript/index.html">JavaScript (New!)</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../javascript/logical-problems.html">JS Logical 10 (New!)</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input class="form-control me-2 bg-secondary text-white border-0" type="search" placeholder="Search JS & web topics..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  
+      <div class="tutorial-wrapper">
+        <aside class="sidebar-nav">
+          
+    <div class="mb-4">
+      <h5 class="fw-bold px-3 mb-3 text-secondary text-uppercase small tracking-wider">HTML Outline</h5>
+      <nav class="nav flex-column">
+        <a href="index.html" class="nav-link active">
+          Course Overview
+        </a>
+        
+      <a href="introduction.html" class="nav-link ">
+        HTML Introduction & Syntax
+      </a>
+    
+      <a href="structure.html" class="nav-link ">
+        Document Structure & Meta Tags
+      </a>
+    
+      <a href="headings-text.html" class="nav-link ">
+        Headings, Paragraphs & Text Formatting
+      </a>
+    
+      <a href="links.html" class="nav-link ">
+        Links & Relative Paths
+      </a>
+    
+      <a href="images.html" class="nav-link ">
+        HTML Images & Semantics
+      </a>
+    
+      <a href="lists.html" class="nav-link ">
+        HTML Lists (ul, ol, dl)
+      </a>
+    
+      <a href="tables.html" class="nav-link ">
+        HTML Tables & Layout grids
+      </a>
+    
+      <a href="forms.html" class="nav-link ">
+        HTML Forms & User Inputs
+      </a>
+    
+      <a href="input-types.html" class="nav-link ">
+        HTML Input Types
+      </a>
+    
+      <a href="form-validation.html" class="nav-link ">
+        Form Attributes & Validation
+      </a>
+    
+      <a href="semantic.html" class="nav-link ">
+        Semantic HTML5 Elements
+      </a>
+    
+      <a href="multimedia.html" class="nav-link ">
+        HTML5 Multimedia & Embeds
+      </a>
+    
+      <a href="advanced-html.html" class="nav-link ">
+        Advanced HTML, a11y & SEO
+      </a>
+    
+        
+      </nav>
+    </div>
+  
+        </aside>
+        <main class="content-area">
+          
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">HTML Course</li>
+      </ol>
+    </nav>
+    
+    <h1 class="fw-bold tw-text-3xl tw-text-slate-900 dark:tw-text-white tw-mb-4">HTML Course Overview</h1>
+    <p class="lead text-muted">Select any topic from the list below or from the sidebar menu to begin learning from basic to advanced parameters.</p>
+    
+    <div class="row g-4 mt-1">
+      
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 bg-white text-dark">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-indigo text-uppercase small" style="background-color: #6366f1;">Topic 1</span>
+              </div>
+              <h5 class="card-title fw-bold text-slate-800">HTML Introduction & Syntax</h5>
+              <p class="card-text text-muted small flex-grow-1">HTML (HyperText Markup Language) is the standard markup language used to create the structure of web pages. It uses a tag-based syntax to de...</p>
+              <a href="introduction.html" class="btn btn-sm btn-outline-primary fw-bold mt-2 align-self-start">Start Lesson</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 bg-white text-dark">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-indigo text-uppercase small" style="background-color: #6366f1;">Topic 2</span>
+              </div>
+              <h5 class="card-title fw-bold text-slate-800">Document Structure & Meta Tags</h5>
+              <p class="card-text text-muted small flex-grow-1">The HTML document structure defines the nesting order of core layout elements. The head section houses metadata tags that communicate page i...</p>
+              <a href="structure.html" class="btn btn-sm btn-outline-primary fw-bold mt-2 align-self-start">Start Lesson</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 bg-white text-dark">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-indigo text-uppercase small" style="background-color: #6366f1;">Topic 3</span>
+              </div>
+              <h5 class="card-title fw-bold text-slate-800">Headings, Paragraphs & Text Formatting</h5>
+              <p class="card-text text-muted small flex-grow-1">Headings (<h1> to <h6>) define content hierarchy, paragraphs (<p>) container block text, and formatting tags (<strong>, <em>, <mark>, <small...</p>
+              <a href="headings-text.html" class="btn btn-sm btn-outline-primary fw-bold mt-2 align-self-start">Start Lesson</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 bg-white text-dark">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-indigo text-uppercase small" style="background-color: #6366f1;">Topic 4</span>
+              </div>
+              <h5 class="card-title fw-bold text-slate-800">Links & Relative Paths</h5>
+              <p class="card-text text-muted small flex-grow-1">Links (hyperlinks) connect pages. Created with the anchor tag (<a>), the href attribute defines the target directory path, target control op...</p>
+              <a href="links.html" class="btn btn-sm btn-outline-primary fw-bold mt-2 align-self-start">Start Lesson</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 bg-white text-dark">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-indigo text-uppercase small" style="background-color: #6366f1;">Topic 5</span>
+              </div>
+              <h5 class="card-title fw-bold text-slate-800">HTML Images & Semantics</h5>
+              <p class="card-text text-muted small flex-grow-1">Images in HTML are void elements defined with the <img> tag. The figure (<figure>) and figcaption (<figcaption>) elements provide a semantic...</p>
+              <a href="images.html" class="btn btn-sm btn-outline-primary fw-bold mt-2 align-self-start">Start Lesson</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 bg-white text-dark">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-indigo text-uppercase small" style="background-color: #6366f1;">Topic 6</span>
+              </div>
+              <h5 class="card-title fw-bold text-slate-800">HTML Lists (ul, ol, dl)</h5>
+              <p class="card-text text-muted small flex-grow-1">Lists organize related content. Unordered lists (<ul>) create bullet lists, ordered lists (<ol>) create numbered sequences, and description ...</p>
+              <a href="lists.html" class="btn btn-sm btn-outline-primary fw-bold mt-2 align-self-start">Start Lesson</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 bg-white text-dark">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-indigo text-uppercase small" style="background-color: #6366f1;">Topic 7</span>
+              </div>
+              <h5 class="card-title fw-bold text-slate-800">HTML Tables & Layout grids</h5>
+              <p class="card-text text-muted small flex-grow-1">Tables arrange data in rows and columns. They are constructed using <table>, <tr> (row), <th> (header), and <td> (cell) tags, supported by c...</p>
+              <a href="tables.html" class="btn btn-sm btn-outline-primary fw-bold mt-2 align-self-start">Start Lesson</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 bg-white text-dark">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-indigo text-uppercase small" style="background-color: #6366f1;">Topic 8</span>
+              </div>
+              <h5 class="card-title fw-bold text-slate-800">HTML Forms & User Inputs</h5>
+              <p class="card-text text-muted small flex-grow-1">HTML Forms collect user input. Forms are defined with the <form> tag, containing label interfaces (<label>), text fields (<textarea>), selec...</p>
+              <a href="forms.html" class="btn btn-sm btn-outline-primary fw-bold mt-2 align-self-start">Start Lesson</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 bg-white text-dark">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-indigo text-uppercase small" style="background-color: #6366f1;">Topic 9</span>
+              </div>
+              <h5 class="card-title fw-bold text-slate-800">HTML Input Types</h5>
+              <p class="card-text text-muted small flex-grow-1">HTML5 supports various input types (text, password, email, number, date, checkbox, radio, file, etc.) that enable validation and custom mobi...</p>
+              <a href="input-types.html" class="btn btn-sm btn-outline-primary fw-bold mt-2 align-self-start">Start Lesson</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 bg-white text-dark">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-indigo text-uppercase small" style="background-color: #6366f1;">Topic 10</span>
+              </div>
+              <h5 class="card-title fw-bold text-slate-800">Form Attributes & Validation</h5>
+              <p class="card-text text-muted small flex-grow-1">Form attributes define validation rules, formatting guidelines, and behavior limits (required, placeholder, disabled, pattern, min/max) that...</p>
+              <a href="form-validation.html" class="btn btn-sm btn-outline-primary fw-bold mt-2 align-self-start">Start Lesson</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 bg-white text-dark">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-indigo text-uppercase small" style="background-color: #6366f1;">Topic 11</span>
+              </div>
+              <h5 class="card-title fw-bold text-slate-800">Semantic HTML5 Elements</h5>
+              <p class="card-text text-muted small flex-grow-1">Semantic HTML refers to using markup tags that describe the meaning of the content (like <header>, <nav>, <main>, <section>, <article>, <asi...</p>
+              <a href="semantic.html" class="btn btn-sm btn-outline-primary fw-bold mt-2 align-self-start">Start Lesson</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 bg-white text-dark">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-indigo text-uppercase small" style="background-color: #6366f1;">Topic 12</span>
+              </div>
+              <h5 class="card-title fw-bold text-slate-800">HTML5 Multimedia & Embeds</h5>
+              <p class="card-text text-muted small flex-grow-1">HTML5 native multimedia tags include <audio> and <video> for playing media files without external plugins, alongside <iframe> elements for e...</p>
+              <a href="multimedia.html" class="btn btn-sm btn-outline-primary fw-bold mt-2 align-self-start">Start Lesson</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 bg-white text-dark">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-indigo text-uppercase small" style="background-color: #6366f1;">Topic 13</span>
+              </div>
+              <h5 class="card-title fw-bold text-slate-800">Advanced HTML, a11y & SEO</h5>
+              <p class="card-text text-muted small flex-grow-1">Advanced HTML5 incorporates global attributes, metadata (for search engines), accessible templates (a11y), and semantic structures to maximi...</p>
+              <a href="advanced-html.html" class="btn btn-sm btn-outline-primary fw-bold mt-2 align-self-start">Start Lesson</a>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+
+    
+  
+        </main>
+      </div>
+    
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white-50 py-5 mt-auto border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="text-white fw-bold d-flex align-items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            WebLearn Hub
+          </h5>
+          <p class="small mt-2">Master Web Basics, HTML5, CSS3, Bootstrap 5, Tailwind CSS, and JavaScript with interactive examples and logic problem solvers.</p>
+          <p class="small text-white-50">Tagline: <em>Learn. Code. Build. Share.</em></p>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Curriculum</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../web-basics/index.html" class="text-white-50 text-decoration-none">Web Basics</a></li>
+            <li><a href="index.html" class="text-white-50 text-decoration-none">HTML5 Basics</a></li>
+            <li><a href="../css/index.html" class="text-white-50 text-decoration-none">CSS3 Styles</a></li>
+            <li><a href="../responsive/index.html" class="text-white-50 text-decoration-none">Responsive Design</a></li>
+            <li><a href="../bootstrap/index.html" class="text-white-50 text-decoration-none">Bootstrap 5</a></li>
+            <li><a href="../tailwind/index.html" class="text-white-50 text-decoration-none">Tailwind CSS</a></li>
+            <li><a href="../javascript/index.html" class="text-warning text-decoration-none fw-bold">JavaScript (New)</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Resources</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../javascript/logical-problems.html" class="text-white-50 text-decoration-none">JS Logical 10</a></li>
+            <li><a href="../pages/practice.html" class="text-white-50 text-decoration-none">Practice Sets</a></li>
+            <li><a href="../pages/projects.html" class="text-white-50 text-decoration-none">Projects</a></li>
+            <li><a href="../pages/quizzes.html" class="text-white-50 text-decoration-none">Quizzes</a></li>
+            <li><a href="../pages/articles.html" class="text-white-50 text-decoration-none">Articles</a></li>
+            <li><a href="../pages/cheat-sheets.html" class="text-white-50 text-decoration-none">Cheat Sheets</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-white fw-bold">Company & Legal</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../pages/about.html" class="text-white-50 text-decoration-none">About Hub</a></li>
+            <li><a href="../pages/contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="text-center small">
+        © 2026 WebLearn Hub. Complete Frontend & JavaScript Learning System. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

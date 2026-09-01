@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn Grid System (row & col) syntax, properties, mistakes, and practice questions.">
+  <title>Grid System (row & col) | WebLearn Hub</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Compiled style.css (includes Tailwind utilities + prefixing) -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Inline CSS Checkbox Hack for Mobile Navbar toggling */
+    #mobile-nav-checkbox:checked ~ #navbarCollapseContent {
+      display: block !important;
+    }
+    /* Hover Dropdown Menu triggers */
+    .nav-item-dropdown {
+      position: relative;
+    }
+    .dropdown-menu-custom {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #212529;
+      border: 1px solid #343a40;
+      padding: 0.5rem 0;
+      z-index: 1000;
+      min-width: 200px;
+      border-radius: 0.25rem;
+      list-style: none;
+    }
+    .dropdown-menu-custom a:hover {
+      background-color: #4f46e5;
+    }
+    .nav-item-dropdown:hover .dropdown-menu-custom {
+      display: block;
+    }
+    .interactive-runner-card {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 16px;
+      color: #e2e8f0;
+    }
+    .runner-screen {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 6px;
+      padding: 12px;
+      font-family: 'Fira Code', monospace;
+      color: #38bdf8;
+      min-height: 48px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Responsive Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        WebLearn Hub
+      </a>
+      
+      <!-- Mobile toggle using checkbox -->
+      <input type="checkbox" id="mobile-nav-checkbox" class="d-none">
+      <label for="mobile-nav-checkbox" class="navbar-toggler" role="button" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </label>
+
+      <div class="collapse navbar-collapse" id="navbarCollapseContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+          
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../index.html">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../javascript/index.html">JavaScript</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../javascript/logical-problems.html">Logic 10</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/roadmap.html">Roadmap</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/practice.html">Practice</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/projects.html">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/quizzes.html">Quizzes</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/articles.html">Articles</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/interview.html">Interviews</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/cheat-sheets.html">Cheat Sheets</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/about.html">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/contact.html">Contact</a>
+      </li>
+    
+          <!-- Learn hover dropdown -->
+          <li class="nav-item nav-item-dropdown">
+            <a class="nav-link dropdown-toggle text-white-50" href="#" role="button">All Modules</a>
+            <ul class="dropdown-menu-custom shadow">
+              <li><a class="dropdown-item text-white" style="font-size: 13px;" href="../web-basics/index.html">Web Basics</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../html/index.html">HTML5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../css/index.html">CSS3</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../responsive/index.html">Responsive Design</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="index.html">Bootstrap 5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../tailwind/index.html">Tailwind CSS</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../javascript/index.html">JavaScript (New!)</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../javascript/logical-problems.html">JS Logical 10 (New!)</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input class="form-control me-2 bg-secondary text-white border-0" type="search" placeholder="Search JS & web topics..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  
+      <div class="tutorial-wrapper">
+        <aside class="sidebar-nav">
+          
+    <div class="mb-4">
+      <h5 class="fw-bold px-3 mb-3 text-secondary text-uppercase small tracking-wider">BOOTSTRAP Outline</h5>
+      <nav class="nav flex-column">
+        <a href="index.html" class="nav-link ">
+          Course Overview
+        </a>
+        
+      <a href="introduction.html" class="nav-link ">
+        Bootstrap Introduction & Setup
+      </a>
+    
+      <a href="containers-breakpoints.html" class="nav-link ">
+        Containers & Breakpoints
+      </a>
+    
+      <a href="grid.html" class="nav-link active">
+        Grid System (row & col)
+      </a>
+    
+      <a href="typography-colors.html" class="nav-link ">
+        Typography & Colors
+      </a>
+    
+      <a href="buttons-cards.html" class="nav-link ">
+        Buttons & Cards
+      </a>
+    
+      <a href="navbar.html" class="nav-link ">
+        Responsive Navbar
+      </a>
+    
+      <a href="alerts-components.html" class="nav-link ">
+        Alerts & Core Components
+      </a>
+    
+      <a href="progress-spinners.html" class="nav-link ">
+        Progress Bars & Spinners
+      </a>
+    
+      <a href="drawers-modals.html" class="nav-link ">
+        Accordions & Modals
+      </a>
+    
+      <a href="forms-validation.html" class="nav-link ">
+        Forms & Validations
+      </a>
+    
+        
+      </nav>
+    </div>
+  
+        </aside>
+        <main class="content-area">
+          
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html">BOOTSTRAP</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Grid System (row & col)</li>
+      </ol>
+    </nav>
+
+    <!-- 1. Topic Title -->
+    <h1 class="fw-bold tw-text-4xl tw-text-slate-900 dark:tw-text-white tw-mb-4">Grid System (row & col)</h1>
+    
+    <!-- 2. What is it? -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">1. What is it?</h3>
+      <p class="lead">The Bootstrap grid system is a mobile-first flexbox grid. It uses containers, rows, and columns to organize content, dividing the page width into up to 12 responsive columns per row.</p>
+    </section>
+
+    <!-- 3. Why is it important? -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">2. Why is it important?</h3>
+      <p>Grids divide your screen. You can set columns to display full-width (col-12) on mobile, but align side-by-side as four boxes (col-md-3) on desktop resolutions.</p>
+    </section>
+
+    <!-- 4. Syntax & 5. Basic Example -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">3. Syntax & Basic Example</h3>
+      <pre class="bg-dark text-white p-3 rounded font-monospace small mb-2"><code>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-4&quot;&gt;Col A&lt;/div&gt;
+  &lt;div class=&quot;col-md-8&quot;&gt;Col B&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <p class="small text-muted mt-2"><strong>Basic description:</strong> <code>Splitting a row into two equal halves on desktop: `&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-md-6&quot;&gt;Left&lt;/div&gt;&lt;div class=&quot;col-md-6&quot;&gt;Right&lt;/div&gt;&lt;/div&gt;`.</code></p>
+    </section>
+
+    <!-- 6. Code Example & 7. Expected Output -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">4. Code & Interactive Rendered Output</h3>
+      
+      <div class="editor-container">
+        <div class="editor-header">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+          <div class="editor-title">bootstrap live sandbox</div>
+        </div>
+        <div class="editor-body">
+          <pre class="code-panel"><code>&lt;div class=&quot;container-fluid text-center&quot;&gt;
+    &lt;div class=&quot;row g-2&quot;&gt;
+        &lt;div class=&quot;col-6 col-md-3&quot;&gt;&lt;div class=&quot;bg-primary text-white p-3 rounded&quot;&gt;Column 1&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;col-6 col-md-3&quot;&gt;&lt;div class=&quot;bg-primary text-white p-3 rounded&quot;&gt;Column 2&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;col-6 col-md-3&quot;&gt;&lt;div class=&quot;bg-primary text-white p-3 rounded&quot;&gt;Column 3&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;col-6 col-md-3&quot;&gt;&lt;div class=&quot;bg-primary text-white p-3 rounded&quot;&gt;Column 4&lt;/div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <div class="output-panel">
+            <h6 class="tw-text-xs tw-text-slate-400 tw-font-bold tw-uppercase tw-mb-2">Live Output & Execution Preview</h6>
+            <div class="border tw-p-4 tw-rounded bg-white text-dark">
+              <div style="font-family: sans-serif; font-size: 13px;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; text-align: center; color: white;">
+        <div style="background-color: #0d6efd; padding: 10px; border-radius: 4px;">Column 1</div>
+        <div style="background-color: #0d6efd; padding: 10px; border-radius: 4px;">Column 2</div>
+        <div style="background-color: #0d6efd; padding: 10px; border-radius: 4px;">Column 3</div>
+        <div style="background-color: #0d6efd; padding: 10px; border-radius: 4px;">Column 4</div>
+    </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="small text-muted mt-2"><strong>Expected Layout / Behavior:</strong> Four equally spaced blue boxes in a single horizontal row on desktop. On mobile, they reflow into two rows of two boxes each.</p>
+    </section>
+
+    <!-- 8. Line-by-Line Explanation -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">5. Line-by-Line Explanation</h3>
+      <ul class="tw-list-disc tw-pl-5 tw-space-y-2">
+        <li>row: The parent wrapper flex line that handles column wrapping.</li><li>col-6: Displays each column at 50% width (6/12 units) by default on mobile.</li><li>col-md-3: Shrinks columns to 25% width (3/12 units) on tablets and desktops (>=768px).</li><li>g-2: Sets a small gutter spacing gap between the columns.</li>
+      </ul>
+    </section>
+
+    <!-- 9. Important Properties/Tags/Classes -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">6. Key Properties, Methods & Syntax</h3>
+      <table class="table table-bordered table-striped small">
+        <thead>
+          <tr class="table-primary">
+            <th>Property / Method / Tag</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+    <tr>
+      <td class="font-monospace fw-bold text-indigo-600">row</td>
+      <td>Flex container holding grid columns, canceling outer padding with negative margins.</td>
+    </tr>
+  
+    <tr>
+      <td class="font-monospace fw-bold text-indigo-600">col-X</td>
+      <td>Sets a column width to span X units out of the 12-column grid.</td>
+    </tr>
+  
+    <tr>
+      <td class="font-monospace fw-bold text-indigo-600">g-*</td>
+      <td>Gutter spacing utility controlling gaps between grid columns.</td>
+    </tr>
+  
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 10. Real-World Use -->
+    <section class="tw-mb-8 bg-info bg-opacity-10 border border-info border-opacity-20 tw-p-4 tw-rounded-lg">
+      <h4 class="fw-bold text-info-emphasis fs-5">7. Real-World Use</h4>
+      <p class="mb-0 small">E-commerce grids, product lists, dashboard metrics cards, and article feeds use grid columns to reflow content across different resolutions.</p>
+    </section>
+
+    <!-- 11. Common Mistakes & 12. Best Practices -->
+    <div class="row g-4 tw-mb-8">
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-success fs-5">Best Practices</h4>
+          <ul class="small mb-0 mt-2">
+            <li>Use responsive column classes (col-md-*, col-lg-*) to build clean mobile-first grids.</li><li>Use auto-width columns (.col) to distribute space equally among elements.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-danger fs-5">Common Mistakes</h4>
+          <ul class="small mb-0 mt-2">
+            <li>Placing column classes (.col-*) directly inside container nodes without a .row parent wrapper.</li><li>Summing column spans past 12 in a single row without intending to wrap items.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13. Practice Exercise -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">8. Interactive Practice Challenge</h3>
+      <div class="card border-primary p-4 bg-white text-dark">
+        <h5 class="fw-bold">Write an HTML block that creates a two-column grid. On small screens, both columns should stack (full-width), but on medium screens (md) and wider, they should take equal half-widths.</h5>
+        <p class="small text-muted mt-1">Objective: Utilize responsive column prefixes.</p>
+        <p class="small">Instructions: Create a row containing two divs with col-12 col-md-6 classes.</p>
+        
+        <pre class="bg-dark text-white p-3 rounded font-monospace small mb-3"><code>&lt;div class=&quot;row&quot;&gt;
+    &lt;!-- Columns here --&gt;
+&lt;/div&gt;</code></pre>
+        
+        <div class="d-flex gap-2">
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Hint</summary>
+            <div class="interactive-body">
+              <p class="mb-0 text-secondary">Use class=&#039;col-12 col-md-6&#039; on both column elements.</p>
+            </div>
+          </details>
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Solution</summary>
+            <div class="interactive-body">
+              <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-12 col-md-6&quot;&gt;Left Column&lt;/div&gt;
+    &lt;div class=&quot;col-12 col-md-6&quot;&gt;Right Column&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. Interview Questions -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">9. Tech Screening Question</h3>
+      <details class="interactive-card">
+        <summary>Q: How does the Bootstrap grid system calculate column sizes?</summary>
+        <div class="interactive-body">
+          <h6 class="fw-bold text-success">Answer:</h6>
+          <p>The Bootstrap grid system is based on a 12-column layout. A column class specifies how many of these 12 tracks to occupy. For example, .col-6 occupies 6 out of 12 tracks (50% width), .col-4 occupies 4 out of 12 tracks (33.3% width), and .col-12 occupies the full width (100% width).</p>
+          <h6 class="fw-bold text-indigo-600">Explanation:</h6>
+          <p class="small">This 12-factor layout makes it easy to split rows into halves (6+6), thirds (4+4+4), quarters (3+3+3+3), or asymmetric structures (8+4).</p>
+          <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>col-md-8 + col-md-4 = 12 total units.</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <!-- 15. Quick Revision -->
+    <section class="tw-mb-8 bg-warning bg-opacity-10 border border-warning border-opacity-20 tw-p-4 tw-rounded-lg">
+      <h4 class="fw-bold text-warning-emphasis fs-5">10. Quick Revision</h4>
+      <p class="mb-0 small">The Bootstrap grid uses rows and columns inside containers. It splits the screen into 12 column units, letting you define responsive column spans using breakpoints (sm, md, lg).</p>
+    </section>
+
+    <!-- 16 & 17. Previous / Next navigation -->
+    <div class="d-flex justify-content-between pt-4 border-top">
+      <a href="containers-breakpoints.html" class="btn btn-outline-secondary d-flex align-items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Previous: Containers & Breakpoints
+       </a>
+      <a href="typography-colors.html" class="btn btn-primary d-flex align-items-center gap-1">
+        Next: Typography & Colors
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+       </a>
+    </div>
+  
+        </main>
+      </div>
+    
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white-50 py-5 mt-auto border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="text-white fw-bold d-flex align-items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            WebLearn Hub
+          </h5>
+          <p class="small mt-2">Master Web Basics, HTML5, CSS3, Bootstrap 5, Tailwind CSS, and JavaScript with interactive examples and logic problem solvers.</p>
+          <p class="small text-white-50">Tagline: <em>Learn. Code. Build. Share.</em></p>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Curriculum</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../web-basics/index.html" class="text-white-50 text-decoration-none">Web Basics</a></li>
+            <li><a href="../html/index.html" class="text-white-50 text-decoration-none">HTML5 Basics</a></li>
+            <li><a href="../css/index.html" class="text-white-50 text-decoration-none">CSS3 Styles</a></li>
+            <li><a href="../responsive/index.html" class="text-white-50 text-decoration-none">Responsive Design</a></li>
+            <li><a href="index.html" class="text-white-50 text-decoration-none">Bootstrap 5</a></li>
+            <li><a href="../tailwind/index.html" class="text-white-50 text-decoration-none">Tailwind CSS</a></li>
+            <li><a href="../javascript/index.html" class="text-warning text-decoration-none fw-bold">JavaScript (New)</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Resources</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../javascript/logical-problems.html" class="text-white-50 text-decoration-none">JS Logical 10</a></li>
+            <li><a href="../pages/practice.html" class="text-white-50 text-decoration-none">Practice Sets</a></li>
+            <li><a href="../pages/projects.html" class="text-white-50 text-decoration-none">Projects</a></li>
+            <li><a href="../pages/quizzes.html" class="text-white-50 text-decoration-none">Quizzes</a></li>
+            <li><a href="../pages/articles.html" class="text-white-50 text-decoration-none">Articles</a></li>
+            <li><a href="../pages/cheat-sheets.html" class="text-white-50 text-decoration-none">Cheat Sheets</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-white fw-bold">Company & Legal</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../pages/about.html" class="text-white-50 text-decoration-none">About Hub</a></li>
+            <li><a href="../pages/contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="text-center small">
+        © 2026 WebLearn Hub. Complete Frontend & JavaScript Learning System. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn HTML Headings syntax, advantages, common mistakes, and practice questions.">
+  <title>HTML Headings | WebLearn Hub</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Compiled style.css (includes Tailwind utilities + prefixing) -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Inline CSS Checkbox Hack for No-JS Mobile Navbar toggling */
+    #mobile-nav-checkbox:checked ~ #navbarCollapseContent {
+      display: block !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Responsive Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        WebLearn Hub
+      </a>
+      
+      <!-- Pure CSS toggle using checkbox (Zero JS) -->
+      <input type="checkbox" id="mobile-nav-checkbox" class="d-none">
+      <label for="mobile-nav-checkbox" class="navbar-toggler" role="button" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </label>
+
+      <div class="collapse navbar-collapse" id="navbarCollapseContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+          
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../index.html">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../html/index.html">HTML5</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../css/index.html">CSS3</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../bootstrap/index.html">Bootstrap</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../tailwind/index.html">Tailwind</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../examples/html-examples.html">Examples</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../practice/html-practice.html">Practice</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../projects/html-projects.html">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../articles/index.html">Articles</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../cheat-sheets/index.html">Cheat Sheets</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../interview/index.html">Interviews</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../about.html">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../contact.html">Contact</a>
+      </li>
+    
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input class="form-control me-2 bg-secondary text-white border-0" type="search" placeholder="Search lessons..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  
+      <div class="tutorial-wrapper">
+        <aside class="sidebar-nav">
+          
+    <div class="mb-4">
+      <h5 class="fw-bold px-3 mb-3 text-secondary text-uppercase small tracking-wider">HTML Topics</h5>
+      <nav class="nav flex-column">
+        <a href="../html/index.html" class="nav-link ">
+          Course Overview
+        </a>
+        
+      <a href="../html/introduction.html" class="nav-link ">
+        HTML Introduction
+      </a>
+    
+      <a href="../html/structure.html" class="nav-link ">
+        HTML Document Structure
+      </a>
+    
+      <a href="../html/headings.html" class="nav-link active">
+        HTML Headings
+      </a>
+    
+      <a href="../html/paragraphs.html" class="nav-link ">
+        HTML Paragraphs
+      </a>
+    
+      <a href="../html/links.html" class="nav-link ">
+        HTML Links
+      </a>
+    
+      <a href="../html/images.html" class="nav-link ">
+        HTML Images
+      </a>
+    
+      <a href="../html/lists.html" class="nav-link ">
+        HTML Lists
+      </a>
+    
+      <a href="../html/tables.html" class="nav-link ">
+        HTML Tables
+      </a>
+    
+      <a href="../html/forms.html" class="nav-link ">
+        HTML Forms
+      </a>
+    
+      <a href="../html/semantic.html" class="nav-link ">
+        Semantic HTML5
+      </a>
+    
+      <a href="../html/multimedia.html" class="nav-link ">
+        HTML5 Multimedia
+      </a>
+    
+      <a href="../html/accessibility.html" class="nav-link ">
+        HTML5 Accessibility
+      </a>
+    
+      <a href="../html/seo.html" class="nav-link ">
+        HTML5 SEO
+      </a>
+    
+      </nav>
+    </div>
+  
+        </aside>
+        <main class="content-area">
+          
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html">HTML Course</a></li>
+        <li class="breadcrumb-item active" aria-current="page">HTML Headings</li>
+      </ol>
+    </nav>
+
+    <h1 class="fw-bold tw-text-4xl tw-text-slate-900 dark:tw-text-white tw-mb-4">HTML Headings</h1>
+    
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">What is HTML Headings?</h3>
+      <p class="lead">HTML headings are defined with the <h1> to <h6> tags. <h1> defines the most important heading, representing the main topic, while <h6> defines the least important heading, used for sub-details.</p>
+    </section>
+
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">Why is it used?</h3>
+      <p>Headings help structure the outline of a document. Search engines use them to index the structure and content of your web pages. Users scan pages by headings, so hierarchy is critical.</p>
+    </section>
+
+    <!-- Side-by-Side Editor Preview -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">Code & Output Example</h3>
+      
+      <div class="editor-container">
+        <div class="editor-header">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+          <div class="editor-title">html editor</div>
+        </div>
+        <div class="editor-body">
+          <pre class="code-panel"><code>&lt;h1&gt;HTML5 Core&lt;/h1&gt;
+&lt;h2&gt;Section 1: Basics&lt;/h2&gt;
+&lt;h3&gt;Lesson 1.1: Headings&lt;/h3&gt;
+&lt;p&gt;This is a paragraph under a nested heading hierarchy.&lt;/p&gt;</code></pre>
+          <div class="output-panel">
+            <h6 class="tw-text-xs tw-text-slate-400 tw-font-bold tw-uppercase tw-mb-2">Visual Preview</h6>
+            <div class="border tw-p-4 tw-rounded bg-white text-dark">
+              <div style="font-family: sans-serif;">
+    <h1 style="font-size: 2.25rem; color: #1e3a8a; margin-top: 10px; margin-bottom: 10px;">HTML5 Core</h1>
+    <h2 style="font-size: 1.75rem; color: #3b82f6; margin-top: 8px; margin-bottom: 8px;">Section 1: Basics</h2>
+    <h3 style="font-size: 1.25rem; color: #0d9488; margin-top: 6px; margin-bottom: 6px;">Lesson 1.1: Headings</h3>
+    <p style="color: #4b5563;">This is a paragraph under a nested heading hierarchy.</p>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">Code Explanation</h3>
+      <ul class="tw-list-disc tw-pl-5 tw-space-y-2">
+        <li><h1>: The main heading. A page should typically have only one <h1> element.</li><li><h2>: Major sub-headings. Used to divide the document into sections.</li><li><h3>: Nested section subheadings. Further refines heading structure.</li>
+      </ul>
+    </section>
+
+    <div class="row g-4 tw-mb-8">
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-success fs-5">Important Points</h4>
+          <ul class="small mb-0 mt-2">
+            <li>Do not use headings to make text BIG or BOLD. Use them only for structural headings.</li><li>Headings should follow a sequential order: <h1> then <h2>, then <h3>, etc.</li><li>Skipping heading levels (e.g. going from <h1> to <h4>) disrupts document structure.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-danger fs-5">Common Mistakes</h4>
+          <ul class="small mb-0 mt-2">
+            <li>Using multiple <h1> elements on a single page, which confuses search engine crawlers.</li><li>Choosing a heading level based on the default font-size instead of logical hierarchy. Use CSS to change the visual size instead.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="tw-mb-8 bg-info bg-opacity-10 border border-info border-opacity-20 tw-p-4 tw-rounded-lg">
+      <h4 class="fw-bold text-info-emphasis fs-5">Real-World Usage</h4>
+      <p class="mb-0 small">When using screen readers, visually impaired users can jump from heading to heading to navigate the page quickly. If your headings are out of order or used incorrectly, it breaks navigation.</p>
+    </section>
+
+    <!-- Practice Exercise Section -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">Practice Exercise</h3>
+      <div class="card border-primary p-4 bg-white text-dark">
+        <h5 class="fw-bold">Create a page layout showing a main recipe book title, a category heading (e.g., 'Desserts'), and a specific recipe name.</h5>
+        <p class="small text-muted mt-1">Objective: Apply hierarchical heading tags.</p>
+        <p class="small">Instructions: Use <h1>, <h2>, and <h3> in the correct nested order.</p>
+        
+        <pre class="bg-dark text-white p-3 rounded font-monospace small mb-3"><code>&lt;!-- Structure your headings here --&gt;</code></pre>
+        
+        <div class="d-flex gap-2">
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Hint</summary>
+            <div class="interactive-body">
+              <p class="mb-0 text-secondary">Main book title should be <h1>, Desserts should be <h2>, and recipe name should be <h3>.</p>
+            </div>
+          </details>
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Solution</summary>
+            <div class="interactive-body">
+              <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;h1&gt;Grandma&#039;s Cookbook&lt;/h1&gt;
+&lt;h2&gt;Desserts&lt;/h2&gt;
+&lt;h3&gt;Chocolate Chip Cookies&lt;/h3&gt;
+&lt;p&gt;Preheat the oven to 350 degrees...&lt;/p&gt;</code></pre>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interview Prep Section -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">Interview Question</h3>
+      <details class="interactive-card">
+        <summary>Q: Why is heading hierarchy important for SEO?</summary>
+        <div class="interactive-body">
+          <h6 class="fw-bold text-success">Answer:</h6>
+          <p>Search engine web crawlers (like Googlebot) read headings to understand the context, topic, and outline of a webpage. The headings acts as a table of contents. Properly nested headings help the crawler categorize the content accurately.</p>
+          <h6 class="fw-bold text-indigo-600">Explanation:</h6>
+          <p class="small">Having keyword-rich headings structured in sequential order is a fundamental part of on-page search optimization.</p>
+          <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;h1&gt;Web Development Course&lt;/h1&gt; -&gt; &lt;h2&gt;Learn HTML&lt;/h2&gt; -&gt; &lt;h3&gt;Heading Tags&lt;/h3&gt; is correct. Going from &lt;h1&gt; directly to &lt;h3&gt; represents a broken outline.</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <!-- Previous / Next navigation -->
+    <div class="d-flex justify-content-between pt-4 border-top">
+      <a href="structure.html" class="btn btn-outline-secondary d-flex align-items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Previous: HTML Document Structure
+       </a>
+      <a href="paragraphs.html" class="btn btn-primary d-flex align-items-center gap-1">
+        Next: HTML Paragraphs
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+       </a>
+    </div>
+  
+        </main>
+      </div>
+    
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white-50 py-5 mt-auto border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="text-white fw-bold d-flex align-items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            WebLearn Hub
+          </h5>
+          <p class="small mt-2">Master HTML5, CSS3, Bootstrap 5 and Tailwind CSS through hands-on static code walkthroughs.</p>
+          <p class="small text-white-50">Tagline: <em>Learn. Code. Build. Share.</em></p>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Tutorials</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../html/index.html" class="text-white-50 text-decoration-none hover:text-white">HTML5 Basics</a></li>
+            <li><a href="../css/index.html" class="text-white-50 text-decoration-none hover:text-white">CSS3 Styles</a></li>
+            <li><a href="../bootstrap/index.html" class="text-white-50 text-decoration-none hover:text-white">Bootstrap 5</a></li>
+            <li><a href="../tailwind/index.html" class="text-white-50 text-decoration-none hover:text-white">Tailwind CSS</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Resources</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../examples/html-examples.html" class="text-white-50 text-decoration-none hover:text-white">Examples</a></li>
+            <li><a href="../practice/html-practice.html" class="text-white-50 text-decoration-none hover:text-white">Practice Sets</a></li>
+            <li><a href="../projects/html-projects.html" class="text-white-50 text-decoration-none hover:text-white">Projects</a></li>
+            <li><a href="../articles/index.html" class="text-white-50 text-decoration-none hover:text-white">Articles</a></li>
+            <li><a href="../cheat-sheets/index.html" class="text-white-50 text-decoration-none hover:text-white">Cheat Sheets</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-white fw-bold">Company</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../about.html" class="text-white-50 text-decoration-none hover:text-white">About Hub</a></li>
+            <li><a href="../contact.html" class="text-white-50 text-decoration-none hover:text-white">Contact Us</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover:text-white">Privacy Policy</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover:text-white">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="text-center small">
+        © 2026 WebLearn Hub. Built strictly with frontend technologies. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

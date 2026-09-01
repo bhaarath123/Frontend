@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compare HTML5 and CSS3. Read through side-by-side feature cards and check our structures vs styling comparison layout table.">
+  <title>HTML5 & CSS3 Features | WebDev Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-icon">&lt;/&gt;</span>
+          <span>WebDev Hub</span>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="html5.html">HTML5</a></li>
+          <li><a href="css3.html">CSS3</a></li>
+          <li><a href="features.html" class="active">Features</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Title Hero -->
+    <div style="margin-bottom: 2rem;">
+      <h1 style="font-size: 2.2rem; color: var(--dark-slate); margin-bottom: 0.5rem;">HTML5 & CSS3 Features</h1>
+      <p style="color: var(--text-muted); font-size: 1.1rem;">Explore the unique capabilities of both technologies and see how they work together to create professional websites.</p>
+    </div>
+
+    <!-- Content Layout Grid -->
+    <div class="content-layout">
+
+      <!-- Main Column -->
+      <div class="main-content">
+
+        <!-- Feature Cards Section -->
+        <section id="technology-features">
+          <h2 class="section-title">Feature Breakdown</h2>
+          <div class="cards-grid">
+
+            <!-- HTML5 Card -->
+            <article class="card">
+              <div class="card-header-img" style="background: linear-gradient(135deg, #e44d26, #f16529); height: 120px;">
+                <div class="card-tag">HTML5 Core</div>
+              </div>
+              <div class="card-content">
+                <h3 style="margin-top: 0.5rem;">HTML5 Features</h3>
+                <p>HTML5 builds the structure of your site. Key features include:</p>
+                <ul class="feature-list" style="margin-bottom: 0;">
+                  <li><strong>Semantic HTML:</strong> Tags like <code>&lt;main&gt;</code> and <code>&lt;nav&gt;</code> define page components clearly.</li>
+                  <li><strong>Multimedia:</strong> Native player controls for playing audio and video without plugins.</li>
+                  <li><strong>Forms:</strong> Enhanced verification attributes and native calendar/color inputs.</li>
+                  <li><strong>Canvas:</strong> Responsive canvas context for custom shapes and games.</li>
+                  <li><strong>SVG:</strong> Built-in vector graphics rendering that stays crisp at any size.</li>
+                  <li><strong>Storage:</strong> Offline persistent databases built right into the browser.</li>
+                  <li><strong>Accessibility:</strong> Better integration with screen-readers and accessibility devices.</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- CSS3 Card -->
+            <article class="card">
+              <div class="card-header-img" style="background: linear-gradient(135deg, #264de4, #29a9df); height: 120px;">
+                <div class="card-tag">CSS3 Design</div>
+              </div>
+              <div class="card-content">
+                <h3 style="margin-top: 0.5rem;">CSS3 Features</h3>
+                <p>CSS3 shapes the presentation of your site. Key features include:</p>
+                <ul class="feature-list" style="margin-bottom: 0;">
+                  <li><strong>Flexbox:</strong> Streamlines aligning and packing items in one-dimensional lists.</li>
+                  <li><strong>CSS Grid:</strong> Creates two-dimensional web layouts using rows and columns.</li>
+                  <li><strong>Animations:</strong> Looping keyframe animations built strictly with styling sheets.</li>
+                  <li><strong>Transitions:</strong> Smoothly transforms properties during state changes (e.g. hovers).</li>
+                  <li><strong>Transforms:</strong> Translates, scales, skews, or rotates elements dynamically.</li>
+                  <li><strong>Media Queries:</strong> Modifies styles based on screen resolution and size.</li>
+                  <li><strong>Gradients:</strong> Fades colors into one another without needing large background files.</li>
+                  <li><strong>Shadows:</strong> Adds card depth and realistic visual shadows easily.</li>
+                </ul>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- HTML5 vs CSS3 Comparison Table Section -->
+        <section id="comparison">
+          <h2 class="section-title">HTML5 vs CSS3 Comparison</h2>
+          <p>While both are essential, they serve completely different roles in frontend web development:</p>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width: 50%;">HTML5</th>
+                  <th style="width: 50%;">CSS3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Purpose:</strong> Structure</td>
+                  <td><strong>Purpose:</strong> Presentation</td>
+                </tr>
+                <tr>
+                  <td><strong>Language Type:</strong> Markup Language</td>
+                  <td><strong>Language Type:</strong> Style Sheet Language</td>
+                </tr>
+                <tr>
+                  <td><strong>Main Use:</strong> Creates webpage content</td>
+                  <td><strong>Main Use:</strong> Styles webpage content</td>
+                </tr>
+                <tr>
+                  <td><strong>Examples:</strong> Headings, paragraphs, forms, images, tables</td>
+                  <td><strong>Examples:</strong> Colors, fonts, layouts, transitions, animations</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- The Relationship Section -->
+        <section id="relationship">
+          <h2 class="section-title">The Relationship</h2>
+          <p>Think of web development like building a house:</p>
+          <ul class="feature-list">
+            <li><strong>HTML5 represents the structure:</strong> It is the concrete foundation, the bricks, the wooden framing, and the placement of doors and windows. Without it, you have no house.</li>
+            <li><strong>CSS3 represents the design:</strong> It is the paint on the walls, the aesthetic layout of the furniture, the wallpaper patterns, and the lighting installations. It makes the house beautiful, functional, and pleasant to inhabit.</li>
+          </ul>
+          <p style="margin-top: 1rem; font-style: italic; color: var(--text-muted);">Together, HTML5 structures the page content, and CSS3 styles the design to deliver a complete, modern user experience.</p>
+        </section>
+
+      </div>
+
+      <!-- Aside Sidebar -->
+      <aside>
+        <div class="aside-widget">
+          <h3>Quick Contrast</h3>
+          <div class="quick-tip">
+            <strong>Key Concept</strong>
+            <p style="margin-top: 0.5rem; margin-bottom: 0; font-size: 0.9rem;"><strong>HTML5</strong> tells the browser <em>what</em> is on the page (e.g. "this is a button").<br><br><strong>CSS3</strong> tells the browser <em>how</em> it looks (e.g. "this button is blue with rounded corners and fades on hover").</p>
+          </div>
+        </div>
+        
+        <div class="aside-widget">
+          <h3>Next Level</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">Once you master HTML5 and CSS3, the third layer of web development is <strong>JavaScript</strong>, which handles the interactive actions and logical behaviors of the web page.</p>
+        </div>
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="html5.html">HTML5</a></li>
+        <li><a href="css3.html">CSS3</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Web Development Hub | Learn HTML5 & CSS3</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

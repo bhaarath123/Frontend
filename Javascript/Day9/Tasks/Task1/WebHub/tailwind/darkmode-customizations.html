@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn Dark Mode & Customization syntax, properties, mistakes, and practice questions.">
+  <title>Dark Mode & Customization | WebLearn Hub</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Compiled style.css (includes Tailwind utilities + prefixing) -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Inline CSS Checkbox Hack for Mobile Navbar toggling */
+    #mobile-nav-checkbox:checked ~ #navbarCollapseContent {
+      display: block !important;
+    }
+    /* Hover Dropdown Menu triggers */
+    .nav-item-dropdown {
+      position: relative;
+    }
+    .dropdown-menu-custom {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #212529;
+      border: 1px solid #343a40;
+      padding: 0.5rem 0;
+      z-index: 1000;
+      min-width: 200px;
+      border-radius: 0.25rem;
+      list-style: none;
+    }
+    .dropdown-menu-custom a:hover {
+      background-color: #4f46e5;
+    }
+    .nav-item-dropdown:hover .dropdown-menu-custom {
+      display: block;
+    }
+    .interactive-runner-card {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 16px;
+      color: #e2e8f0;
+    }
+    .runner-screen {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 6px;
+      padding: 12px;
+      font-family: 'Fira Code', monospace;
+      color: #38bdf8;
+      min-height: 48px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Responsive Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        WebLearn Hub
+      </a>
+      
+      <!-- Mobile toggle using checkbox -->
+      <input type="checkbox" id="mobile-nav-checkbox" class="d-none">
+      <label for="mobile-nav-checkbox" class="navbar-toggler" role="button" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </label>
+
+      <div class="collapse navbar-collapse" id="navbarCollapseContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+          
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../index.html">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../javascript/index.html">JavaScript</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../javascript/logical-problems.html">Logic 10</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/roadmap.html">Roadmap</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/practice.html">Practice</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/projects.html">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/quizzes.html">Quizzes</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/articles.html">Articles</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/interview.html">Interviews</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/cheat-sheets.html">Cheat Sheets</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/about.html">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/contact.html">Contact</a>
+      </li>
+    
+          <!-- Learn hover dropdown -->
+          <li class="nav-item nav-item-dropdown">
+            <a class="nav-link dropdown-toggle text-white-50" href="#" role="button">All Modules</a>
+            <ul class="dropdown-menu-custom shadow">
+              <li><a class="dropdown-item text-white" style="font-size: 13px;" href="../web-basics/index.html">Web Basics</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../html/index.html">HTML5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../css/index.html">CSS3</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../responsive/index.html">Responsive Design</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../bootstrap/index.html">Bootstrap 5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="index.html">Tailwind CSS</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../javascript/index.html">JavaScript (New!)</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../javascript/logical-problems.html">JS Logical 10 (New!)</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input class="form-control me-2 bg-secondary text-white border-0" type="search" placeholder="Search JS & web topics..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  
+      <div class="tutorial-wrapper">
+        <aside class="sidebar-nav">
+          
+    <div class="mb-4">
+      <h5 class="fw-bold px-3 mb-3 text-secondary text-uppercase small tracking-wider">TAILWIND Outline</h5>
+      <nav class="nav flex-column">
+        <a href="index.html" class="nav-link ">
+          Course Overview
+        </a>
+        
+      <a href="introduction.html" class="nav-link ">
+        Tailwind CSS Introduction
+      </a>
+    
+      <a href="spacing.html" class="nav-link ">
+        Spacing (Margin & Padding)
+      </a>
+    
+      <a href="typography.html" class="nav-link ">
+        Typography
+      </a>
+    
+      <a href="colors-borders.html" class="nav-link ">
+        Colors & Borders
+      </a>
+    
+      <a href="shadows-dimensions.html" class="nav-link ">
+        Shadows & Dimensions
+      </a>
+    
+      <a href="flexbox.html" class="nav-link ">
+        Tailwind Flexbox
+      </a>
+    
+      <a href="grid.html" class="nav-link ">
+        Tailwind Grid
+      </a>
+    
+      <a href="positioning-states.html" class="nav-link ">
+        Positioning & States
+      </a>
+    
+      <a href="darkmode-customizations.html" class="nav-link active">
+        Dark Mode & Customization
+      </a>
+    
+        
+      </nav>
+    </div>
+  
+        </aside>
+        <main class="content-area">
+          
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html">TAILWIND</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Dark Mode & Customization</li>
+      </ol>
+    </nav>
+
+    <!-- 1. Topic Title -->
+    <h1 class="fw-bold tw-text-4xl tw-text-slate-900 dark:tw-text-white tw-mb-4">Dark Mode & Customization</h1>
+    
+    <!-- 2. What is it? -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">1. What is it?</h3>
+      <p class="lead">Tailwind CSS features native dark mode support using the dark: variant class prefix. When active, styles with the dark: prefix (e.g., dark:tw-bg-slate-900) are applied to elements automatically.</p>
+    </section>
+
+    <!-- 3. Why is it important? -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">2. Why is it important?</h3>
+      <p>Dark mode reduces eye strain in low-light environments. Tailwind lets you configure dark mode layouts directly in your HTML files, avoiding duplicate custom CSS files.</p>
+    </section>
+
+    <!-- 4. Syntax & 5. Basic Example -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">3. Syntax & Basic Example</h3>
+      <pre class="bg-dark text-white p-3 rounded font-monospace small mb-2"><code>&lt;div class=&quot;tw-bg-white tw-text-slate-900 dark:tw-bg-slate-900 dark:tw-text-white&quot;&gt;
+  Automatic Dark Mode adaptive card.
+&lt;/div&gt;</code></pre>
+      <p class="small text-muted mt-2"><strong>Basic description:</strong> <code>A dark mode background: `dark:tw-bg-slate-950`.</code></p>
+    </section>
+
+    <!-- 6. Code Example & 7. Expected Output -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">4. Code & Interactive Rendered Output</h3>
+      
+      <div class="editor-container">
+        <div class="editor-header">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+          <div class="editor-title">tailwind live sandbox</div>
+        </div>
+        <div class="editor-body">
+          <pre class="code-panel"><code>&lt;div class=&quot;tw-bg-white tw-p-4 tw-rounded-lg tw-shadow dark:tw-bg-slate-800 tw-border dark:tw-border-slate-700&quot;&gt;
+    &lt;h5 class=&quot;tw-text-slate-900 dark:tw-text-white tw-font-bold&quot;&gt;Adaptive Theme Card&lt;/h5&gt;
+    &lt;p class=&quot;tw-text-slate-500 dark:tw-text-slate-400 tw-text-sm tw-mt-1&quot;&gt;This text adjusts to light and dark modes.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          <div class="output-panel">
+            <h6 class="tw-text-xs tw-text-slate-400 tw-font-bold tw-uppercase tw-mb-2">Live Output & Execution Preview</h6>
+            <div class="border tw-p-4 tw-rounded bg-white text-dark">
+              <div style="font-family: sans-serif; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+    <!-- Light Theme Mode -->
+    <div style="background-color: white; padding: 1rem; border-radius: 0.5rem; border: 1px solid #e2e8f0;">
+        <h5 style="color: #0f172a; font-weight: bold; margin-top: 0; margin-bottom: 0.25rem; font-size: 13px;">Light Example</h5>
+        <p style="color: #64748b; font-size: 11px; margin-bottom: 0;">White cards with dark text.</p>
+    </div>
+    <!-- Dark Theme Mode -->
+    <div style="background-color: #1e293b; padding: 1rem; border-radius: 0.5rem; border: 1px solid #334155; color: white;">
+        <h5 style="color: white; font-weight: bold; margin-top: 0; margin-bottom: 0.25rem; font-size: 13px;">Dark Example</h5>
+        <p style="color: #94a3b8; font-size: 11px; margin-bottom: 0;">Slate cards with bright text.</p>
+    </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="small text-muted mt-2"><strong>Expected Layout / Behavior:</strong> Two cards displaying light and dark theme configurations side-by-side (simulated visual preview).</p>
+    </section>
+
+    <!-- 8. Line-by-Line Explanation -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">5. Line-by-Line Explanation</h3>
+      <ul class="tw-list-disc tw-pl-5 tw-space-y-2">
+        <li>dark:tw-bg-slate-800: Sets a dark slate background in dark mode.</li><li>dark:tw-text-white: Sets white text in dark mode.</li><li>dark:tw-border-slate-700: Adjusts borders to dark grey in dark mode to prevent visual harshness.</li>
+      </ul>
+    </section>
+
+    <!-- 9. Important Properties/Tags/Classes -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">6. Key Properties, Methods & Syntax</h3>
+      <table class="table table-bordered table-striped small">
+        <thead>
+          <tr class="table-primary">
+            <th>Property / Method / Tag</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+    <tr>
+      <td class="font-monospace fw-bold text-indigo-600">dark:*</td>
+      <td>Applies style overrides when dark mode is enabled on the HTML container.</td>
+    </tr>
+  
+    <tr>
+      <td class="font-monospace fw-bold text-indigo-600">darkMode: 'media'</td>
+      <td>Tailwind config setting that checks system color preferences automatically.</td>
+    </tr>
+  
+    <tr>
+      <td class="font-monospace fw-bold text-indigo-600">darkMode: 'class'</td>
+      <td>Tailwind config setting that triggers dark mode only when the .dark class is added to the HTML root.</td>
+    </tr>
+  
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 10. Real-World Use -->
+    <section class="tw-mb-8 bg-info bg-opacity-10 border border-info border-opacity-20 tw-p-4 tw-rounded-lg">
+      <h4 class="fw-bold text-info-emphasis fs-5">7. Real-World Use</h4>
+      <p class="mb-0 small">Modern SaaS platforms detect system preferences natively, or allow manual theme toggling via class name updates, adjusting layout styling instantly.</p>
+    </section>
+
+    <!-- 11. Common Mistakes & 12. Best Practices -->
+    <div class="row g-4 tw-mb-8">
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-success fs-5">Best Practices</h4>
+          <ul class="small mb-0 mt-2">
+            <li>Always design light mode first, then add dark mode overrides using the dark: prefix.</li><li>Ensure text contrast ratios remain high in both themes.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-danger fs-5">Common Mistakes</h4>
+          <ul class="small mb-0 mt-2">
+            <li>Forgetting to design custom dark mode overrides, leaving some cards with bright white backgrounds in dark mode, causing poor contrast and layout inconsistencies.</li><li>Using pure black background (#000) and pure white text, which creates harsh contrast. Rich dark slates (#0f172a, #1e293b) are preferred.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13. Practice Exercise -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">8. Interactive Practice Challenge</h3>
+      <div class="card border-primary p-4 bg-white text-dark">
+        <h5 class="fw-bold">Write an HTML container styled with Tailwind classes (using 'tw-' prefix) to display a white background (tw-bg-white) and black text (tw-text-black) in light mode, and a slate-900 background (dark:tw-bg-slate-900) and white text (dark:tw-text-white) in dark mode.</h5>
+        <p class="small text-muted mt-1">Objective: Set responsive theme colors.</p>
+        <p class="small">Instructions: Combine light and dark: variants.</p>
+        
+        <pre class="bg-dark text-white p-3 rounded font-monospace small mb-3"><code>&lt;!-- Write adaptive theme card --&gt;</code></pre>
+        
+        <div class="d-flex gap-2">
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Hint</summary>
+            <div class="interactive-body">
+              <p class="mb-0 text-secondary">Use classes class=&#039;tw-bg-white tw-text-black dark:tw-bg-slate-900 dark:tw-text-white&#039;.</p>
+            </div>
+          </details>
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Solution</summary>
+            <div class="interactive-body">
+              <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;div class=&quot;tw-bg-white tw-text-black dark:tw-bg-slate-900 dark:tw-text-white tw-p-4&quot;&gt;
+    Adaptive content.
+&lt;/div&gt;</code></pre>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. Interview Questions -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">9. Tech Screening Question</h3>
+      <details class="interactive-card">
+        <summary>Q: What are the two strategies Tailwind uses for Dark Mode, and how do they differ?</summary>
+        <div class="interactive-body">
+          <h6 class="fw-bold text-success">Answer:</h6>
+          <p>The two strategies are: 1) 'media' (the default, which uses the browser's prefers-color-scheme media query to match dark mode automatically), and 2) 'class' (which applies dark mode styles only when the .dark class is added to the HTML root tag).</p>
+          <h6 class="fw-bold text-indigo-600">Explanation:</h6>
+          <p class="small">The 'media' strategy is automatic; the 'class' strategy is used when you want to build a manual toggle switch in the UI.</p>
+          <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>tailwind.config.js: darkMode: &#039;class&#039;</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <!-- 15. Quick Revision -->
+    <section class="tw-mb-8 bg-warning bg-opacity-10 border border-warning border-opacity-20 tw-p-4 tw-rounded-lg">
+      <h4 class="fw-bold text-warning-emphasis fs-5">10. Quick Revision</h4>
+      <p class="mb-0 small">Tailwind's dark: variant prefix applies styles in dark mode. Configure dark mode using either system preferences ('media') or a manual root class ('class') in the configuration file.</p>
+    </section>
+
+    <!-- 16 & 17. Previous / Next navigation -->
+    <div class="d-flex justify-content-between pt-4 border-top">
+      <a href="positioning-states.html" class="btn btn-outline-secondary d-flex align-items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Previous: Positioning & States
+       </a>
+      <div></div>
+    </div>
+  
+        </main>
+      </div>
+    
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white-50 py-5 mt-auto border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="text-white fw-bold d-flex align-items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            WebLearn Hub
+          </h5>
+          <p class="small mt-2">Master Web Basics, HTML5, CSS3, Bootstrap 5, Tailwind CSS, and JavaScript with interactive examples and logic problem solvers.</p>
+          <p class="small text-white-50">Tagline: <em>Learn. Code. Build. Share.</em></p>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Curriculum</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../web-basics/index.html" class="text-white-50 text-decoration-none">Web Basics</a></li>
+            <li><a href="../html/index.html" class="text-white-50 text-decoration-none">HTML5 Basics</a></li>
+            <li><a href="../css/index.html" class="text-white-50 text-decoration-none">CSS3 Styles</a></li>
+            <li><a href="../responsive/index.html" class="text-white-50 text-decoration-none">Responsive Design</a></li>
+            <li><a href="../bootstrap/index.html" class="text-white-50 text-decoration-none">Bootstrap 5</a></li>
+            <li><a href="index.html" class="text-white-50 text-decoration-none">Tailwind CSS</a></li>
+            <li><a href="../javascript/index.html" class="text-warning text-decoration-none fw-bold">JavaScript (New)</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Resources</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../javascript/logical-problems.html" class="text-white-50 text-decoration-none">JS Logical 10</a></li>
+            <li><a href="../pages/practice.html" class="text-white-50 text-decoration-none">Practice Sets</a></li>
+            <li><a href="../pages/projects.html" class="text-white-50 text-decoration-none">Projects</a></li>
+            <li><a href="../pages/quizzes.html" class="text-white-50 text-decoration-none">Quizzes</a></li>
+            <li><a href="../pages/articles.html" class="text-white-50 text-decoration-none">Articles</a></li>
+            <li><a href="../pages/cheat-sheets.html" class="text-white-50 text-decoration-none">Cheat Sheets</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-white fw-bold">Company & Legal</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../pages/about.html" class="text-white-50 text-decoration-none">About Hub</a></li>
+            <li><a href="../pages/contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="text-center small">
+        © 2026 WebLearn Hub. Complete Frontend & JavaScript Learning System. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Practice questions for frontend and JavaScript developer technical interviews.">
+  <title>Technical Interview Questions | WebLearn Hub</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Compiled style.css (includes Tailwind utilities + prefixing) -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Inline CSS Checkbox Hack for Mobile Navbar toggling */
+    #mobile-nav-checkbox:checked ~ #navbarCollapseContent {
+      display: block !important;
+    }
+    /* Hover Dropdown Menu triggers */
+    .nav-item-dropdown {
+      position: relative;
+    }
+    .dropdown-menu-custom {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #212529;
+      border: 1px solid #343a40;
+      padding: 0.5rem 0;
+      z-index: 1000;
+      min-width: 200px;
+      border-radius: 0.25rem;
+      list-style: none;
+    }
+    .dropdown-menu-custom a:hover {
+      background-color: #4f46e5;
+    }
+    .nav-item-dropdown:hover .dropdown-menu-custom {
+      display: block;
+    }
+    .interactive-runner-card {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 16px;
+      color: #e2e8f0;
+    }
+    .runner-screen {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 6px;
+      padding: 12px;
+      font-family: 'Fira Code', monospace;
+      color: #38bdf8;
+      min-height: 48px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Responsive Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        WebLearn Hub
+      </a>
+      
+      <!-- Mobile toggle using checkbox -->
+      <input type="checkbox" id="mobile-nav-checkbox" class="d-none">
+      <label for="mobile-nav-checkbox" class="navbar-toggler" role="button" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </label>
+
+      <div class="collapse navbar-collapse" id="navbarCollapseContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+          
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../index.html">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../javascript/index.html">JavaScript</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../javascript/logical-problems.html">Logic 10</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/roadmap.html">Roadmap</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/practice.html">Practice</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/projects.html">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/quizzes.html">Quizzes</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/articles.html">Articles</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link active fw-bold text-white" href="../pages/interview.html">Interviews</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/cheat-sheets.html">Cheat Sheets</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/about.html">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/contact.html">Contact</a>
+      </li>
+    
+          <!-- Learn hover dropdown -->
+          <li class="nav-item nav-item-dropdown">
+            <a class="nav-link dropdown-toggle text-white-50" href="#" role="button">All Modules</a>
+            <ul class="dropdown-menu-custom shadow">
+              <li><a class="dropdown-item text-white" style="font-size: 13px;" href="../web-basics/index.html">Web Basics</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../html/index.html">HTML5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../css/index.html">CSS3</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../responsive/index.html">Responsive Design</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../bootstrap/index.html">Bootstrap 5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../tailwind/index.html">Tailwind CSS</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../javascript/index.html">JavaScript (New!)</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../javascript/logical-problems.html">JS Logical 10 (New!)</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input class="form-control me-2 bg-secondary text-white border-0" type="search" placeholder="Search JS & web topics..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  
+      <main class="flex-grow-1">
+        
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h1 class="fw-bold text-slate-900">Technical Interview Preparation</h1>
+      <p class="text-muted">Common technical screening questions for HTML5, CSS3, Bootstrap 5, Tailwind CSS, and JavaScript.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-12">
+        <div class="card p-4 shadow-sm border-0 mb-4 bg-white text-dark">
+          <h2 class="fw-bold border-bottom pb-2 text-warning mb-3">⚡ JavaScript Interview Questions</h2>
+          
+    <div class="mb-4">
+      <h3 class="fw-bold h5 text-capitalize text-indigo-600 mb-3">beginner Level</h3>
+      
+        <details class="interactive-card">
+          <summary>Q: What is the difference between `var`, `let`, and `const`?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>`var` is function-scoped and hoisted with undefined. `let` is block-scoped and reassignable. `const` is block-scoped and cannot be reassigned.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">Modern JS uses `const` by default and `let` only when values change.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>const PI = 3.14; let counter = 0;</code></pre>
+          </div>
+        </details>
+      
+        <details class="interactive-card">
+          <summary>Q: What is the difference between `==` and `===`?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>`==` performs loose equality with type coercion (e.g. 5 == '5' is true). `===` performs strict equality checking both value and data type (5 === '5' is false).</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">Always use strict equality `===` to prevent subtle bugs.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>5 === &#039;5&#039; // false, 5 == &#039;5&#039; // true</code></pre>
+          </div>
+        </details>
+      
+        <details class="interactive-card">
+          <summary>Q: What are the 7 primitive data types in JavaScript?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>String, Number, BigInt, Boolean, Undefined, Null, and Symbol.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">Primitives are immutable and passed by value; Objects are mutable and passed by reference.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>typeof &#039;Hello&#039; // &#039;string&#039;, typeof 42 // &#039;number&#039;</code></pre>
+          </div>
+        </details>
+      
+    </div>
+  
+    <div class="mb-4">
+      <h3 class="fw-bold h5 text-capitalize text-indigo-600 mb-3">intermediate Level</h3>
+      
+        <details class="interactive-card">
+          <summary>Q: What is a Closure in JavaScript?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>A closure is a function that remembers and accesses variables from its outer (lexical) scope even after the outer function has finished executing.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">Closures enable private variables and function factories.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>function outer() { let x = 10; return () =&gt; x; }</code></pre>
+          </div>
+        </details>
+      
+        <details class="interactive-card">
+          <summary>Q: What is Event Delegation?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>Attaching a single event listener to a parent container to manage events triggered by its present and future child elements using event bubbling and `e.target`.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">Saves memory and automatically handles dynamic elements.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>parent.addEventListener(&#039;click&#039;, e =&gt; { if (e.target.matches(&#039;li&#039;)) ... });</code></pre>
+          </div>
+        </details>
+      
+        <details class="interactive-card">
+          <summary>Q: What is the difference between `map()` and `forEach()`?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>`map()` transforms elements and returns a new array. `forEach()` iterates over the array for side effects and returns undefined.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">Use `map` when transforming data; use `forEach` for logging or DOM updates.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>const doubled = [1, 2].map(x =&gt; x * 2); // [2, 4]</code></pre>
+          </div>
+        </details>
+      
+    </div>
+  
+    <div class="mb-4">
+      <h3 class="fw-bold h5 text-capitalize text-indigo-600 mb-3">advanced Level</h3>
+      
+        <details class="interactive-card">
+          <summary>Q: Explain the JavaScript Event Loop.</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>JavaScript is single-threaded. The Event Loop monitors the Call Stack and task queues. When the Call Stack is empty, it pushes tasks from the Microtask Queue (Promises) first, then tasks from the Callback Queue (setTimeout, DOM events) onto the stack.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">Microtasks always have higher priority than macrotasks.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>Promise.resolve().then(...) runs before setTimeout(..., 0)</code></pre>
+          </div>
+        </details>
+      
+        <details class="interactive-card">
+          <summary>Q: What is the difference between Promise and async/await?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>`Promise` is an object representing asynchronous completion handled with `.then()`/`.catch()`. `async/await` is syntactic sugar over Promises that allows writing asynchronous code in a clean, linear, synchronous-looking style with `try/catch`.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">async functions always return a Promise.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>const res = await fetch(url); const data = await res.json();</code></pre>
+          </div>
+        </details>
+      
+    </div>
+  
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="card p-4 shadow-sm border-0 mb-4 bg-white text-dark">
+          <h2 class="fw-bold border-bottom pb-2 text-danger mb-3">HTML5 Interview Questions</h2>
+          
+    <div class="mb-4">
+      <h3 class="fw-bold h5 text-capitalize text-indigo-600 mb-3">beginner Level</h3>
+      
+        <details class="interactive-card">
+          <summary>Q: What is HTML?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>HTML (HyperText Markup Language) is the standard markup language used to structure web pages.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">Browsers read HTML tags to construct the Document Object Model (DOM).</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;p&gt;Paragraph&lt;/p&gt;</code></pre>
+          </div>
+        </details>
+      
+        <details class="interactive-card">
+          <summary>Q: What are HTML attributes?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>Attributes provide extra configuration details to elements (e.g. href, src, id, class).</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">They are defined in the opening tag.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;a href=&#039;index.html&#039;&gt;Home&lt;/a&gt;</code></pre>
+          </div>
+        </details>
+      
+    </div>
+  
+    <div class="mb-4">
+      <h3 class="fw-bold h5 text-capitalize text-indigo-600 mb-3">intermediate Level</h3>
+      
+        <details class="interactive-card">
+          <summary>Q: Why is Semantic HTML important?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>Semantic HTML uses meaningful tags (header, nav, article, main, footer) that clarify structure for screen readers and SEO crawlers.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">It boosts accessibility (a11y) and search rankings.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;article&gt;&lt;h2&gt;Title&lt;/h2&gt;&lt;/article&gt;</code></pre>
+          </div>
+        </details>
+      
+    </div>
+  
+    <div class="mb-4">
+      <h3 class="fw-bold h5 text-capitalize text-indigo-600 mb-3">advanced Level</h3>
+      
+        <details class="interactive-card">
+          <summary>Q: How do SVG and Canvas differ?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>SVG is vector-based XML in the DOM (CSS styleable, scalable). Canvas is a raster pixel grid drawn with scripts.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">Use SVG for icons and charts; Canvas for games.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;svg&gt;&lt;circle r=&#039;10&#039;&gt;&lt;/svg&gt;</code></pre>
+          </div>
+        </details>
+      
+    </div>
+  
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="card p-4 shadow-sm border-0 mb-4 bg-white text-dark">
+          <h2 class="fw-bold border-bottom pb-2 text-primary mb-3">CSS3 Interview Questions</h2>
+          
+    <div class="mb-4">
+      <h3 class="fw-bold h5 text-capitalize text-indigo-600 mb-3">beginner Level</h3>
+      
+        <details class="interactive-card">
+          <summary>Q: What is the CSS Box Model?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>The Box Model consists of Content, Padding, Border, and Margin surrounding every element.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">Always set box-sizing: border-box to keep sizing predictable.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>div { padding: 10px; border: 1px solid black; }</code></pre>
+          </div>
+        </details>
+      
+    </div>
+  
+    <div class="mb-4">
+      <h3 class="fw-bold h5 text-capitalize text-indigo-600 mb-3">intermediate Level</h3>
+      
+        <details class="interactive-card">
+          <summary>Q: What is the difference between relative, absolute, and fixed position?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>Relative offsets from normal flow. Absolute offsets relative to the nearest positioned ancestor. Fixed offsets relative to the browser viewport.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">Absolute children anchor to relative parents.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>.parent { position: relative; } .child { position: absolute; }</code></pre>
+          </div>
+        </details>
+      
+    </div>
+  
+    <div class="mb-4">
+      <h3 class="fw-bold h5 text-capitalize text-indigo-600 mb-3">advanced Level</h3>
+      
+        <details class="interactive-card">
+          <summary>Q: How is CSS specificity calculated?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>Inline styles (1000) > ID (100) > Class/Attribute/Pseudo-class (10) > Element (1).</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">Higher specificity rules take precedence over lower ones.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>#header (100) beats .title (10).</code></pre>
+          </div>
+        </details>
+      
+    </div>
+  
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="card p-4 shadow-sm border-0 mb-4 bg-white text-dark">
+          <h2 class="fw-bold border-bottom pb-2 text-violet mb-3" style="color: #8b5cf6;">Bootstrap 5 Interview Questions</h2>
+          
+    <div class="mb-4">
+      <h3 class="fw-bold h5 text-capitalize text-indigo-600 mb-3">beginner Level</h3>
+      
+        <details class="interactive-card">
+          <summary>Q: What is the Bootstrap Grid System?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>A 12-column mobile-first flexbox grid using containers, rows, and responsive column classes.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">Columns must be placed inside .row containers.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;div class=&#039;row&#039;&gt;&lt;div class=&#039;col-6&#039;&gt;Half&lt;/div&gt;&lt;/div&gt;</code></pre>
+          </div>
+        </details>
+      
+    </div>
+  
+    <div class="mb-4">
+      <h3 class="fw-bold h5 text-capitalize text-indigo-600 mb-3">intermediate Level</h3>
+      
+        <details class="interactive-card">
+          <summary>Q: How do Bootstrap responsive classes work?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>Bootstrap uses breakpoint suffixes (sm, md, lg, xl, xxl) based on media query min-widths.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">col-md-6 takes half width at 768px and above.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;div class=&#039;col-12 col-md-6&#039;&gt;...&lt;/div&gt;</code></pre>
+          </div>
+        </details>
+      
+    </div>
+  
+    <div class="mb-4">
+      <h3 class="fw-bold h5 text-capitalize text-indigo-600 mb-3">advanced Level</h3>
+      
+        <details class="interactive-card">
+          <summary>Q: How do you customize Bootstrap brand colors?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>By modifying CSS custom properties (variables) or overriding Sass maps ($primary) before compiling.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">:root { --bs-primary: #6366f1; }</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>:root { --bs-primary: #6366f1; }</code></pre>
+          </div>
+        </details>
+      
+    </div>
+  
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="card p-4 shadow-sm border-0 mb-4 bg-white text-dark">
+          <h2 class="fw-bold border-bottom pb-2 text-info mb-3">Tailwind CSS Interview Questions</h2>
+          
+    <div class="mb-4">
+      <h3 class="fw-bold h5 text-capitalize text-indigo-600 mb-3">beginner Level</h3>
+      
+        <details class="interactive-card">
+          <summary>Q: What is utility-first CSS?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>Building custom designs by composing low-level utility classes directly in the HTML without writing custom stylesheets.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">Speeds up development and ensures consistency.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;div class=&#039;tw-p-4 tw-bg-blue-600 tw-text-white&#039;&gt;...&lt;/div&gt;</code></pre>
+          </div>
+        </details>
+      
+    </div>
+  
+    <div class="mb-4">
+      <h3 class="fw-bold h5 text-capitalize text-indigo-600 mb-3">intermediate Level</h3>
+      
+        <details class="interactive-card">
+          <summary>Q: How do hover and focus variants work in Tailwind?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>By prefixing utilities with state modifiers like hover: or focus:.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">hover:tw-bg-blue-700 changes background color on mouseover.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;button class=&#039;tw-bg-blue-500 hover:tw-bg-blue-700&#039;&gt;Save&lt;/button&gt;</code></pre>
+          </div>
+        </details>
+      
+    </div>
+  
+    <div class="mb-4">
+      <h3 class="fw-bold h5 text-capitalize text-indigo-600 mb-3">advanced Level</h3>
+      
+        <details class="interactive-card">
+          <summary>Q: What is Tailwind CSS Purging/Tree-shaking?</summary>
+          <div class="interactive-body bg-white text-dark">
+            <h6 class="fw-bold text-success">Answer:</h6>
+            <p>The Tailwind compiler scans HTML files and extracts only the classes used, stripping out unused styles to keep the final CSS file tiny.</p>
+            <h6 class="fw-bold text-secondary">Explanation:</h6>
+            <p class="small text-muted">Keeps production CSS file under 10-15KB.</p>
+            <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>Compiles tw-p-4 if used, drops unused utilities.</code></pre>
+          </div>
+        </details>
+      
+    </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+
+      </main>
+    
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white-50 py-5 mt-auto border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="text-white fw-bold d-flex align-items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            WebLearn Hub
+          </h5>
+          <p class="small mt-2">Master Web Basics, HTML5, CSS3, Bootstrap 5, Tailwind CSS, and JavaScript with interactive examples and logic problem solvers.</p>
+          <p class="small text-white-50">Tagline: <em>Learn. Code. Build. Share.</em></p>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Curriculum</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../web-basics/index.html" class="text-white-50 text-decoration-none">Web Basics</a></li>
+            <li><a href="../html/index.html" class="text-white-50 text-decoration-none">HTML5 Basics</a></li>
+            <li><a href="../css/index.html" class="text-white-50 text-decoration-none">CSS3 Styles</a></li>
+            <li><a href="../responsive/index.html" class="text-white-50 text-decoration-none">Responsive Design</a></li>
+            <li><a href="../bootstrap/index.html" class="text-white-50 text-decoration-none">Bootstrap 5</a></li>
+            <li><a href="../tailwind/index.html" class="text-white-50 text-decoration-none">Tailwind CSS</a></li>
+            <li><a href="../javascript/index.html" class="text-warning text-decoration-none fw-bold">JavaScript (New)</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Resources</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../javascript/logical-problems.html" class="text-white-50 text-decoration-none">JS Logical 10</a></li>
+            <li><a href="../pages/practice.html" class="text-white-50 text-decoration-none">Practice Sets</a></li>
+            <li><a href="../pages/projects.html" class="text-white-50 text-decoration-none">Projects</a></li>
+            <li><a href="../pages/quizzes.html" class="text-white-50 text-decoration-none">Quizzes</a></li>
+            <li><a href="../pages/articles.html" class="text-white-50 text-decoration-none">Articles</a></li>
+            <li><a href="../pages/cheat-sheets.html" class="text-white-50 text-decoration-none">Cheat Sheets</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-white fw-bold">Company & Legal</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../pages/about.html" class="text-white-50 text-decoration-none">About Hub</a></li>
+            <li><a href="../pages/contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="text-center small">
+        © 2026 WebLearn Hub. Complete Frontend & JavaScript Learning System. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

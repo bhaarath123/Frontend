@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Master CSS3 styling rules, selectors, box model, external sheets, properties lookup, and animations code example.">
+  <title>CSS3 – Styling the Web | WebDev Hub</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-icon">&lt;/&gt;</span>
+          <span>WebDev Hub</span>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="html5.html">HTML5</a></li>
+          <li><a href="css3.html" class="active">CSS3</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Title Hero -->
+    <div style="margin-bottom: 2rem;">
+      <h1 style="font-size: 2.2rem; color: var(--dark-slate); margin-bottom: 0.5rem;">CSS3 – Styling the Web</h1>
+      <p style="color: var(--text-muted); font-size: 1.1rem;">Take control of layout design, typography, spacing, and animations to build breathtaking web designs.</p>
+    </div>
+
+    <!-- Layout Grid -->
+    <div class="content-layout">
+
+      <!-- Main Column -->
+      <div class="main-content">
+
+        <!-- What is CSS Section -->
+        <section id="what-is-css">
+          <h2 class="section-title">1. What is CSS?</h2>
+          <p><strong>CSS</strong> stands for <strong>Cascading Style Sheets</strong>. It is a stylesheet language used to control the appearance, layout, colors, fonts, spacing, alignment, and mobile responsiveness of elements rendered inside HTML documents.</p>
+        </section>
+
+        <!-- Importance of CSS Section -->
+        <section id="importance-css">
+          <h2 class="section-title">2. Importance of CSS</h2>
+          <p>HTML defines what elements are on a page, but CSS defines how they feel and appear. Its primary benefits include:</p>
+          <ul class="feature-list">
+            <li><strong>Makes websites attractive:</strong> Allows you to replace plain elements with customized layouts, gradients, and shadows.</li>
+            <li><strong>Controls page layout:</strong> Lets you arrange elements in side-by-side columns, grids, or floating headers.</li>
+            <li><strong>Separates content from presentation:</strong> Keeps your HTML markup clean and makes code changes much simpler.</li>
+            <li><strong>Provides responsive design:</strong> Fits layouts beautifully across laptops, wide desktop screens, and tiny phone screens.</li>
+            <li><strong>Improves user experience:</strong> Interactive elements change hover colors and transitions, offering clear visual feedback.</li>
+            <li><strong>Allows reusable styles:</strong> Write a style rule once and apply it to hundreds of web pages instantly.</li>
+          </ul>
+        </section>
+
+        <!-- Key Features of CSS3 Section -->
+        <section id="features-css3">
+          <h2 class="section-title">3. Key Features of CSS3</h2>
+          <p>CSS3 brings modular features enabling sophisticated layout designs without needing resource-heavy images or JavaScript scripts:</p>
+          <ul class="feature-list">
+            <li><strong>Selectors:</strong> Targets specific tags using pseudo-classes (e.g., <code>:hover</code>, <code>:nth-child</code>, <code>:focus</code>).</li>
+            <li><strong>Colors:</strong> Supports transparent variables (RGBA, HSLA) and hex/name palettes.</li>
+            <li><strong>Fonts:</strong> Incorporates external fonts (like Google Fonts) using simple <code>@import</code> rules.</li>
+            <li><strong>Box model:</strong> Standardizes margin, border, padding, and content bounds calculation rules.</li>
+            <li><strong>Flexbox:</strong> Streamlines alignment of item chains along simple horizontal or vertical axes.</li>
+            <li><strong>Grid:</strong> Arranges pages in structured two-dimensional column-and-row frameworks.</li>
+            <li><strong>Media queries:</strong> Activates custom blocks of CSS depending on the user's viewport width.</li>
+            <li><strong>Transitions:</strong> Animates property transitions smoothly over a configurable time frame.</li>
+            <li><strong>Transforms:</strong> Rotates, scales, skews, or translates page elements in 2D and 3D space.</li>
+            <li><strong>Animations:</strong> Executes custom keyframe-based cycles to create complex looping visual behaviors.</li>
+            <li><strong>Border radius:</strong> rounds corners easily on boxes, cards, and input fields.</li>
+            <li><strong>Shadows:</strong> Adds three-dimensional depth shadows behind texts and box frames.</li>
+            <li><strong>Gradients:</strong> Blends color mixtures dynamically across elements.</li>
+          </ul>
+        </section>
+
+        <!-- Types of CSS Section -->
+        <section id="types-css">
+          <h2 class="section-title">4. Types of CSS</h2>
+          <p>There are three main ways to apply CSS styles to an HTML document:</p>
+          
+          <h3 style="margin-top: 1rem;">1. Inline CSS</h3>
+          <p>Applied directly within the HTML element using the <code>style</code> attribute. Useful for quick changes, but hard to maintain.</p>
+          <p><em>Example:</em> <code>&lt;p style="color: red;"&gt;Hello&lt;/p&gt;</code></p>
+          
+          <h3 style="margin-top: 1rem;">2. Internal CSS</h3>
+          <p>Defined inside the <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section of a single HTML document. Suitable for single-page files.</p>
+          
+          <h3 style="margin-top: 1rem;">3. External CSS</h3>
+          <p>Written in a separate <code>.css</code> stylesheet file and linked in the HTML head using a <code>&lt;link&gt;</code> tag. This is the <strong>industry standard recommended way</strong> for websites, keeping all layouts centrally managed in one file.</p>
+        </section>
+
+        <!-- Important CSS Properties Table Section -->
+        <section id="common-properties">
+          <h2 class="section-title">5. Important CSS Properties</h2>
+          <p>Here are the properties web developers use most frequently to adjust styling layouts:</p>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>color</code></td>
+                  <td>Changes the foreground text color</td>
+                </tr>
+                <tr>
+                  <td><code>background-color</code></td>
+                  <td>Changes the background color of an element</td>
+                </tr>
+                <tr>
+                  <td><code>font-size</code></td>
+                  <td>Controls the size of the text (e.g., in px, em, rem)</td>
+                </tr>
+                <tr>
+                  <td><code>font-family</code></td>
+                  <td>Specifies the font typeface hierarchy</td>
+                </tr>
+                <tr>
+                  <td><code>margin</code></td>
+                  <td>Controls the outer transparent spacing around elements</td>
+                </tr>
+                <tr>
+                  <td><code>padding</code></td>
+                  <td>Controls the inner spacing between content and border</td>
+                </tr>
+                <tr>
+                  <td><code>border</code></td>
+                  <td>Sets outline thickness, style, and color values</td>
+                </tr>
+                <tr>
+                  <td><code>width</code></td>
+                  <td>Configures the explicit horizontal width of an element</td>
+                </tr>
+                <tr>
+                  <td><code>height</code></td>
+                  <td>Configures the explicit vertical height of an element</td>
+                </tr>
+                <tr>
+                  <td><code>display</code></td>
+                  <td>Controls layout rendering model (e.g., block, inline-block, flex, grid, none)</td>
+                </tr>
+                <tr>
+                  <td><code>position</code></td>
+                  <td>Configures positioning modes (static, relative, absolute, fixed, sticky)</td>
+                </tr>
+                <tr>
+                  <td><code>text-align</code></td>
+                  <td>Aligns internal content text (left, center, right, justify)</td>
+                </tr>
+                <tr>
+                  <td><code>box-shadow</code></td>
+                  <td>Adds a customized drop-shadow behind block-level boxes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Advantages of CSS3 Section -->
+        <section id="advantages-css3">
+          <h2 class="section-title">6. Advantages of CSS3</h2>
+          <p>Adhering to modern CSS3 standards speeds up delivery and simplifies code management:</p>
+          <ul class="feature-list">
+            <li><strong>Faster development:</strong> Styling changes propagate across your entire site from one single CSS file.</li>
+            <li><strong>Reusable styles:</strong> Group class definitions together and apply them across multiple HTML elements.</li>
+            <li><strong>Responsive design:</strong> Media queries allow simple responsive styles to dynamically target specific viewports.</li>
+            <li><strong>Attractive layouts:</strong> Grid and Flexbox make structuring advanced layouts much simpler and cleaner.</li>
+            <li><strong>Better maintainability:</strong> Clear separation of text markup structure and styling rules makes updating sites quick.</li>
+            <li><strong>Animation and visual effects:</strong> Perform transitions and keyframe movements without script dependencies.</li>
+          </ul>
+        </section>
+
+        <!-- CSS Code Example Section -->
+        <section id="code-example">
+          <h2 class="section-title">7. Styled CSS3 Code Example</h2>
+          <p>Below is a clean CSS layout demonstration of classes, hover selectors, transitions, and media query breakpoints:</p>
+          <pre><code><span class="comment">/* Styles a standard card element with smooth interactive scale */</span>
+<span class="selector">.card</span> {
+  <span class="prop">background-color</span>: <span class="val">#ffffff</span>;
+  <span class="prop">border</span>: <span class="val">1px solid #e2e8f0</span>;
+  <span class="prop">border-radius</span>: <span class="val">12px</span>;
+  <span class="prop">box-shadow</span>: <span class="val">0 10px 15px -3px rgba(0, 0, 0, 0.05)</span>;
+  <span class="prop">transition</span>: <span class="val">transform 0.3s ease, box-shadow 0.3s ease</span>;
+}
+
+<span class="comment">/* Elevate card slightly on hover */</span>
+<span class="selector">.card:hover</span> {
+  <span class="prop">transform</span>: <span class="val">translateY(-5px)</span>;
+  <span class="prop">box-shadow</span>: <span class="val">0 20px 25px -5px rgba(0, 0, 0, 0.1)</span>;
+}
+
+<span class="comment">/* Media query rules for mobile viewports */</span>
+<span class="selector">@media (max-width: 768px)</span> {
+  <span class="selector">.card</span> {
+    <span class="prop">margin-bottom</span>: <span class="val">1rem</span>;
+  }
+}</code></pre>
+        </section>
+
+      </div>
+
+      <!-- Aside Sidebar -->
+      <aside>
+        <div class="aside-widget">
+          <h3>Box Model Tip</h3>
+          <div class="quick-tip">
+            <strong>Border-Box Rule</strong>
+            <p style="margin-top: 0.5rem; margin-bottom: 0; font-size: 0.9rem;">Include <code>box-sizing: border-box;</code> globally in your stylesheet. This forces paddings and border widths to fit <em>within</em> the specified width of the element, preventing layout breaking!</p>
+          </div>
+        </div>
+        
+        <div class="aside-widget">
+          <h3>Did You Know?</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">The initial CSS proposal was written by Håkon Wium Lie in October 18, 1994. The CSS3 specifications are designed in modular pieces, allowing new modules (like Grid) to develop independently.</p>
+        </div>
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="html5.html">HTML5</a></li>
+        <li><a href="css3.html">CSS3</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Web Development Hub | Learn HTML5 & CSS3</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn web development with HTML5 & CSS3. Build the foundation of modern websites with clean code, responsive styling, and accessibility.">
+  <title>Web Development Hub – HTML5 & CSS3</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-icon">&lt;/&gt;</span>
+          <span>WebDev Hub</span>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="html5.html">HTML5</a></li>
+          <li><a href="css3.html">CSS3</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Learn Web Development with HTML5 & CSS3</h1>
+      <p>Build the foundation of modern websites with HTML5 and CSS3. Master structuring content and styling layout step-by-step.</p>
+      <a href="html5.html" class="btn btn-primary">Start Learning</a>
+    </section>
+
+    <!-- Content Layout Grid -->
+    <div class="content-layout">
+      
+      <!-- Main Content Area -->
+      <div class="main-content">
+        
+        <!-- Introduction Section -->
+        <section id="introduction">
+          <h2 class="section-title">What is Web Development?</h2>
+          <p>Web development is the process of creating websites and web applications that run on the internet or an intranet. It includes designing the structure, appearance, and functionality of web pages. From simple static landing pages to complex social networking applications, web development forms the core of our digital world.</p>
+          <figure>
+            <!-- Generated Web Development illustration placeholder -->
+            <img src="images/web_dev.jpg" alt="Illustration representing modern web development with layout components, gears, and stylized code blocks" style="border-radius: var(--border-radius-md); max-width: 100%; height: auto; box-shadow: var(--box-shadow);">
+            <figcaption>Figure 1: HTML5 structures content while CSS3 controls visual design & aesthetics.</figcaption>
+          </figure>
+        </section>
+
+        <!-- Core Technologies Article Cards -->
+        <section id="technologies">
+          <h2 class="section-title">Core Technologies</h2>
+          <div class="cards-grid">
+            
+            <!-- HTML5 Card -->
+            <article class="card">
+              <div class="card-header-img" style="background: linear-gradient(135deg, #e44d26, #f16529); height: 120px;">
+                <div class="card-tag">Structure</div>
+              </div>
+              <div class="card-content">
+                <h3>HTML5</h3>
+                <p>HTML5 (HyperText Markup Language) is used to create the structure and content of web pages. It defines the headings, paragraphs, links, images, tables, and multimedia content of a website.</p>
+                <a href="html5.html" class="card-link">Explore HTML5</a>
+              </div>
+            </article>
+
+            <!-- CSS3 Card -->
+            <article class="card">
+              <div class="card-header-img" style="background: linear-gradient(135deg, #264de4, #29a9df); height: 120px;">
+                <div class="card-tag">Style</div>
+              </div>
+              <div class="card-content">
+                <h3>CSS3</h3>
+                <p>CSS3 (Cascading Style Sheets) is used to style, design, and visually present HTML elements. It manages colors, typography, spacing, layouts, and responsive media adjustments.</p>
+                <a href="css3.html" class="card-link">Explore CSS3</a>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- Why Learn HTML & CSS Section -->
+        <section id="why-learn">
+          <h2 class="section-title">Why Learn HTML & CSS?</h2>
+          <p>These two fundamental technologies are critical for anyone interested in programming, design, or digital publishing. Here is why you should learn them:</p>
+          <ul class="feature-list">
+            <li><strong>Easy to learn:</strong> Simple syntax and immediate visual feedback make it the perfect starting point for beginners.</li>
+            <li><strong>Foundation of web development:</strong> Every website on the internet uses HTML and CSS under the hood.</li>
+            <li><strong>Used in almost every website:</strong> Knowledge of these basics is highly sought after by employers worldwide.</li>
+            <li><strong>Helps create responsive websites:</strong> Build pages that look stunning on laptops, tablets, and smartphones alike.</li>
+            <li><strong>Important for frontend development:</strong> You cannot learn advanced frameworks (like React, Vue, or Angular) without first mastering HTML & CSS.</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <!-- Sidebar Area -->
+      <aside>
+        <div class="aside-widget">
+          <h3>Quick Resource</h3>
+          <div class="quick-tip">
+            <strong>Pro Tip: Developer Tools</strong>
+            <p style="margin-top: 0.5rem; margin-bottom: 0; font-size: 0.9rem;">Right-click anywhere on a web page and select "Inspect" to open browser Developer Tools. This allows you to view the HTML and CSS of any website in real time!</p>
+          </div>
+        </div>
+        <div class="aside-widget">
+          <h3>Learning Path</h3>
+          <ol style="margin-bottom: 0; padding-left: 1.2rem; font-size: 0.95rem;">
+            <li>Learn semantic HTML5 tags</li>
+            <li>Apply basic CSS3 styles</li>
+            <li>Understand the Box Model</li>
+            <li>Build layouts with Flexbox</li>
+            <li>Add media queries for mobile responsive layouts</li>
+          </ol>
+        </div>
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="html5.html">HTML5</a></li>
+        <li><a href="css3.html">CSS3</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Web Development Hub | Learn HTML5 & CSS3</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn HTML Forms & User Inputs syntax, properties, mistakes, and practice questions.">
+  <title>HTML Forms & User Inputs | WebLearn Hub</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Compiled style.css (includes Tailwind utilities + prefixing) -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Inline CSS Checkbox Hack for Mobile Navbar toggling */
+    #mobile-nav-checkbox:checked ~ #navbarCollapseContent {
+      display: block !important;
+    }
+    /* Hover Dropdown Menu triggers */
+    .nav-item-dropdown {
+      position: relative;
+    }
+    .dropdown-menu-custom {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #212529;
+      border: 1px solid #343a40;
+      padding: 0.5rem 0;
+      z-index: 1000;
+      min-width: 200px;
+      border-radius: 0.25rem;
+      list-style: none;
+    }
+    .dropdown-menu-custom a:hover {
+      background-color: #4f46e5;
+    }
+    .nav-item-dropdown:hover .dropdown-menu-custom {
+      display: block;
+    }
+    .interactive-runner-card {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 16px;
+      color: #e2e8f0;
+    }
+    .runner-screen {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 6px;
+      padding: 12px;
+      font-family: 'Fira Code', monospace;
+      color: #38bdf8;
+      min-height: 48px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Responsive Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        WebLearn Hub
+      </a>
+      
+      <!-- Mobile toggle using checkbox -->
+      <input type="checkbox" id="mobile-nav-checkbox" class="d-none">
+      <label for="mobile-nav-checkbox" class="navbar-toggler" role="button" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </label>
+
+      <div class="collapse navbar-collapse" id="navbarCollapseContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+          
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../index.html">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../javascript/index.html">JavaScript</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../javascript/logical-problems.html">Logic 10</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/roadmap.html">Roadmap</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/practice.html">Practice</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/projects.html">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/quizzes.html">Quizzes</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/articles.html">Articles</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/interview.html">Interviews</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/cheat-sheets.html">Cheat Sheets</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/about.html">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/contact.html">Contact</a>
+      </li>
+    
+          <!-- Learn hover dropdown -->
+          <li class="nav-item nav-item-dropdown">
+            <a class="nav-link dropdown-toggle text-white-50" href="#" role="button">All Modules</a>
+            <ul class="dropdown-menu-custom shadow">
+              <li><a class="dropdown-item text-white" style="font-size: 13px;" href="../web-basics/index.html">Web Basics</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="index.html">HTML5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../css/index.html">CSS3</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../responsive/index.html">Responsive Design</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../bootstrap/index.html">Bootstrap 5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../tailwind/index.html">Tailwind CSS</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../javascript/index.html">JavaScript (New!)</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../javascript/logical-problems.html">JS Logical 10 (New!)</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input class="form-control me-2 bg-secondary text-white border-0" type="search" placeholder="Search JS & web topics..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  
+      <div class="tutorial-wrapper">
+        <aside class="sidebar-nav">
+          
+    <div class="mb-4">
+      <h5 class="fw-bold px-3 mb-3 text-secondary text-uppercase small tracking-wider">HTML Outline</h5>
+      <nav class="nav flex-column">
+        <a href="index.html" class="nav-link ">
+          Course Overview
+        </a>
+        
+      <a href="introduction.html" class="nav-link ">
+        HTML Introduction & Syntax
+      </a>
+    
+      <a href="structure.html" class="nav-link ">
+        Document Structure & Meta Tags
+      </a>
+    
+      <a href="headings-text.html" class="nav-link ">
+        Headings, Paragraphs & Text Formatting
+      </a>
+    
+      <a href="links.html" class="nav-link ">
+        Links & Relative Paths
+      </a>
+    
+      <a href="images.html" class="nav-link ">
+        HTML Images & Semantics
+      </a>
+    
+      <a href="lists.html" class="nav-link ">
+        HTML Lists (ul, ol, dl)
+      </a>
+    
+      <a href="tables.html" class="nav-link ">
+        HTML Tables & Layout grids
+      </a>
+    
+      <a href="forms.html" class="nav-link active">
+        HTML Forms & User Inputs
+      </a>
+    
+      <a href="input-types.html" class="nav-link ">
+        HTML Input Types
+      </a>
+    
+      <a href="form-validation.html" class="nav-link ">
+        Form Attributes & Validation
+      </a>
+    
+      <a href="semantic.html" class="nav-link ">
+        Semantic HTML5 Elements
+      </a>
+    
+      <a href="multimedia.html" class="nav-link ">
+        HTML5 Multimedia & Embeds
+      </a>
+    
+      <a href="advanced-html.html" class="nav-link ">
+        Advanced HTML, a11y & SEO
+      </a>
+    
+        
+      </nav>
+    </div>
+  
+        </aside>
+        <main class="content-area">
+          
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html">HTML</a></li>
+        <li class="breadcrumb-item active" aria-current="page">HTML Forms & User Inputs</li>
+      </ol>
+    </nav>
+
+    <!-- 1. Topic Title -->
+    <h1 class="fw-bold tw-text-4xl tw-text-slate-900 dark:tw-text-white tw-mb-4">HTML Forms & User Inputs</h1>
+    
+    <!-- 2. What is it? -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">1. What is it?</h3>
+      <p class="lead">HTML Forms collect user input. Forms are defined with the <form> tag, containing label interfaces (<label>), text fields (<textarea>), selectors (<select>), and actions (<button>).</p>
+    </section>
+
+    <!-- 3. Why is it important? -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">2. Why is it important?</h3>
+      <p>Forms are the core interactive elements of a webpage. They enable user logins, search inputs, support queries, and checkout processes.</p>
+    </section>
+
+    <!-- 4. Syntax & 5. Basic Example -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">3. Syntax & Basic Example</h3>
+      <pre class="bg-dark text-white p-3 rounded font-monospace small mb-2"><code>&lt;form action=&quot;/submit&quot; method=&quot;POST&quot;&gt;
+  &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;username&quot;&gt;
+  &lt;button type=&quot;submit&quot;&gt;Send&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+      <p class="small text-muted mt-2"><strong>Basic description:</strong> <code>A standard email input form: `&lt;input type=&quot;email&quot; placeholder=&quot;Enter Email&quot;&gt;`.</code></p>
+    </section>
+
+    <!-- 6. Code Example & 7. Expected Output -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">4. Code & Interactive Rendered Output</h3>
+      
+      <div class="editor-container">
+        <div class="editor-header">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+          <div class="editor-title">html live sandbox</div>
+        </div>
+        <div class="editor-body">
+          <pre class="code-panel"><code>&lt;form action=&quot;#&quot; style=&quot;font-family: sans-serif; max-width: 320px; padding: 15px; border: 1px solid #ccc; border-radius: 6px;&quot;&gt;
+    &lt;div style=&quot;margin-bottom: 10px;&quot;&gt;
+        &lt;label for=&quot;form_username&quot; style=&quot;display: block; font-weight: bold; font-size: 13px;&quot;&gt;Username:&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;form_username&quot; name=&quot;user&quot; style=&quot;width: 100%; padding: 5px; box-sizing: border-box;&quot; placeholder=&quot;john_doe&quot;&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;margin-bottom: 10px;&quot;&gt;
+        &lt;label for=&quot;form_notes&quot; style=&quot;display: block; font-weight: bold; font-size: 13px;&quot;&gt;Bio Notes:&lt;/label&gt;
+        &lt;textarea id=&quot;form_notes&quot; name=&quot;notes&quot; style=&quot;width: 100%; padding: 5px; box-sizing: border-box;&quot; placeholder=&quot;Brief details...&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;submit&quot; style=&quot;width: 100%; background: #6366f1; color: white; border: none; padding: 8px; font-weight: bold; border-radius: 4px;&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+          <div class="output-panel">
+            <h6 class="tw-text-xs tw-text-slate-400 tw-font-bold tw-uppercase tw-mb-2">Live Output & Execution Preview</h6>
+            <div class="border tw-p-4 tw-rounded bg-white text-dark">
+              <div style="font-family: sans-serif; display: flex; justify-content: center;">
+    <form style="max-width: 280px; width: 100%; padding: 15px; border: 1px solid #e2e8f0; border-radius: 6px; background: #fff;">
+        <div style="margin-bottom: 8px;">
+            <label style="display: block; font-weight: bold; font-size: 12px; color: #1e3a8a; margin-bottom: 4px;">Username:</label>
+            <input type="text" style="width: 100%; padding: 4px; font-size: 12px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box;" placeholder="john_doe">
+        </div>
+        <div style="margin-bottom: 8px;">
+            <label style="display: block; font-weight: bold; font-size: 12px; color: #1e3a8a; margin-bottom: 4px;">Bio Notes:</label>
+            <textarea style="width: 100%; padding: 4px; font-size: 12px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box;" placeholder="Brief details..."></textarea>
+        </div>
+        <button type="button" style="width: 100%; background: #6366f1; color: white; border: none; padding: 6px; font-weight: bold; border-radius: 4px; cursor: pointer; font-size: 12px;">Submit</button>
+    </form>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="small text-muted mt-2"><strong>Expected Layout / Behavior:</strong> A styled vertical box showing username and textarea fields with a blue submission button at the bottom.</p>
+    </section>
+
+    <!-- 8. Line-by-Line Explanation -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-2">5. Line-by-Line Explanation</h3>
+      <ul class="tw-list-disc tw-pl-5 tw-space-y-2">
+        <li>action attribute: Specifies where the form payload is transmitted upon submission.</li><li>method='POST': Transmits data securely within the HTTP request body instead of the URL.</li><li>label for='...': Connects text labels with input fields via matching IDs.</li><li>textarea: Creates a multi-line text input field.</li>
+      </ul>
+    </section>
+
+    <!-- 9. Important Properties/Tags/Classes -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">6. Key Properties, Methods & Syntax</h3>
+      <table class="table table-bordered table-striped small">
+        <thead>
+          <tr class="table-primary">
+            <th>Property / Method / Tag</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+    <tr>
+      <td class="font-monospace fw-bold text-indigo-600">action</td>
+      <td>The URL target endpoint where data is sent.</td>
+    </tr>
+  
+    <tr>
+      <td class="font-monospace fw-bold text-indigo-600">method</td>
+      <td>HTTP transmission type (GET/POST).</td>
+    </tr>
+  
+    <tr>
+      <td class="font-monospace fw-bold text-indigo-600">name</td>
+      <td>The key name associated with the input value sent to the backend.</td>
+    </tr>
+  
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 10. Real-World Use -->
+    <section class="tw-mb-8 bg-info bg-opacity-10 border border-info border-opacity-20 tw-p-4 tw-rounded-lg">
+      <h4 class="fw-bold text-info-emphasis fs-5">7. Real-World Use</h4>
+      <p class="mb-0 small">Customer login screens, registration pages, support desks, and search inputs are built using HTML forms.</p>
+    </section>
+
+    <!-- 11. Common Mistakes & 12. Best Practices -->
+    <div class="row g-4 tw-mb-8">
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-success fs-5">Best Practices</h4>
+          <ul class="small mb-0 mt-2">
+            <li>Always associate a label with its input using matching 'for' and 'id' attributes.</li><li>Use fieldset and legend elements to group related inputs.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h4 class="fw-bold text-danger fs-5">Common Mistakes</h4>
+          <ul class="small mb-0 mt-2">
+            <li>Forgetting the name attribute on input tags. If name is missing, the input data is not included in the form payload.</li><li>Using plain text labels without the 'for' attribute, which hurts accessibility.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13. Practice Exercise -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">8. Interactive Practice Challenge</h3>
+      <div class="card border-primary p-4 bg-white text-dark">
+        <h5 class="fw-bold">Create a search form containing an input field with id 'search-box' and a button with type 'submit'.</h5>
+        <p class="small text-muted mt-1">Objective: Build input fields.</p>
+        <p class="small">Instructions: Combine form, label, input, and button elements.</p>
+        
+        <pre class="bg-dark text-white p-3 rounded font-monospace small mb-3"><code>&lt;!-- Write search form --&gt;</code></pre>
+        
+        <div class="d-flex gap-2">
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Hint</summary>
+            <div class="interactive-body">
+              <p class="mb-0 text-secondary">Use input type=&#039;search&#039; and connect it to a label.</p>
+            </div>
+          </details>
+          <details class="interactive-card flex-fill">
+            <summary>Reveal Solution</summary>
+            <div class="interactive-body">
+              <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;form action=&quot;/search&quot; method=&quot;GET&quot;&gt;
+    &lt;label for=&quot;search-box&quot;&gt;Search:&lt;/label&gt;
+    &lt;input type=&quot;search&quot; id=&quot;search-box&quot; name=&quot;q&quot;&gt;
+    &lt;button type=&quot;submit&quot;&gt;Go&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. Interview Questions -->
+    <section class="tw-mb-8">
+      <h3 class="fw-bold tw-text-xl tw-text-indigo-600 dark:tw-text-indigo-400 tw-mb-3">9. Tech Screening Question</h3>
+      <details class="interactive-card">
+        <summary>Q: Why should you always bind input fields to label elements?</summary>
+        <div class="interactive-body">
+          <h6 class="fw-bold text-success">Answer:</h6>
+          <p>Binding inputs to labels is vital for two reasons: 1) Accessibility (allows screen readers to read the label text when the input is focused), and 2) Usability (allows users to focus or select the input field by clicking on the label text, which is helpful for small checkboxes and radio buttons).</p>
+          <h6 class="fw-bold text-indigo-600">Explanation:</h6>
+          <p class="small">This is done by setting the label's 'for' attribute to match the input's 'id'.</p>
+          <pre class="bg-dark text-white p-3 rounded font-monospace small mb-0"><code>&lt;label for=&#039;user-pass&#039;&gt;Password&lt;/label&gt;&lt;input type=&#039;password&#039; id=&#039;user-pass&#039;&gt;</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <!-- 15. Quick Revision -->
+    <section class="tw-mb-8 bg-warning bg-opacity-10 border border-warning border-opacity-20 tw-p-4 tw-rounded-lg">
+      <h4 class="fw-bold text-warning-emphasis fs-5">10. Quick Revision</h4>
+      <p class="mb-0 small">HTML Forms wrap inputs using form tags. Always use labels linked with IDs, set input name attributes, and configure the appropriate method (GET/POST).</p>
+    </section>
+
+    <!-- 16 & 17. Previous / Next navigation -->
+    <div class="d-flex justify-content-between pt-4 border-top">
+      <a href="tables.html" class="btn btn-outline-secondary d-flex align-items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Previous: HTML Tables & Layout grids
+       </a>
+      <a href="input-types.html" class="btn btn-primary d-flex align-items-center gap-1">
+        Next: HTML Input Types
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+       </a>
+    </div>
+  
+        </main>
+      </div>
+    
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white-50 py-5 mt-auto border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="text-white fw-bold d-flex align-items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            WebLearn Hub
+          </h5>
+          <p class="small mt-2">Master Web Basics, HTML5, CSS3, Bootstrap 5, Tailwind CSS, and JavaScript with interactive examples and logic problem solvers.</p>
+          <p class="small text-white-50">Tagline: <em>Learn. Code. Build. Share.</em></p>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Curriculum</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../web-basics/index.html" class="text-white-50 text-decoration-none">Web Basics</a></li>
+            <li><a href="index.html" class="text-white-50 text-decoration-none">HTML5 Basics</a></li>
+            <li><a href="../css/index.html" class="text-white-50 text-decoration-none">CSS3 Styles</a></li>
+            <li><a href="../responsive/index.html" class="text-white-50 text-decoration-none">Responsive Design</a></li>
+            <li><a href="../bootstrap/index.html" class="text-white-50 text-decoration-none">Bootstrap 5</a></li>
+            <li><a href="../tailwind/index.html" class="text-white-50 text-decoration-none">Tailwind CSS</a></li>
+            <li><a href="../javascript/index.html" class="text-warning text-decoration-none fw-bold">JavaScript (New)</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Resources</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../javascript/logical-problems.html" class="text-white-50 text-decoration-none">JS Logical 10</a></li>
+            <li><a href="../pages/practice.html" class="text-white-50 text-decoration-none">Practice Sets</a></li>
+            <li><a href="../pages/projects.html" class="text-white-50 text-decoration-none">Projects</a></li>
+            <li><a href="../pages/quizzes.html" class="text-white-50 text-decoration-none">Quizzes</a></li>
+            <li><a href="../pages/articles.html" class="text-white-50 text-decoration-none">Articles</a></li>
+            <li><a href="../pages/cheat-sheets.html" class="text-white-50 text-decoration-none">Cheat Sheets</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-white fw-bold">Company & Legal</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../pages/about.html" class="text-white-50 text-decoration-none">About Hub</a></li>
+            <li><a href="../pages/contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="text-center small">
+        © 2026 WebLearn Hub. Complete Frontend & JavaScript Learning System. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

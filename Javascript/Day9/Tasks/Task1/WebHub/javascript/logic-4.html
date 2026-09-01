@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Solution, algorithm, explanation and interactive code runner for Check Palindrome String.">
+  <title>Logic 4: Check Palindrome String | WebLearn Hub</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Compiled style.css (includes Tailwind utilities + prefixing) -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Inline CSS Checkbox Hack for Mobile Navbar toggling */
+    #mobile-nav-checkbox:checked ~ #navbarCollapseContent {
+      display: block !important;
+    }
+    /* Hover Dropdown Menu triggers */
+    .nav-item-dropdown {
+      position: relative;
+    }
+    .dropdown-menu-custom {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #212529;
+      border: 1px solid #343a40;
+      padding: 0.5rem 0;
+      z-index: 1000;
+      min-width: 200px;
+      border-radius: 0.25rem;
+      list-style: none;
+    }
+    .dropdown-menu-custom a:hover {
+      background-color: #4f46e5;
+    }
+    .nav-item-dropdown:hover .dropdown-menu-custom {
+      display: block;
+    }
+    .interactive-runner-card {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 16px;
+      color: #e2e8f0;
+    }
+    .runner-screen {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 6px;
+      padding: 12px;
+      font-family: 'Fira Code', monospace;
+      color: #38bdf8;
+      min-height: 48px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Responsive Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        WebLearn Hub
+      </a>
+      
+      <!-- Mobile toggle using checkbox -->
+      <input type="checkbox" id="mobile-nav-checkbox" class="d-none">
+      <label for="mobile-nav-checkbox" class="navbar-toggler" role="button" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </label>
+
+      <div class="collapse navbar-collapse" id="navbarCollapseContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+          
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../index.html">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="index.html">JavaScript</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link active fw-bold text-white" href="logical-problems.html">Logic 10</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/roadmap.html">Roadmap</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/practice.html">Practice</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/projects.html">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/quizzes.html">Quizzes</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/articles.html">Articles</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/interview.html">Interviews</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/cheat-sheets.html">Cheat Sheets</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/about.html">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link text-white-50" href="../pages/contact.html">Contact</a>
+      </li>
+    
+          <!-- Learn hover dropdown -->
+          <li class="nav-item nav-item-dropdown">
+            <a class="nav-link dropdown-toggle text-white-50" href="#" role="button">All Modules</a>
+            <ul class="dropdown-menu-custom shadow">
+              <li><a class="dropdown-item text-white" style="font-size: 13px;" href="../web-basics/index.html">Web Basics</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../html/index.html">HTML5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../css/index.html">CSS3</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../responsive/index.html">Responsive Design</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../bootstrap/index.html">Bootstrap 5</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="../tailwind/index.html">Tailwind CSS</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="index.html">JavaScript (New!)</a></li><li><a class="dropdown-item text-white" style="font-size: 13px;" href="logical-problems.html">JS Logical 10 (New!)</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input class="form-control me-2 bg-secondary text-white border-0" type="search" placeholder="Search JS & web topics..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  
+      <div class="tutorial-wrapper">
+        <aside class="sidebar-nav">
+          
+    <div class="mb-4">
+      <h5 class="fw-bold px-3 mb-3 text-warning text-uppercase small tracking-wider">Logical 10 Problems</h5>
+      <nav class="nav flex-column">
+        <a href="logical-problems.html" class="nav-link ">
+          Logical 10 Overview
+        </a>
+        
+    <a href="logic-1.html" class="nav-link ">
+      <span class="badge bg-secondary me-1">#1</span> Check Even or Odd Number
+    </a>
+  
+    <a href="logic-2.html" class="nav-link ">
+      <span class="badge bg-secondary me-1">#2</span> Find Largest of Three Numbers
+    </a>
+  
+    <a href="logic-3.html" class="nav-link ">
+      <span class="badge bg-secondary me-1">#3</span> Reverse a String
+    </a>
+  
+    <a href="logic-4.html" class="nav-link active">
+      <span class="badge bg-secondary me-1">#4</span> Check Palindrome String
+    </a>
+  
+    <a href="logic-5.html" class="nav-link ">
+      <span class="badge bg-secondary me-1">#5</span> Find Factorial of a Number
+    </a>
+  
+    <a href="logic-6.html" class="nav-link ">
+      <span class="badge bg-secondary me-1">#6</span> Generate Fibonacci Series
+    </a>
+  
+    <a href="logic-7.html" class="nav-link ">
+      <span class="badge bg-secondary me-1">#7</span> Check Prime Number
+    </a>
+  
+    <a href="logic-8.html" class="nav-link ">
+      <span class="badge bg-secondary me-1">#8</span> Find Sum of Digits of a Number
+    </a>
+  
+    <a href="logic-9.html" class="nav-link ">
+      <span class="badge bg-secondary me-1">#9</span> Find Largest Number in an Array
+    </a>
+  
+    <a href="logic-10.html" class="nav-link ">
+      <span class="badge bg-secondary me-1">#10</span> Count Vowels in a String
+    </a>
+  
+      </nav>
+    </div>
+  
+        </aside>
+        <main class="content-area">
+          
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html">JavaScript</a></li>
+        <li class="breadcrumb-item"><a href="logical-problems.html">Logical Problems</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Logic 4</li>
+      </ol>
+    </nav>
+
+    <div class="d-flex align-items-center gap-2 mb-2">
+      <span class="badge bg-warning text-dark fw-bold text-uppercase">Logic Problem 4 of 10</span>
+    </div>
+    <h1 class="fw-bold tw-text-3xl tw-text-slate-900 dark:tw-text-white tw-mb-4">Check Palindrome String</h1>
+
+    <!-- Problem Statement -->
+    <div class="card border-primary p-4 bg-white text-dark mb-4 shadow-sm">
+      <h4 class="fw-bold text-primary fs-5">Problem Statement</h4>
+      <p class="lead mb-0 fs-6">Write a JavaScript function to check whether a given string or word is a Palindrome (reads the same forward and backward).</p>
+    </div>
+
+    <!-- Examples -->
+    <section class="tw-mb-6">
+      <h4 class="fw-bold tw-text-xl tw-text-indigo-600 tw-mb-3">Examples</h4>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="bg-light p-3 border rounded font-monospace small">
+            <strong>Example 1:</strong><br>
+            Input: <code>str = &#039;racecar&#039;</code><br>
+            Output: <code>&#039;racecar&#039; is a Palindrome</code>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="bg-light p-3 border rounded font-monospace small">
+            <strong>Example 2:</strong><br>
+            Input: <code>str = &#039;hello&#039;</code><br>
+            Output: <code>&#039;hello&#039; is NOT a Palindrome</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logic -->
+    <section class="tw-mb-6">
+      <h4 class="fw-bold tw-text-xl tw-text-indigo-600 tw-mb-2">Logic & Thought Process</h4>
+      <div class="bg-info bg-opacity-10 border border-info border-opacity-25 p-3 rounded">
+        <p class="mb-0">A string is a palindrome if it matches its reverse. We can compare characters from both ends moving inward using two pointers (left at 0, right at length - 1), or reverse the string and check if `reversedStr === originalStr`. We should also normalize case (`toLowerCase()`) for case-insensitive matching.</p>
+      </div>
+    </section>
+
+    <!-- Algorithm -->
+    <section class="tw-mb-6">
+      <h4 class="fw-bold tw-text-xl tw-text-indigo-600 tw-mb-2">Step-by-Step Algorithm</h4>
+      <ol class="tw-list-decimal tw-pl-5 tw-space-y-1">
+        <li>Step 1: Start the program.</li><li>Step 2: Read input string and convert to lowercase: `str = str.toLowerCase()`.</li><li>Step 3: Set `left = 0` and `right = str.length - 1`.</li><li>Step 4: While `left < right`: check if `str[left] !== str[right]`. If not equal, return false.</li><li>Step 5: Increment `left++` and decrement `right--`.</li><li>Step 6: If loop completes without mismatch, return true (is Palindrome).</li><li>Step 7: End.</li>
+      </ol>
+    </section>
+
+    <!-- Code Example -->
+    <section class="tw-mb-6">
+      <h4 class="fw-bold tw-text-xl tw-text-indigo-600 tw-mb-3">JavaScript Solution Code</h4>
+      <pre class="bg-dark text-white p-3 rounded font-monospace small mb-2"><code>function isPalindrome(str) {
+  // Normalize string to lowercase
+  const cleanStr = str.toLowerCase();
+  
+  // Two-pointer comparison
+  let left = 0;
+  let right = cleanStr.length - 1;
+  
+  while (left &lt; right) {
+    if (cleanStr[left] !== cleanStr[right]) {
+      return `&quot;${str}&quot; is NOT a Palindrome`;
+    }
+    left++;
+    right--;
+  }
+  
+  return `&quot;${str}&quot; is a Palindrome`;
+}
+
+// Test cases
+console.log(isPalindrome(&quot;racecar&quot;)); // Palindrome
+console.log(isPalindrome(&quot;Madam&quot;));   // Palindrome
+console.log(isPalindrome(&quot;coding&quot;));  // NOT a Palindrome</code></pre>
+      <p class="small text-muted mt-2"><strong>Output:</strong> For 'racecar', letters match from both ends (r=r, a=a, c=c), returning that it is a Palindrome. For 'coding', 'c' != 'g', immediately returning NOT a Palindrome.</p>
+    </section>
+
+    <!-- Line by line explanation -->
+    <section class="tw-mb-6">
+      <h4 class="fw-bold tw-text-xl tw-text-indigo-600 tw-mb-2">Line-by-Line Code Explanation</h4>
+      <ul class="tw-list-disc tw-pl-5 tw-space-y-1 small">
+        <li>Line 3: Converts string to lowercase for case-insensitive validation.</li><li>Lines 6-7: Initializes `left` index at start (0) and `right` index at end (`length - 1`).</li><li>Line 9: Loops while `left < right`.</li><li>Line 10: Compares characters at `left` and `right`. If mismatch found, terminates early with false.</li><li>Lines 13-14: Moves pointers inward (`left++`, `right--`).</li>
+      </ul>
+    </section>
+
+    <!-- Complexity & Edge Cases -->
+    <div class="row g-3 tw-mb-8">
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h5 class="fw-bold text-dark fs-6">Complexity Analysis</h5>
+          <p class="small mb-1"><strong>Time Complexity:</strong> O(N) - Inspects at most N/2 character pairs.</p>
+          <p class="small mb-0"><strong>Space Complexity:</strong> O(1) - Constant auxiliary memory with the two-pointer approach.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card bg-light h-100 p-3 border-0">
+          <h5 class="fw-bold text-dark fs-6">Edge Cases & Interview Tips</h5>
+          <p class="small mb-0">Single character strings ('a') and empty strings are palindromes by definition.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Interactive Tester -->
+    <section class="tw-mb-8">
+      <h4 class="fw-bold tw-text-xl tw-text-warning tw-mb-3">⚡ Live Interactive Code Runner</h4>
+      <div class="interactive-runner-card">
+        <label class="form-label fw-bold small text-slate-300" for="live-input-4">Enter a word to test for palindrome:</label>
+        <div class="input-group mb-3">
+          <input type="text" id="live-input-4" class="form-control font-monospace" value="racecar">
+          <button class="btn btn-warning fw-bold px-4" type="button" id="live-run-btn-4">Run Code</button>
+        </div>
+        <label class="form-label small text-slate-400">Execution Output Console:</label>
+        <div id="live-output-4" class="runner-screen">Click 'Run Code' to execute JavaScript logic...</div>
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const btn = document.getElementById('live-run-btn-4');
+          const input = document.getElementById('live-input-4');
+          const output = document.getElementById('live-output-4');
+          
+          function executeLogic(val) {
+  if (!val.trim()) return "Please enter a word.";
+  const clean = val.toLowerCase().replace(/[^a-z0-9]/g, '');
+  let left = 0, right = clean.length - 1;
+  let isPal = true;
+  while (left < right) {
+    if (clean[left] !== clean[right]) {
+      isPal = false;
+      break;
+    }
+    left++;
+    right--;
+  }
+  return isPal 
+    ? '"' + val + '" is a valid Palindrome! ✓' 
+    : '"' + val + '" is NOT a Palindrome. ✗';
+}
+
+          function run() {
+            try {
+              const res = executeLogic(input.value);
+              output.innerText = res;
+            } catch(e) {
+              output.innerText = "Error: " + e.message;
+            }
+          }
+
+          btn.addEventListener('click', run);
+          input.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') run();
+          });
+          // Auto run once
+          run();
+        });
+      </script>
+    </section>
+
+    <!-- Navigation between problems -->
+    <div class="d-flex justify-content-between pt-4 border-top">
+      <a href="logic-3.html" class="btn btn-outline-secondary d-flex align-items-center gap-1">
+        &larr; Prev: Logic 3
+       </a>
+      <a href="logic-5.html" class="btn btn-primary d-flex align-items-center gap-1">
+        Next: Logic 5 &rarr;
+       </a>
+    </div>
+  
+        </main>
+      </div>
+    
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white-50 py-5 mt-auto border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="text-white fw-bold d-flex align-items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            WebLearn Hub
+          </h5>
+          <p class="small mt-2">Master Web Basics, HTML5, CSS3, Bootstrap 5, Tailwind CSS, and JavaScript with interactive examples and logic problem solvers.</p>
+          <p class="small text-white-50">Tagline: <em>Learn. Code. Build. Share.</em></p>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Curriculum</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../web-basics/index.html" class="text-white-50 text-decoration-none">Web Basics</a></li>
+            <li><a href="../html/index.html" class="text-white-50 text-decoration-none">HTML5 Basics</a></li>
+            <li><a href="../css/index.html" class="text-white-50 text-decoration-none">CSS3 Styles</a></li>
+            <li><a href="../responsive/index.html" class="text-white-50 text-decoration-none">Responsive Design</a></li>
+            <li><a href="../bootstrap/index.html" class="text-white-50 text-decoration-none">Bootstrap 5</a></li>
+            <li><a href="../tailwind/index.html" class="text-white-50 text-decoration-none">Tailwind CSS</a></li>
+            <li><a href="index.html" class="text-warning text-decoration-none fw-bold">JavaScript (New)</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white fw-bold">Resources</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="logical-problems.html" class="text-white-50 text-decoration-none">JS Logical 10</a></li>
+            <li><a href="../pages/practice.html" class="text-white-50 text-decoration-none">Practice Sets</a></li>
+            <li><a href="../pages/projects.html" class="text-white-50 text-decoration-none">Projects</a></li>
+            <li><a href="../pages/quizzes.html" class="text-white-50 text-decoration-none">Quizzes</a></li>
+            <li><a href="../pages/articles.html" class="text-white-50 text-decoration-none">Articles</a></li>
+            <li><a href="../pages/cheat-sheets.html" class="text-white-50 text-decoration-none">Cheat Sheets</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-white fw-bold">Company & Legal</h6>
+          <ul class="list-unstyled small mt-2">
+            <li><a href="../pages/about.html" class="text-white-50 text-decoration-none">About Hub</a></li>
+            <li><a href="../pages/contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="text-center small">
+        © 2026 WebLearn Hub. Complete Frontend & JavaScript Learning System. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
