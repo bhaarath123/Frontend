@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1: Show / Hide Content</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 50px auto;
+            max-width: 500px;
+            padding: 0 20px;
+        }
+
+        .task-box {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #2b2b2b;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 15px;
+            font-weight: 600;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #0b5ed7;
+        }
+
+    
+        pre {
+            background-color: #212529;
+            color: #f8f9fa;
+            padding: 12px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 13px;
+            margin-top: 20px;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+    
+        .smooth-paragraph {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            margin: 0;
+            transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+        }
+
+        /* The class applied dynamically by JS to reveal the block smoothly */
+        .smooth-paragraph.reveal {
+            max-height: 120px; /* Big enough to fit the entire block text safely */
+            opacity: 1;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="task-box">
+        <h2>Show / Hide Content</h2>
+        
+        <!-- Button and Paragraph Elements -->
+        <button id="toggle-btn">Show Content</button>
+        <p id="target-paragraph" class="smooth-paragraph">
+            Hello! I am the hidden paragraph. You have successfully toggled my visibility state using the modern <code>classList.toggle()</code> method.
+        </p>
+
+        <!-- Dynamic Syntax Guide Container -->
+        <pre><code>// Under the hood script:
+element.classList.toggle('reveal');</code></pre>
+    </div>
+
+    <!-- Linking to your isolated scripting block -->
+    <script src="assets/js/task1.js"></script>
+</body>
+</html>

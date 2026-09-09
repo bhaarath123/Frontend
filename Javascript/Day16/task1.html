@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details System</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            margin: 40px auto;
+            max-width: 700px;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #111827;
+        }
+
+        /* Form Styling */
+        .form-container {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #4b5563;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* Target Dashboard Output Display Grid */
+        .dashboard-title {
+            margin-top: 20px;
+            color: #1f2937;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 8px;
+        }
+
+        #student-list-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        /* Dynamically Injected Student Card Elements */
+        .student-card {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 5px solid #2563eb;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .student-card p {
+            margin: 6px 0;
+            font-size: 14px;
+        }
+
+        .student-card strong {
+            color: #4b5563;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Database Lab</h1>
+
+    <!-- Registration Input Box Form Formats -->
+    <div class="form-container">
+        <div class="form-group">
+            <label for="student-name">Student Name</label>
+            <input type="text" id="student-name" placeholder="Enter full name">
+        </div>
+
+        <div class="form-group">
+            <label for="student-age">Age</label>
+            <input type="number" id="student-age" placeholder="Enter age">
+        </div>
+
+        <div class="form-group">
+            <label for="student-city">City</label>
+            <input type="text" id="student-city" placeholder="Enter current city">
+        </div>
+
+        <button id="add-student-btn">Add Student</button>
+    </div>
+
+    <!-- Active Roster Dashboard View -->
+    <h2 class="dashboard-title">Registered Students</h2>
+    <div id="student-list-container">
+        <!-- New student <div> blocks will be added here by JavaScript dynamically -->
+    </div>
+
+    <!-- Linking to your isolated functional script component -->
+    <script src="assets/js/task1.js"></script>
+</body>
+</html>

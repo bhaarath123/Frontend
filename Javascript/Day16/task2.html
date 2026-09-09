@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            margin: 40px auto;
+            max-width: 750px;
+            padding: 0 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #111827;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #4b5563;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: #059669;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #047857;
+        }
+
+        .table-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            background-color: #f9fafb;
+            color: #4b5563;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Employee Roster Manager</h1>
+
+    <div class="form-container">
+        <div class="form-group">
+            <label for="emp-name">Employee Name</label>
+            <input type="text" id="emp-name" placeholder="Enter full name">
+        </div>
+
+        <div class="form-group">
+            <label for="emp-dept">Department</label>
+            <select id="emp-dept">
+                <option value="">-- Select Department --</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Sales">Sales</option>
+                <option value="Finance">Finance</option>
+                <option value="Human Resources">Human Resources</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="emp-salary">Salary (Monthly)</label>
+            <input type="number" id="emp-salary" placeholder="Enter salary value">
+        </div>
+
+        <button id="add-emp-btn">Add Employee</button>
+    </div>
+
+    <h2>Active Employee Registry Table</h2>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody id="employee-table-body">
+                <!-- Dynamically injected table row nodes will populate down here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="assets/js/task2.js"></script>
+</body>
+</html>

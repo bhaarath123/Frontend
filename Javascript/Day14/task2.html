@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2: Color Toggle</title>
+    <style>
+        /* Basic page setup */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* --- Core Color Toggle CSS --- */
+        .color-box {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            border-radius: 8px;
+            /* 1. Initial color state set to Red */
+            background-color: #ff4d4d; 
+            /* Optional transition for smooth color morphing */
+            transition: background-color 0.3s ease; 
+        }
+
+        /* 2. The green CSS class to be toggled on/off by Javascript */
+        .color-box.green-mode {
+            background-color: #2ecc71; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <button id="toggle-btn">Toggle Color</button>
+        <!-- The target element display box -->
+        <div id="my-box" class="color-box"></div>
+    </div>
+
+    <!-- Link to external JS logic layer -->
+    <script src="assets/js/task2.js"></script>
+</body>
+</html>

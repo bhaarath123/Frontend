@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3: Smooth Card Toggle</title>
+    <style>
+        /* Base Page Setup */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- Custom Card Block Component --- */
+        .custom-card {
+            background-color: #ffffff;
+            width: 320px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e7eb;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-body {
+            padding: 24px;
+        }
+
+        .card-body h3 {
+            margin: 0 0 12px 0;
+            font-size: 1.25rem;
+            color: #1f2937;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #2563eb;
+        }
+
+        /* --- Smooth Details Reveal Engine --- */
+        .card-details {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            /* Cubic-bezier enables a snapping/clean acceleration profile */
+            transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), opacity 0.3s ease;
+        }
+
+        /* Toggled state activated via separate JavaScript handler code */
+        .card-details.open {
+            max-height: 200px; /* Provides sufficient ceiling height for child paragraph text blocks */
+            opacity: 1;
+            margin-top: 15px;
+        }
+
+        .card-details p {
+            margin: 0;
+            color: #4b5563;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 3. Smooth Card Component Element Build -->
+    <div class="custom-card">
+        <!-- Image Element (Placeholder) -->
+        <img src="https://picsum.photos" alt="Card Banner Image" class="card-img">
+        
+        <!-- Heading & Functional Trigger Container -->
+        <div class="card-body">
+            <h3>Adventure Passport</h3>
+            
+            <button id="card-toggle-btn">Show Details</button>
+            
+            <!-- Target Paragraph Wrapper Panel -->
+            <div id="card-details-panel" class="card-details">
+                <p>Unlock premium access to towering mountain ranges, isolated forest tracks, and panoramic coastal routes waiting off the map.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inject independent functional script script layer -->
+    <script src="assets/js/task3.js"></script>
+</body>
+</html>
