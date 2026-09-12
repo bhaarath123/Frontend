@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4 - Async / Await Syntax</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            margin: 50px auto;
+            max-width: 550px;
+            padding: 0 20px;
+        }
+
+        .task-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #334155;
+            border-left: 4px solid #f59e0b;
+            padding-left: 10px;
+        }
+
+        .action-btn {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            background-color: #f59e0b;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            margin-bottom: 15px;
+        }
+
+        .action-btn:hover {
+            background-color: #d97706;
+        }
+
+        .log-output {
+            background-color: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            padding: 12px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 14px;
+            color: #0f172a;
+        }
+
+        pre {
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 13.5px;
+            margin-top: 20px;
+        }
+
+        code {
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="task-card">
+        <h2>Task 4 – Async / Await Block</h2>
+        <p>Click below to invoke an async block containing an await constraint to temporarily suspend performance execution flow.</p>
+        
+        <button id="btn-async" class="action-btn">Run Async Function</button>
+        <div id="log-task4" class="log-output">Awaiting block invocation execution...</div>
+        
+        <pre><code>// Essential Syntax Template
+async function getSystemData() {
+    try {
+        const response = await basicPromiseFunction();
+        console.log(response);
+    } catch (error) {
+        console.error(error);
+    }
+}</code></pre>
+    </div>
+
+    <script src="assets/js/task4.js"></script>
+</body>
+</html>

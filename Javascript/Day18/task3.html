@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 - Promise Consumption Chain</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            margin: 50px auto;
+            max-width: 550px;
+            padding: 0 20px;
+        }
+
+        .task-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #334155;
+            border-left: 4px solid #6366f1;
+            padding-left: 10px;
+        }
+
+        .action-btn {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            background-color: #6366f1;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            margin-right: 10px;
+            margin-bottom: 15px;
+        }
+
+        .action-btn:hover {
+            background-color: #4f46e5;
+        }
+
+        .action-btn.secondary {
+            background-color: #64748b;
+        }
+
+        .action-btn.secondary:hover {
+            background-color: #475569;
+        }
+
+        .log-output {
+            background-color: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            padding: 12px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 14px;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+
+        pre {
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 13.5px;
+            margin-top: 20px;
+        }
+
+        code {
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="task-card">
+        <h2>Task 3 – Consumer Methods Chain</h2>
+        <p>Click the buttons below to run the full chain execution and see how each handler reacts.</p>
+        
+        <button id="btn-success" class="action-btn">Trigger Success Flow</button>
+        <button id="btn-fail" class="action-btn secondary">Trigger Failure Flow</button>
+        <div id="log-task3" class="log-output">Awaiting chain interaction...</div>
+        
+        <pre><code>// Essential Syntax Template
+myPromise
+    .then((result) => {
+        // Runs on resolve
+    })
+    .catch((error) => {
+        // Runs on reject
+    })
+    .finally(() => {
+        // Runs always at the end
+    });</code></pre>
+    </div>
+
+    <script src="assets/js/task3.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .auth-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 360px;
+        }
+        h2 { margin-top: 0; text-align: center; color: #111827; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 6px; font-weight: 600; color: #4b5563; }
+        .form-group input { width: 100%; padding: 10px; font-size: 14px; border: 1px solid #d1d5db; border-radius: 6px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; font-size: 16px; font-weight: 600; background-color: #2563eb; color: white; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.2s ease; }
+        button:hover { background-color: #1d4ed8; }
+        p { text-align: center; font-size: 14px; margin-top: 15px; color: #6b7280; }
+        a { color: #2563eb; text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <div class="auth-container">
+        <h2>Create Account</h2>
+        <div class="form-group">
+            <label for="reg-username">Username</label>
+            <input type="text" id="reg-username" placeholder="Choose a username">
+        </div>
+        <div class="form-group">
+            <label for="reg-email">Email Address</label>
+            <input type="email" id="reg-email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+            <label for="reg-password">Password</label>
+            <input type="password" id="reg-password" placeholder="Create a password">
+        </div>
+        <button id="register-btn">Register</button>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+
+    <!-- Isolated Registration Script -->
+    <script src="assets/js/task1.js"></script>
+</body>
+</html>

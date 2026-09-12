@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 - Promise Syntax Blueprint</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            margin: 50px auto;
+            max-width: 550px;
+            padding: 0 20px;
+        }
+
+        .task-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #334155;
+            border-left: 4px solid #10b981;
+            padding-left: 10px;
+        }
+
+        .action-btn {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            background-color: #10b981;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            margin-right: 10px;
+            margin-bottom: 15px;
+        }
+
+        .action-btn:hover {
+            background-color: #059669;
+        }
+
+        .action-btn.secondary {
+            background-color: #ef4444;
+        }
+
+        .action-btn.secondary:hover {
+            background-color: #dc2626;
+        }
+
+        .log-output {
+            background-color: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            padding: 12px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 14px;
+            color: #0f172a;
+        }
+
+        pre {
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 13.5px;
+            margin-top: 20px;
+        }
+
+        code {
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="task-card">
+        <h2>Task 2 – Promise Object Instance</h2>
+        <p>Click the buttons below to instantiate a fresh Promise executor and capture its resulting settled states.</p>
+        
+        <button id="btn-resolve" class="action-btn">Trigger Resolve</button>
+        <button id="btn-reject" class="action-btn secondary">Trigger Reject</button>
+        <div id="log-task2" class="log-output">Awaiting instance instantiation...</div>
+        
+        <pre><code>// Essential Syntax Template
+const myPromise = new Promise((resolve, reject) => {
+    if (successCondition) {
+        resolve("Success value");
+    } else {
+        reject("Failure reason");
+    }
+});</code></pre>
+    </div>
+
+    <script src="assets/js/task2.js"></script>
+</body>
+</html>
