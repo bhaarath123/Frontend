@@ -1,0 +1,31 @@
+1.What is React?
+
+React is a popular software tool created by Meta (Facebook) for building the visual parts of websites. It acts like a smart engine that makes web pages fast, modern, and highly interactive.
+
+2.Is React a Library or Framework?
+
+React is a library.
+
+A framework forces you to follow its strict, pre-built house rules.
+
+A library is like a box of tools where you are in charge; React only handles drawing items on the screen, letting you choose other tools for different jobs.
+
+3. What is a Component?
+
+A component is a self-contained, miniature block of code that controls one specific piece of the screen (like a search bar, a button, or a profile picture). You build a website by stacking these blocks together.
+
+4.What is JSX?
+
+JSX is a code hybrid that lets developers write visual layout tags (HTML) right inside their business logic code (JavaScript). It acts as a shortcut so you do not have to jump between separate design files and brain files.
+
+5. What is the Real DOM?
+
+The Real DOM (Document Object Model) is the browser's internal roadmap of your live webpage. When you change something, the browser often has to recalculate and redraw the entire map, which makes the Real DOM slow and heavy to work with.
+
+6. What is the Virtual DOM?
+
+The Virtual DOM is a lightweight, digital photocopy of the Real DOM that lives purely in the computer's memory. Because it is just a hidden draft, React can change it instantly without slowing down your screen.
+
+7.What is Reconciliation?
+
+Reconciliation is Reacts automatic "spot-the-difference" process. When a change happens, React compares its fast Virtual DOM draft to the heavy Real DOM, figures out exactly what altered, and updates only that specific spot on the real screen while leaving the rest of the page completely alone.
